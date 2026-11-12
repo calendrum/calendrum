@@ -1,0 +1,23 @@
+{
+  "charset": "UTF-8",
+  "components": [
+    {
+      "name": "X",
+      "properties": [
+        {
+          "name": "SUMMARY",
+          "parameters": [
+            {
+              "name": "X-NOTE",
+              "values": [
+                "hi"
+              ]
+            }
+          ],
+          "value": "value"
+        }
+      ],
+      "components": []
+    }
+  ]
+}

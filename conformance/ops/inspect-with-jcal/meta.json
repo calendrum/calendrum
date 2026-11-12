@@ -1,0 +1,7 @@
+{
+  "id": "inspect-with-jcal",
+  "operation": "inspect",
+  "description": "The response also holds the jCal form.",
+  "source": "synthetic",
+  "license": "CC0-1.0"
+}

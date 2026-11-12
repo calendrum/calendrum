@@ -1,0 +1,53 @@
+{
+  "charset": "UTF-8",
+  "components": [
+    {
+      "name": "VCALENDAR",
+      "properties": [
+        {
+          "name": "CALSCALE",
+          "parameters": [],
+          "value": "GREGORIAN"
+        },
+        {
+          "name": "PRODID",
+          "parameters": [],
+          "value": "-//Example Inc.//Example Calendar//EN"
+        },
+        {
+          "name": "VERSION",
+          "parameters": [],
+          "value": "2.0"
+        }
+      ],
+      "components": [
+        {
+          "name": "VEVENT",
+          "properties": [
+            {
+              "name": "DTSTAMP",
+              "parameters": [],
+              "value": "20080205T191224Z"
+            },
+            {
+              "name": "DTSTART",
+              "parameters": [],
+              "value": "20081006"
+            },
+            {
+              "name": "SUMMARY",
+              "parameters": [],
+              "value": "Planning meeting"
+            },
+            {
+              "name": "UID",
+              "parameters": [],
+              "value": "4088E990AD89CB3DBB484909"
+            }
+          ],
+          "components": []
+        }
+      ]
+    }
+  ]
+}

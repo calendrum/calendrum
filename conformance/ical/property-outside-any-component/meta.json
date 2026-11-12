@@ -1,0 +1,13 @@
+{
+  "id": "property-outside-any-component",
+  "description": "A property appears before the first BEGIN; it is reported but does not appear in the tree.",
+  "tags": [
+    "structure",
+    "robustness"
+  ],
+  "rfc": [
+    "RFC 5545 §3.4"
+  ],
+  "source": "synthetic",
+  "license": "CC0-1.0"
+}

@@ -1,0 +1,75 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Calendrum real corpus expected parse outcome (<file>.expected-problems.json)",
+  "description": "What a lenient parse of the file with the default options gives: the encoding, whether it stopped early, how many times each problem code occurred, and the problems the listener received in order. Messages are not compared.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "charset",
+    "charsetConfidence",
+    "truncated",
+    "counts",
+    "problems"
+  ],
+  "properties": {
+    "charset": {
+      "type": "string",
+      "minLength": 1
+    },
+    "charsetConfidence": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 100
+    },
+    "truncated": {
+      "type": "boolean"
+    },
+    "counts": {
+      "description": "Occurrences of every code that occurred at least once, including those not reported individually, by code.",
+      "type": "object",
+      "additionalProperties": {
+        "type": "integer",
+        "minimum": 1
+      }
+    },
+    "problems": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "code",
+          "severity",
+          "line",
+          "column",
+          "offset"
+        ],
+        "properties": {
+          "code": {
+            "type": "string",
+            "pattern": "^ICAL-[A-Z][0-9]{3}$"
+          },
+          "severity": {
+            "enum": [
+              "info",
+              "warning",
+              "error"
+            ]
+          },
+          "line": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "column": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "offset": {
+            "type": "integer",
+            "minimum": 0
+          }
+        }
+      }
+    }
+  }
+}

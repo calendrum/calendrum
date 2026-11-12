@@ -1,0 +1,9 @@
+[
+  {
+    "code": "ICAL-S018",
+    "severity": "warning",
+    "line": 4,
+    "column": 1,
+    "offset": 23
+  }
+]

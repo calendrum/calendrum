@@ -1,0 +1,13 @@
+{
+  "id": "x-name-property-and-parameter",
+  "description": "An experimental (x-name) property with an experimental parameter.",
+  "tags": [
+    "names",
+    "parameters"
+  ],
+  "rfc": [
+    "RFC 5545 §3.1"
+  ],
+  "source": "synthetic",
+  "license": "CC0-1.0"
+}

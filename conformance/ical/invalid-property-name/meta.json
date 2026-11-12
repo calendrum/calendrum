@@ -1,0 +1,15 @@
+{
+  "id": "invalid-property-name",
+  "description": "A property name contains a character outside A-Z, a-z, 0-9 and '-'.",
+  "tags": [
+    "names",
+    "robustness"
+  ],
+  "rfc": [
+    "RFC 5545 §3.1"
+  ],
+  "source": "synthetic",
+  "license": "CC0-1.0",
+  "jcal": false,
+  "jcalReason": "jCal is written by the rules of canonical writing: a property name that is not a token cannot be built again when jCal is read."
+}

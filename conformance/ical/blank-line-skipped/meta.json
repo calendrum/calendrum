@@ -1,0 +1,10 @@
+{
+  "id": "blank-line-skipped",
+  "description": "An empty logical line between two properties is skipped.",
+  "tags": [
+    "robustness"
+  ],
+  "rfc": [],
+  "source": "synthetic",
+  "license": "CC0-1.0"
+}

@@ -1,0 +1,16 @@
+{
+  "charset": "UTF-16BE",
+  "components": [
+    {
+      "name": "X",
+      "properties": [
+        {
+          "name": "SUMMARY",
+          "parameters": [],
+          "value": "Привет"
+        }
+      ],
+      "components": []
+    }
+  ]
+}

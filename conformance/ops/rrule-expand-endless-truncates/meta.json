@@ -1,0 +1,7 @@
+{
+  "id": "rrule-expand-endless-truncates",
+  "operation": "rrule_expand",
+  "description": "A rule without an end stops at the limit.",
+  "source": "synthetic",
+  "license": "CC0-1.0"
+}

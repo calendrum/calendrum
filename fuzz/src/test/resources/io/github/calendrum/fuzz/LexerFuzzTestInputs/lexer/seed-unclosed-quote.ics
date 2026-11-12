@@ -1,0 +1,7 @@
+BEGIN:VCALENDAR
+BEGIN:VEVENT
+ATTENDEE;CN="Jane Doe:mailto:jane@example.com
+ATTENDEE;CN="a"b;ROLE="x":mailto:b@example.com
+X;A="unclosed,B=c;D:v
+END:VEVENT
+END:VCALENDAR

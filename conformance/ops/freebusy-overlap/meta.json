@@ -1,0 +1,7 @@
+{
+  "id": "freebusy-overlap",
+  "operation": "freebusy",
+  "description": "Busy intervals are merged, and the overlap is a conflict.",
+  "source": "synthetic",
+  "license": "CC0-1.0"
+}

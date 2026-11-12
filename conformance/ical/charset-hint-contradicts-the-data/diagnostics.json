@@ -1,0 +1,16 @@
+[
+  {
+    "code": "ICAL-S027",
+    "severity": "warning",
+    "line": 3,
+    "column": 9,
+    "offset": 39
+  },
+  {
+    "code": "ICAL-S025",
+    "severity": "warning",
+    "line": 3,
+    "column": 9,
+    "offset": 39
+  }
+]

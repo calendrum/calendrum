@@ -1,0 +1,8 @@
+{
+  "ops_version": 1,
+  "ok": false,
+  "error": {
+    "code": "OPS-UNKNOWN-CODE",
+    "message": "There is no such code"
+  }
+}

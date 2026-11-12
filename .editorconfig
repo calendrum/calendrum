@@ -1,0 +1,58 @@
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+indent_size = 4
+indent_style = space
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+[*.{kt,kts}]
+
+# The ktlint code style that matches the official Kotlin coding conventions (kotlin.code.style=official).
+ktlint_code_style = intellij_idea
+max_line_length = 120
+
+# The coding conventions recommend trailing commas at the declaration site.
+ij_kotlin_allow_trailing_comma = true
+
+# ktlint forbids wildcard imports, so IntelliJ must never create them.
+ij_kotlin_name_count_to_use_star_import = 2147483647
+ij_kotlin_name_count_to_use_star_import_for_members = 2147483647
+
+[examples/android-compose/**.kt]
+ktlint_function_naming_ignore_when_annotated_with = Composable
+
+[*.md]
+trim_trailing_whitespace = false
+
+[*.{yml,yaml}]
+indent_size = 2
+
+[*.bat]
+end_of_line = crlf
+
+[*.ics]
+charset = unset
+end_of_line = unset
+insert_final_newline = unset
+trim_trailing_whitespace = unset
+
+[fuzz/src/test/resources/**/*Inputs/**]
+charset = unset
+end_of_line = unset
+insert_final_newline = unset
+trim_trailing_whitespace = unset
+
+[conformance/ical/**]
+charset = unset
+end_of_line = unset
+insert_final_newline = unset
+trim_trailing_whitespace = unset
+
+[corpus/**]
+charset = unset
+end_of_line = unset
+insert_final_newline = unset
+trim_trailing_whitespace = unset

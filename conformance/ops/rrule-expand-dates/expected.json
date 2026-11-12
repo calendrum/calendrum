@@ -1,0 +1,18 @@
+{
+  "ops_version": 1,
+  "ok": true,
+  "result": {
+    "dates": [
+      {
+        "date": "2026-02-28"
+      },
+      {
+        "date": "2027-02-28"
+      }
+    ],
+    "count": 2,
+    "problems": [],
+    "problem_count": 0
+  },
+  "truncated": false
+}

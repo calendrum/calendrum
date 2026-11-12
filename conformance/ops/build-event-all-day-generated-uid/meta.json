@@ -1,0 +1,7 @@
+{
+  "id": "build-event-all-day-generated-uid",
+  "operation": "build_event",
+  "description": "An all-day event; UID and DTSTAMP come from the environment.",
+  "source": "synthetic",
+  "license": "CC0-1.0"
+}

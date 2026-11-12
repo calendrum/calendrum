@@ -1,0 +1,11 @@
+{
+  "ops_version": 1,
+  "ok": true,
+  "result": {
+    "uid": "fixed@example.com",
+    "ics": "BEGIN:VCALENDAR\r\nPRODID:-//Calendrum//Tooling//EN\r\nVERSION:2.0\r\nBEGIN:VEVENT\r\nUID:fixed@example.com\r\nDTSTAMP:20260101T000000Z\r\nSUMMARY:Plan\\; review\\, part 2\\nsecond line\r\nDTSTART:20260105T100000Z\r\nDTEND:20260105T110000Z\r\nDESCRIPTION:Notes\r\nLOCATION:Room 1\r\nORGANIZER:mailto:boss@example.com\r\nATTENDEE;CN=\"Alice, A.\";RSVP=TRUE:mailto:alice@example.com\r\nATTENDEE:mailto:bob@example.com\r\nEND:VEVENT\r\nEND:VCALENDAR\r\n",
+    "problems": [],
+    "problem_count": 0
+  },
+  "truncated": false
+}

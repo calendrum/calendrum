@@ -1,0 +1,7 @@
+{
+  "id": "diff-no-after",
+  "operation": "diff",
+  "description": "Both calendars are required.",
+  "source": "synthetic",
+  "license": "CC0-1.0"
+}

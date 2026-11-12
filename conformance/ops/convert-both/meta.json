@@ -1,0 +1,7 @@
+{
+  "id": "convert-both",
+  "operation": "convert",
+  "description": "Only one form is accepted.",
+  "source": "synthetic",
+  "license": "CC0-1.0"
+}

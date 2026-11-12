@@ -1,0 +1,114 @@
+{
+  "charset": "UTF-8",
+  "components": [
+    {
+      "name": "VCALENDAR",
+      "properties": [
+        {
+          "name": "VERSION",
+          "parameters": [],
+          "value": "2.0"
+        },
+        {
+          "name": "PRODID",
+          "parameters": [],
+          "value": "-//ABC Corporation//NONSGML My Product//EN"
+        }
+      ],
+      "components": [
+        {
+          "name": "VTODO",
+          "properties": [
+            {
+              "name": "DTSTAMP",
+              "parameters": [],
+              "value": "19980130T134500Z"
+            },
+            {
+              "name": "SEQUENCE",
+              "parameters": [],
+              "value": "2"
+            },
+            {
+              "name": "UID",
+              "parameters": [],
+              "value": "uid4@example.com"
+            },
+            {
+              "name": "ORGANIZER",
+              "parameters": [],
+              "value": "mailto:unclesam@example.com"
+            },
+            {
+              "name": "ATTENDEE",
+              "parameters": [
+                {
+                  "name": "PARTSTAT",
+                  "values": [
+                    "ACCEPTED"
+                  ]
+                }
+              ],
+              "value": "mailto:jqpublic@example.com"
+            },
+            {
+              "name": "DUE",
+              "parameters": [],
+              "value": "19980415T000000"
+            },
+            {
+              "name": "STATUS",
+              "parameters": [],
+              "value": "NEEDS-ACTION"
+            },
+            {
+              "name": "SUMMARY",
+              "parameters": [],
+              "value": "Submit Income Taxes"
+            }
+          ],
+          "components": [
+            {
+              "name": "VALARM",
+              "properties": [
+                {
+                  "name": "ACTION",
+                  "parameters": [],
+                  "value": "AUDIO"
+                },
+                {
+                  "name": "TRIGGER",
+                  "parameters": [],
+                  "value": "19980403T120000Z"
+                },
+                {
+                  "name": "ATTACH",
+                  "parameters": [
+                    {
+                      "name": "FMTTYPE",
+                      "values": [
+                        "audio/basic"
+                      ]
+                    }
+                  ],
+                  "value": "http://example.com/pub/audio-files/ssbanner.aud"
+                },
+                {
+                  "name": "REPEAT",
+                  "parameters": [],
+                  "value": "4"
+                },
+                {
+                  "name": "DURATION",
+                  "parameters": [],
+                  "value": "PT1H"
+                }
+              ],
+              "components": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,185 @@
+{
+  "charset": "UTF-8",
+  "components": [
+    {
+      "name": "VCALENDAR",
+      "properties": [
+        {
+          "name": "PRODID",
+          "parameters": [],
+          "value": "-//RDU Software//NONSGML HandCal//EN"
+        },
+        {
+          "name": "VERSION",
+          "parameters": [],
+          "value": "2.0"
+        }
+      ],
+      "components": [
+        {
+          "name": "VTIMEZONE",
+          "properties": [
+            {
+              "name": "TZID",
+              "parameters": [],
+              "value": "America/New_York"
+            }
+          ],
+          "components": [
+            {
+              "name": "STANDARD",
+              "properties": [
+                {
+                  "name": "DTSTART",
+                  "parameters": [],
+                  "value": "19981025T020000"
+                },
+                {
+                  "name": "TZOFFSETFROM",
+                  "parameters": [],
+                  "value": "-0400"
+                },
+                {
+                  "name": "TZOFFSETTO",
+                  "parameters": [],
+                  "value": "-0500"
+                },
+                {
+                  "name": "TZNAME",
+                  "parameters": [],
+                  "value": "EST"
+                }
+              ],
+              "components": []
+            },
+            {
+              "name": "DAYLIGHT",
+              "properties": [
+                {
+                  "name": "DTSTART",
+                  "parameters": [],
+                  "value": "19990404T020000"
+                },
+                {
+                  "name": "TZOFFSETFROM",
+                  "parameters": [],
+                  "value": "-0500"
+                },
+                {
+                  "name": "TZOFFSETTO",
+                  "parameters": [],
+                  "value": "-0400"
+                },
+                {
+                  "name": "TZNAME",
+                  "parameters": [],
+                  "value": "EDT"
+                }
+              ],
+              "components": []
+            }
+          ]
+        },
+        {
+          "name": "VEVENT",
+          "properties": [
+            {
+              "name": "DTSTAMP",
+              "parameters": [],
+              "value": "19980309T231000Z"
+            },
+            {
+              "name": "UID",
+              "parameters": [],
+              "value": "guid-1.example.com"
+            },
+            {
+              "name": "ORGANIZER",
+              "parameters": [],
+              "value": "mailto:mrbig@example.com"
+            },
+            {
+              "name": "ATTENDEE",
+              "parameters": [
+                {
+                  "name": "RSVP",
+                  "values": [
+                    "TRUE"
+                  ]
+                },
+                {
+                  "name": "ROLE",
+                  "values": [
+                    "REQ-PARTICIPANT"
+                  ]
+                },
+                {
+                  "name": "CUTYPE",
+                  "values": [
+                    "GROUP"
+                  ]
+                }
+              ],
+              "value": "mailto:employee-A@example.com"
+            },
+            {
+              "name": "DESCRIPTION",
+              "parameters": [],
+              "value": "Project XYZ Review Meeting"
+            },
+            {
+              "name": "CATEGORIES",
+              "parameters": [],
+              "value": "MEETING"
+            },
+            {
+              "name": "CLASS",
+              "parameters": [],
+              "value": "PUBLIC"
+            },
+            {
+              "name": "CREATED",
+              "parameters": [],
+              "value": "19980309T130000Z"
+            },
+            {
+              "name": "SUMMARY",
+              "parameters": [],
+              "value": "XYZ Project Review"
+            },
+            {
+              "name": "DTSTART",
+              "parameters": [
+                {
+                  "name": "TZID",
+                  "values": [
+                    "America/New_York"
+                  ]
+                }
+              ],
+              "value": "19980312T083000"
+            },
+            {
+              "name": "DTEND",
+              "parameters": [
+                {
+                  "name": "TZID",
+                  "values": [
+                    "America/New_York"
+                  ]
+                }
+              ],
+              "value": "19980312T093000"
+            },
+            {
+              "name": "LOCATION",
+              "parameters": [],
+              "value": "1CP Conference Room 4350"
+            }
+          ],
+          "components": []
+        }
+      ]
+    }
+  ]
+}

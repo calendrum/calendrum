@@ -1,0 +1,20 @@
+{
+  "ops_version": 1,
+  "ok": true,
+  "result": {
+    "occurrences": [
+      {
+        "calendar_index": 0,
+        "component": "VEVENT",
+        "uid": "f@example.com",
+        "start": "2026-01-05T10:00:00Z",
+        "end": "2026-01-05T11:00:00Z",
+        "all_day": false
+      }
+    ],
+    "count": 1,
+    "problems": [],
+    "problem_count": 0
+  },
+  "truncated": false
+}

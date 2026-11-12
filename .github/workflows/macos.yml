@@ -1,0 +1,71 @@
+# Apple tests on an Apple-silicon runner; macOS minutes count x10. No x64 simulator or macosX64 tests: the Kotlin Gradle
+# plugin disables them on arm64 hosts. Later also on the ci:macos label.
+name: macOS
+
+on:
+  workflow_dispatch:
+  workflow_call:
+  # Automatic runs stay off until a maintainer enables them. To enable, uncomment:
+  # pull_request:
+  #   types: [opened, synchronize, reopened, labeled]
+  #   paths-ignore:
+  #     - 'docs/**'
+  #     - '**/*.md'
+
+permissions:
+  contents: read
+
+jobs:
+  apple:
+    name: macOS (Apple tests, iOS size budget)
+    if: >-
+      github.event_name != 'pull_request' ||
+      (contains(github.event.pull_request.labels.*.name, 'ci:macos') &&
+      (github.event.action != 'labeled' || github.event.label.name == 'ci:macos'))
+    runs-on: macos-26
+
+    # Tight: every minute here costs ten.
+    timeout-minutes: 30
+    concurrency:
+      group: macos-${{ github.ref }}
+      cancel-in-progress: true
+    steps:
+      - name: Check out
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      # apple: only the Apple toolchain is downloaded, not the Linux, MinGW and Android ones.
+      - name: Set up the build
+        uses: ./.github/actions/setup-build
+        with:
+          targets: apple
+          konan-cache: 'true'
+
+      - name: Apple tests
+        run: ./gradlew --continue macosArm64Test iosSimulatorArm64Test tvosSimulatorArm64Test watchosSimulatorArm64Test
+
+      - name: Size budget (iOS)
+        run: size-budget/run.sh --platforms ios
+
+      - name: Upload the size report
+        if: always()
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: size-report-ios
+          path: size-budget/build/size-report.*
+          retention-days: 7
+          if-no-files-found: ignore
+          overwrite: true
+
+      - name: Upload reports
+        if: failure()
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: macos-reports
+          path: |
+            **/build/reports/
+            **/build/test-results/
+          retention-days: 7
+          if-no-files-found: ignore
+          overwrite: true

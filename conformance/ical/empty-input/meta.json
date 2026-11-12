@@ -1,0 +1,11 @@
+{
+  "id": "empty-input",
+  "description": "An empty input gives an empty result and no problems.",
+  "tags": [
+    "robustness",
+    "edge-case"
+  ],
+  "rfc": [],
+  "source": "synthetic",
+  "license": "CC0-1.0"
+}

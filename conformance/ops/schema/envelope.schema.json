@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://calendrum.invalid/ops/envelope.schema.json",
+  "title": "Every response",
+  "type": "object",
+  "properties": {
+    "ops_version": {
+      "type": "integer",
+      "enum": [
+        1
+      ]
+    },
+    "ok": {
+      "type": "boolean"
+    },
+    "result": {
+      "type": "object",
+      "description": "The result of the operation, by the schema of its result."
+    },
+    "truncated": {
+      "type": "boolean",
+      "description": "Whether the response does not hold everything: a limit cut a list, or the input was not read whole."
+    },
+    "error": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "string",
+          "enum": [
+            "OPS-BAD-ARGUMENT",
+            "OPS-UNKNOWN-OPERATION",
+            "OPS-UNKNOWN-ZONE",
+            "OPS-UNKNOWN-CODE",
+            "OPS-TOO-LARGE",
+            "OPS-INTERNAL"
+          ]
+        },
+        "message": {
+          "type": "string",
+          "description": "A fixed sentence. It never quotes the request."
+        }
+      },
+      "required": [
+        "code",
+        "message"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "ops_version",
+    "ok"
+  ],
+  "additionalProperties": false
+}

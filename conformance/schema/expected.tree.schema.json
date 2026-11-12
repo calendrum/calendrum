@@ -1,0 +1,130 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Calendrum conformance expected syntax tree (expected.tree.json)",
+  "oneOf": [
+    {
+      "$ref": "#/$defs/result"
+    },
+    {
+      "$ref": "#/$defs/rejected"
+    }
+  ],
+  "$defs": {
+    "result": {
+      "description": "The lossless syntax tree: top-level components in input order.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "charset",
+        "components"
+      ],
+      "properties": {
+        "charset": {
+          "description": "Encoding the input was read in.",
+          "enum": [
+            "UTF-8",
+            "UTF-16LE",
+            "UTF-16BE",
+            "UTF-32LE",
+            "UTF-32BE",
+            "windows-1251",
+            "KOI8-R",
+            "windows-1252"
+          ]
+        },
+        "components": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/component"
+          }
+        }
+      }
+    },
+    "rejected": {
+      "description": "Strict mode rejected the input at its first error; diagnostics.json lists the problems up to and including that error.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "rejected"
+      ],
+      "properties": {
+        "rejected": {
+          "const": true
+        }
+      }
+    },
+    "component": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "name",
+        "properties",
+        "components"
+      ],
+      "properties": {
+        "name": {
+          "description": "Canonical name: ASCII letters upper-cased.",
+          "type": "string"
+        },
+        "properties": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/property"
+          }
+        },
+        "components": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/component"
+          }
+        }
+      }
+    },
+    "property": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "name",
+        "parameters",
+        "value"
+      ],
+      "properties": {
+        "name": {
+          "description": "Canonical name: ASCII letters upper-cased.",
+          "type": "string"
+        },
+        "parameters": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/parameter"
+          }
+        },
+        "value": {
+          "description": "Raw value after unfolding and decoding: TEXT escapes are not undone.",
+          "type": "string"
+        }
+      }
+    },
+    "parameter": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "name",
+        "values"
+      ],
+      "properties": {
+        "name": {
+          "description": "Canonical name: ASCII letters upper-cased.",
+          "type": "string"
+        },
+        "values": {
+          "description": "Values without the quotes, RFC 6868 escapes decoded.",
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "id": "rfc7265-example-1",
+  "description": "Example 1 of RFC 7265 Appendix B, the reference for the jCal form of a calendar.",
+  "tags": [
+    "rfc7265-example",
+    "values"
+  ],
+  "rfc": [
+    "RFC 7265"
+  ],
+  "source": "rfc",
+  "license": "IETF-Trust-BSD"
+}

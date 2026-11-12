@@ -1,0 +1,7 @@
+{
+  "id": "build-event-zoned-weekly",
+  "operation": "build_event",
+  "description": "A zoned series gets its VTIMEZONE.",
+  "source": "synthetic",
+  "license": "CC0-1.0"
+}

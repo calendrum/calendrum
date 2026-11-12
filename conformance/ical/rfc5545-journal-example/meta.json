@@ -1,0 +1,13 @@
+{
+  "id": "rfc5545-journal-example",
+  "description": "RFC 5545 example: a journal entry with many folded continuation lines.",
+  "tags": [
+    "rfc5545-example",
+    "folding"
+  ],
+  "rfc": [
+    "RFC 5545 §4"
+  ],
+  "source": "rfc",
+  "license": "IETF-Trust-BSD"
+}

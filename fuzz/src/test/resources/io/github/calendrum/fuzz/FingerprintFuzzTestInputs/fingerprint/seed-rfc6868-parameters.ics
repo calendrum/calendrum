@@ -1,0 +1,12 @@
+BEGIN:VCALENDAR
+BEGIN:VEVENT
+GEO;X-ADDRESS="Pittsburgh Pirates^n115 Federal St^nPitts
+ burgh, PA 15212":40.446816;-80.00566
+ATTENDEE;CN="George Herman ^'Babe^' Ruth":mailto:babe@example.com
+X;A=one^ntwo;B=a^^b;C=^'q^':v
+X;A=^x^N^;B="^":v
+X;A=^^n;B=^^^n:v
+X;A=^n:^n^'
+ATTENDEE;MEMBER="mailto:a@example.com","mailto:b@example.com";DELEGATED-TO="mailto:c@example.com":mailto:d@example.com
+END:VEVENT
+END:VCALENDAR

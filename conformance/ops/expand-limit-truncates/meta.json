@@ -1,0 +1,7 @@
+{
+  "id": "expand-limit-truncates",
+  "operation": "expand",
+  "description": "The limit cuts the list and the response says so.",
+  "source": "synthetic",
+  "license": "CC0-1.0"
+}

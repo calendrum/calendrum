@@ -1,0 +1,13 @@
+{
+  "id": "unmatched-end-is-ignored",
+  "description": "An END line names a component that is not open anywhere on the stack and is ignored.",
+  "tags": [
+    "structure",
+    "robustness"
+  ],
+  "rfc": [
+    "RFC 5545 §3.6"
+  ],
+  "source": "synthetic",
+  "license": "CC0-1.0"
+}

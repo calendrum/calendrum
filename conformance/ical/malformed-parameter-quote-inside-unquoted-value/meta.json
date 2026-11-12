@@ -1,0 +1,13 @@
+{
+  "id": "malformed-parameter-quote-inside-unquoted-value",
+  "description": "An unquoted parameter value contains a double-quote character.",
+  "tags": [
+    "parameters",
+    "robustness"
+  ],
+  "rfc": [
+    "RFC 5545 §3.2"
+  ],
+  "source": "synthetic",
+  "license": "CC0-1.0"
+}

@@ -1,0 +1,13 @@
+{
+  "id": "charset-hint-contradicts-the-data",
+  "description": "A UTF-8 charset hint contradicts windows-1251 data; the data decides.",
+  "tags": [
+    "charset"
+  ],
+  "rfc": [],
+  "source": "synthetic",
+  "license": "CC0-1.0",
+  "options": {
+    "charset": "UTF-8"
+  }
+}

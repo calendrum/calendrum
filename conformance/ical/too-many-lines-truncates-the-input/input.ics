@@ -1,0 +1,7 @@
+BEGIN:A
+P:1
+BEGIN:B
+Q:2
+R:3
+END:B
+END:A

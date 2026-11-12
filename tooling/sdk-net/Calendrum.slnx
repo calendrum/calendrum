@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="Calendrum/Calendrum.csproj" />
+  <Project Path="Calendrum.Tests/Calendrum.Tests.csproj" />
+  <Project Path="Calendrum.Measure/Calendrum.Measure.csproj" />
+</Solution>

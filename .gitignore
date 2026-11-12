@@ -1,0 +1,27 @@
+.gradle/
+build/
+local.properties
+docs
+docs/
+
+# Local instructions of the maintainers, read by agents next to AGENTS.md.
+AGENTS.local.md
+
+# Real calendars of the maintainer and everything cut from them: kept locally, never in the repository. Their tests are
+# skipped when the files are absent (corpus/README.md).
+corpus/real/
+**/real-*
+**/seed-real-*
+
+.kotlin/
+.swiftpm/
+.cifuzz-corpus/
+.bench-runners/
+
+.idea/
+*.iml
+.fleet/
+.vscode/
+bin/
+
+.DS_Store

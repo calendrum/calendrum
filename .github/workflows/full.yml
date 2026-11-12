@@ -1,0 +1,32 @@
+# Pre-release run of every CI workflow on one commit. Manual only.
+name: Full
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: full-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  ci:
+    uses: ./.github/workflows/ci.yml
+  native:
+    uses: ./.github/workflows/native.yml
+
+  # Linux (x1), independent of the other jobs.
+  compat:
+    uses: ./.github/workflows/compat.yml
+  size:
+    uses: ./.github/workflows/size.yml
+
+  # macOS (x10) and Windows (x2) start only after the Linux checks pass, so a broken commit costs no expensive minutes.
+  macos:
+    needs: ci
+    uses: ./.github/workflows/macos.yml
+  windows:
+    needs: ci
+    uses: ./.github/workflows/windows.yml

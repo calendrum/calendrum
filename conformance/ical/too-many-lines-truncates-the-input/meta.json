@@ -1,0 +1,16 @@
+{
+  "id": "too-many-lines-truncates-the-input",
+  "description": "A small configured line-count limit stops the parse before the input ends.",
+  "tags": [
+    "limits",
+    "robustness"
+  ],
+  "rfc": [],
+  "source": "synthetic",
+  "license": "CC0-1.0",
+  "options": {
+    "limits": {
+      "maxLines": 4
+    }
+  }
+}

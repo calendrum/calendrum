@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <OutputType>Exe</OutputType>
+    <AssemblyName>Calendrum.Measure</AssemblyName>
+    <RootNamespace>Calendrum.Measure</RootNamespace>
+    <LangVersion>14</LangVersion>
+    <IsPackable>false</IsPackable>
+    <InvariantGlobalization>true</InvariantGlobalization>
+    <NativeBuild>$(MSBuildThisFileDirectory)../../sdk-c/build</NativeBuild>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="../Calendrum/Calendrum.csproj" />
+    <None Include="$(NativeBuild)/bin/macosArm64/releaseShared/libcalendrum.dylib" Link="libcalendrum.dylib" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
+</Project>

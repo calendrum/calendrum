@@ -1,0 +1,15 @@
+{
+  "id": "malformed-parameter-without-equals",
+  "description": "A parameter has no '=' and therefore no value.",
+  "tags": [
+    "parameters",
+    "robustness"
+  ],
+  "rfc": [
+    "RFC 5545 §3.2"
+  ],
+  "source": "synthetic",
+  "license": "CC0-1.0",
+  "jcal": false,
+  "jcalReason": "jCal is written by the rules of canonical writing: a parameter without a value cannot be built again when jCal is read."
+}

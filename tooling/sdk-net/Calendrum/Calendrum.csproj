@@ -1,0 +1,43 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="Version.g.props" />
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <RootNamespace>Calendrum</RootNamespace>
+    <AssemblyName>Calendrum</AssemblyName>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <IsAotCompatible>true</IsAotCompatible>
+    <DebugType>embedded</DebugType>
+
+    <PackageId>Calendrum</PackageId>
+    <Title>Calendrum</Title>
+    <Description>iCalendar (RFC 5545) for .NET: read, check, repair and convert calendars, list occurrences, compare calendars, strip their text.</Description>
+    <PackageTags>icalendar;ics;rfc5545;jcal;calendar;rrule</PackageTags>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <IncludeSymbols>false</IncludeSymbols>
+    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+    <NativeBuild>$(MSBuildThisFileDirectory)../../sdk-c/build</NativeBuild>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <InternalsVisibleTo Include="Calendrum.Tests" />
+    <InternalsVisibleTo Include="Calendrum.Measure" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="package/README.md" Pack="true" PackagePath="README.md" />
+    <None Include="../../../LICENSE" Pack="true" PackagePath="/" />
+    <None Include="../../../NOTICE" Pack="true" PackagePath="/" />
+    <None Include="$(NativeBuild)/licenses/macosArm64/THIRD-PARTY-LICENSES.txt" Pack="true" PackagePath="licenses/osx-arm64/THIRD-PARTY-LICENSES.txt" />
+    <None Include="$(NativeBuild)/licenses/linuxX64/THIRD-PARTY-LICENSES.txt" Pack="true" PackagePath="licenses/linux-x64/THIRD-PARTY-LICENSES.txt" />
+    <None Include="$(NativeBuild)/licenses/linuxArm64/THIRD-PARTY-LICENSES.txt" Pack="true" PackagePath="licenses/linux-arm64/THIRD-PARTY-LICENSES.txt" />
+    <None Include="$(NativeBuild)/licenses/mingwX64/THIRD-PARTY-LICENSES.txt" Pack="true" PackagePath="licenses/win-x64/THIRD-PARTY-LICENSES.txt" />
+    <None Include="$(NativeBuild)/bin/macosArm64/releaseShared/libcalendrum.dylib" Pack="true" PackagePath="runtimes/osx-arm64/native/libcalendrum.dylib" />
+    <None Include="$(NativeBuild)/bin/linuxX64/releaseShared/libcalendrum.so" Pack="true" PackagePath="runtimes/linux-x64/native/libcalendrum.so" />
+    <None Include="$(NativeBuild)/bin/linuxArm64/releaseShared/libcalendrum.so" Pack="true" PackagePath="runtimes/linux-arm64/native/libcalendrum.so" />
+    <None Include="$(NativeBuild)/bin/mingwX64/releaseShared/calendrum.dll" Pack="true" PackagePath="runtimes/win-x64/native/libcalendrum.dll" />
+  </ItemGroup>
+
+</Project>

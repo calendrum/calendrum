@@ -1,0 +1,122 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Calendrum real corpus file manifest (<file>.meta.json)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "file",
+    "source",
+    "client",
+    "clientVersion",
+    "exported",
+    "method",
+    "origin",
+    "charset",
+    "lineEndings",
+    "events",
+    "shiftWeeks",
+    "anonymizerCheck",
+    "license",
+    "features"
+  ],
+  "properties": {
+    "file": {
+      "description": "The calendar file this manifest describes, in the same directory.",
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*\\.ics$"
+    },
+    "source": {
+      "description": "Where the calendar comes from; equal to the directory name.",
+      "enum": [
+        "google",
+        "apple",
+        "outlook",
+        "exchange",
+        "thunderbird",
+        "nextcloud",
+        "yandex",
+        "university",
+        "other"
+      ]
+    },
+    "client": {
+      "description": "The application that wrote the file, as its PRODID or the export says.",
+      "type": "string",
+      "minLength": 1
+    },
+    "clientVersion": {
+      "description": "The version of that application, or null if unknown.",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "exported": {
+      "description": "The month of the export, YYYY-MM.",
+      "type": "string",
+      "pattern": "^[0-9]{4}-(0[1-9]|1[0-2])$"
+    },
+    "method": {
+      "description": "How the file was obtained.",
+      "enum": [
+        "calendar export",
+        "email attachment",
+        "subscription feed",
+        "unknown"
+      ]
+    },
+    "origin": {
+      "description": "Whose calendar it is and on what grounds it is here (own calendar, consent of its owner).",
+      "type": "string",
+      "minLength": 1
+    },
+    "charset": {
+      "description": "The encoding of the file as exported; the parser must detect exactly this one.",
+      "enum": [
+        "UTF-8",
+        "UTF-16LE",
+        "UTF-16BE",
+        "UTF-32LE",
+        "UTF-32BE",
+        "windows-1251",
+        "KOI8-R",
+        "windows-1252"
+      ]
+    },
+    "lineEndings": {
+      "description": "The line endings of the file.",
+      "enum": [
+        "CRLF",
+        "LF",
+        "CR",
+        "mixed"
+      ]
+    },
+    "events": {
+      "description": "The number of VEVENT components in the file.",
+      "type": "integer",
+      "minimum": 0
+    },
+    "shiftWeeks": {
+      "description": "The --shift-weeks the anonymizer ran with.",
+      "type": "integer"
+    },
+    "anonymizerCheck": {
+      "description": "The anonymizer's own check of this file.",
+      "const": "passed"
+    },
+    "license": {
+      "description": "The real corpus belongs to whoever exported it and stays out of the repository.",
+      "const": "private"
+    },
+    "features": {
+      "description": "What is interesting about the file, without any of its values.",
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    }
+  }
+}

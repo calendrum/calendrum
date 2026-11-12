@@ -1,0 +1,13 @@
+{
+  "id": "charset-hint-matches-the-data",
+  "description": "A windows-1251 charset hint matches windows-1251 data; only the transcoding problem is reported.",
+  "tags": [
+    "charset"
+  ],
+  "rfc": [],
+  "source": "synthetic",
+  "license": "CC0-1.0",
+  "options": {
+    "charset": "windows-1251"
+  }
+}

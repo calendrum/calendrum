@@ -1,0 +1,19 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Handmade//Broken export//EN
+BEGIN:VEVENT
+UID:broken-1@home.example
+DTSTAMP:20260101T000000Z
+DTSTART:20260105T100000
+SUMMARY:Встреча с ����� Петровой
+X_PRIVATE_NOTE:Код домофона 4417
+ATTENDEE;CN="Олег Смирнов:mailto:oleg.smirnov@home.example
+LOCATION;X-HINT:Дача в Озёрках
+
+DESCRIPTION:Ключи у соседки Валентины
+END:VEVENT
+BEGIN:VEVENT
+UID:broken-2@home.example
+DTSTAMP:20260101T000000Z
+DTSTART:20260106T100000
+SUMMARY:Обрезанный фид от Сергея

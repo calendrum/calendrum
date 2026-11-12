@@ -1,0 +1,7 @@
+{
+  "id": "tz-resolve-unknown",
+  "operation": "tz_resolve",
+  "description": "An unknown zone is an error.",
+  "source": "synthetic",
+  "license": "CC0-1.0"
+}

@@ -1,0 +1,59 @@
+// Klib ABI Dump
+// Targets: [androidNativeArm32, androidNativeArm64, androidNativeX64, androidNativeX86, iosArm64, iosSimulatorArm64, iosX64, js, linuxArm64, linuxX64, macosArm64, macosX64, mingwX64, tvosArm64, tvosSimulatorArm64, tvosX64, wasmJs, watchosArm64, watchosDeviceArm64, watchosSimulatorArm64]
+// Rendering settings:
+// - Signature version: 2
+// - Show manifest properties: true
+// - Show declarations: true
+
+// Library unique name: <io.github.calendrum:calendrum-ktor>
+final class io.github.calendrum.ktor/ICalContentConverter : io.ktor.serialization/ContentConverter { // io.github.calendrum.ktor/ICalContentConverter|null[0]
+    constructor <init>() // io.github.calendrum.ktor/ICalContentConverter.<init>|<init>(){}[0]
+    constructor <init>(io.github.calendrum.syntax/ParseOptions, io.github.calendrum.syntax/ICalWriter) // io.github.calendrum.ktor/ICalContentConverter.<init>|<init>(io.github.calendrum.syntax.ParseOptions;io.github.calendrum.syntax.ICalWriter){}[0]
+
+    final val parseOptions // io.github.calendrum.ktor/ICalContentConverter.parseOptions|{}parseOptions[0]
+        final fun <get-parseOptions>(): io.github.calendrum.syntax/ParseOptions // io.github.calendrum.ktor/ICalContentConverter.parseOptions.<get-parseOptions>|<get-parseOptions>(){}[0]
+    final val writer // io.github.calendrum.ktor/ICalContentConverter.writer|{}writer[0]
+        final fun <get-writer>(): io.github.calendrum.syntax/ICalWriter // io.github.calendrum.ktor/ICalContentConverter.writer.<get-writer>|<get-writer>(){}[0]
+
+    final fun toString(): kotlin/String // io.github.calendrum.ktor/ICalContentConverter.toString|toString(){}[0]
+    final suspend fun deserialize(io.ktor.utils.io.charsets/Charset, io.ktor.util.reflect/TypeInfo, io.ktor.utils.io/ByteReadChannel): kotlin/Any? // io.github.calendrum.ktor/ICalContentConverter.deserialize|deserialize(io.ktor.utils.io.charsets.Charset;io.ktor.util.reflect.TypeInfo;io.ktor.utils.io.ByteReadChannel){}[0]
+    final suspend fun serialize(io.ktor.http/ContentType, io.ktor.utils.io.charsets/Charset, io.ktor.util.reflect/TypeInfo, kotlin/Any?): io.ktor.http.content/OutgoingContent? // io.github.calendrum.ktor/ICalContentConverter.serialize|serialize(io.ktor.http.ContentType;io.ktor.utils.io.charsets.Charset;io.ktor.util.reflect.TypeInfo;kotlin.Any?){}[0]
+}
+
+final class io.github.calendrum.ktor/IcsFeedOptions { // io.github.calendrum.ktor/IcsFeedOptions|null[0]
+    final val cacheControl // io.github.calendrum.ktor/IcsFeedOptions.cacheControl|{}cacheControl[0]
+        final fun <get-cacheControl>(): kotlin/String // io.github.calendrum.ktor/IcsFeedOptions.cacheControl.<get-cacheControl>|<get-cacheControl>(){}[0]
+    final val writer // io.github.calendrum.ktor/IcsFeedOptions.writer|{}writer[0]
+        final fun <get-writer>(): io.github.calendrum.syntax/ICalWriter // io.github.calendrum.ktor/IcsFeedOptions.writer.<get-writer>|<get-writer>(){}[0]
+
+    final fun toString(): kotlin/String // io.github.calendrum.ktor/IcsFeedOptions.toString|toString(){}[0]
+
+    final class Builder { // io.github.calendrum.ktor/IcsFeedOptions.Builder|null[0]
+        final var cacheControl // io.github.calendrum.ktor/IcsFeedOptions.Builder.cacheControl|{}cacheControl[0]
+            final fun <get-cacheControl>(): kotlin/String // io.github.calendrum.ktor/IcsFeedOptions.Builder.cacheControl.<get-cacheControl>|<get-cacheControl>(){}[0]
+            final fun <set-cacheControl>(kotlin/String) // io.github.calendrum.ktor/IcsFeedOptions.Builder.cacheControl.<set-cacheControl>|<set-cacheControl>(kotlin.String){}[0]
+        final var writer // io.github.calendrum.ktor/IcsFeedOptions.Builder.writer|{}writer[0]
+            final fun <get-writer>(): io.github.calendrum.syntax/ICalWriter // io.github.calendrum.ktor/IcsFeedOptions.Builder.writer.<get-writer>|<get-writer>(){}[0]
+            final fun <set-writer>(io.github.calendrum.syntax/ICalWriter) // io.github.calendrum.ktor/IcsFeedOptions.Builder.writer.<set-writer>|<set-writer>(io.github.calendrum.syntax.ICalWriter){}[0]
+
+        final fun build(): io.github.calendrum.ktor/IcsFeedOptions // io.github.calendrum.ktor/IcsFeedOptions.Builder.build|build(){}[0]
+        final fun cacheControl(kotlin/String): io.github.calendrum.ktor/IcsFeedOptions.Builder // io.github.calendrum.ktor/IcsFeedOptions.Builder.cacheControl|cacheControl(kotlin.String){}[0]
+        final fun toString(): kotlin/String // io.github.calendrum.ktor/IcsFeedOptions.Builder.toString|toString(){}[0]
+        final fun writer(io.github.calendrum.syntax/ICalWriter): io.github.calendrum.ktor/IcsFeedOptions.Builder // io.github.calendrum.ktor/IcsFeedOptions.Builder.writer|writer(io.github.calendrum.syntax.ICalWriter){}[0]
+    }
+
+    final object Companion { // io.github.calendrum.ktor/IcsFeedOptions.Companion|null[0]
+        final val Default // io.github.calendrum.ktor/IcsFeedOptions.Companion.Default|{}Default[0]
+            final fun <get-Default>(): io.github.calendrum.ktor/IcsFeedOptions // io.github.calendrum.ktor/IcsFeedOptions.Companion.Default.<get-Default>|<get-Default>(){}[0]
+
+        final fun builder(): io.github.calendrum.ktor/IcsFeedOptions.Builder // io.github.calendrum.ktor/IcsFeedOptions.Companion.builder|builder(){}[0]
+    }
+}
+
+final val io.github.calendrum.ktor/TextCalendar // io.github.calendrum.ktor/TextCalendar|{}TextCalendar[0]
+    final fun <get-TextCalendar>(): io.ktor.http/ContentType // io.github.calendrum.ktor/TextCalendar.<get-TextCalendar>|<get-TextCalendar>(){}[0]
+
+final fun (io.ktor.serialization/Configuration).io.github.calendrum.ktor/iCalendar() // io.github.calendrum.ktor/iCalendar|iCalendar@io.ktor.serialization.Configuration(){}[0]
+final fun (io.ktor.serialization/Configuration).io.github.calendrum.ktor/iCalendar(io.github.calendrum.ktor/ICalContentConverter, io.ktor.http/ContentType = ...) // io.github.calendrum.ktor/iCalendar|iCalendar@io.ktor.serialization.Configuration(io.github.calendrum.ktor.ICalContentConverter;io.ktor.http.ContentType){}[0]
+final fun (io.ktor.server.routing/Route).io.github.calendrum.ktor/icsFeed(kotlin/String, io.github.calendrum.ktor/IcsFeedOptions, kotlin.coroutines/SuspendFunction1<io.ktor.server.application/ApplicationCall, io.github.calendrum.model/VCalendar>): io.ktor.server.routing/Route // io.github.calendrum.ktor/icsFeed|icsFeed@io.ktor.server.routing.Route(kotlin.String;io.github.calendrum.ktor.IcsFeedOptions;kotlin.coroutines.SuspendFunction1<io.ktor.server.application.ApplicationCall,io.github.calendrum.model.VCalendar>){}[0]
+final fun (io.ktor.server.routing/Route).io.github.calendrum.ktor/icsFeed(kotlin/String, kotlin.coroutines/SuspendFunction1<io.ktor.server.application/ApplicationCall, io.github.calendrum.model/VCalendar>): io.ktor.server.routing/Route // io.github.calendrum.ktor/icsFeed|icsFeed@io.ktor.server.routing.Route(kotlin.String;kotlin.coroutines.SuspendFunction1<io.ktor.server.application.ApplicationCall,io.github.calendrum.model.VCalendar>){}[0]

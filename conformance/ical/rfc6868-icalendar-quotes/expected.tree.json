@@ -1,0 +1,23 @@
+{
+  "charset": "UTF-8",
+  "components": [
+    {
+      "name": "X",
+      "properties": [
+        {
+          "name": "ATTENDEE",
+          "parameters": [
+            {
+              "name": "CN",
+              "values": [
+                "George Herman \"Babe\" Ruth"
+              ]
+            }
+          ],
+          "value": "mailto:babe@example.com"
+        }
+      ],
+      "components": []
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "id": "freebusy-bad-moment",
+  "operation": "freebusy",
+  "description": "A moment must be in ISO 8601.",
+  "source": "synthetic",
+  "license": "CC0-1.0"
+}

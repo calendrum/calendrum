@@ -1,0 +1,11 @@
+{
+  "ops_version": 1,
+  "ok": true,
+  "result": {
+    "ics": "BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//Qaejnol//Dlzar//LT\r\nBEGIN:VEVENT\r\nUID:6c12a75a87a7d7de@example.invalid\r\nDTSTAMP:20260101T000000Z\r\nDTSTART;TZID=Europe/Berlin:20260105T100000\r\nDURATION:PT1H\r\nRRULE:FREQ=WEEKLY;COUNT=2\r\nSUMMARY:Hepptj whsy itar Icfen\r\nORGANIZER;CN=Etft:mailto:u-d95fd6afd72c7479@example.invalid\r\nEND:VEVENT\r\nEND:VCALENDAR\r\n",
+    "shift_weeks": 0,
+    "problems": [],
+    "problem_count": 0
+  },
+  "truncated": false
+}

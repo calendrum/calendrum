@@ -1,0 +1,73 @@
+BEGIN:VCALENDAR
+PRODID:-//Google Inc//Google Calendar 70.9054//EN
+VERSION:2.0
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Расписание Соколовой Анны Игоревны
+X-WR-TIMEZONE:Europe/Moscow
+X-WR-CALDESC:Пары и консультации\, кафедра прикладной математики
+BEGIN:VTIMEZONE
+TZID:Europe/Moscow
+X-LIC-LOCATION:Europe/Moscow
+BEGIN:STANDARD
+TZOFFSETFROM:+0300
+TZOFFSETTO:+0300
+TZNAME:MSK
+DTSTART:19700101T000000
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+DTSTART;TZID=Europe/Moscow:20260907T093000
+DTEND;TZID=Europe/Moscow:20260907T110500
+RRULE:FREQ=WEEKLY;BYDAY=MO;UNTIL=20261221T205959Z
+EXDATE;TZID=Europe/Moscow:20261102T093000,20261109T093000
+DTSTAMP:20260901T120000Z
+UID:7kq3p0v1s2d9f8g6h5j4l3m2n1@google.com
+ORGANIZER;CN=Соколова Анна Игоревна:mailto:a.sokolova@mipt-example.ru
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED;CN=Петров Дмитрий Сер
+ геевич;X-NUM-GUESTS=0:mailto:petrov.ds@mipt-example.ru
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=OPT-PARTICIPANT;PARTSTAT=NEEDS-ACTION;CN=Группа Б05-
+ 123;X-NUM-GUESTS=0:mailto:b05-123@groups.mipt-example.ru
+CREATED:20260815T101500Z
+DESCRIPTION:Лекция по линейной алгебре.\nПодключение: https://zoom.us/j/81234
+ 567890?pwd=QmFzZTY0U2VjcmV0\nИдентификатор: 812 3456 7890\, код доступа: 4
+ 42817\nВопросы — в чат группы или на a.sokolova@mipt-example.ru
+LAST-MODIFIED:20260901T115959Z
+LOCATION:Главный корпус\, ауд. 202\, Институтский пер.\, 9
+SEQUENCE:2
+STATUS:CONFIRMED
+SUMMARY:Линейная алгебра (лекция)
+TRANSP:OPAQUE
+CATEGORIES:Учёба,Лекции
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Напоминание: Линейная алгебра
+TRIGGER:-P0DT0H15M0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Europe/Moscow:20260914T111500
+DTEND;TZID=Europe/Moscow:20260914T125000
+DTSTAMP:20260901T120000Z
+UID:7kq3p0v1s2d9f8g6h5j4l3m2n1@google.com
+RECURRENCE-ID;TZID=Europe/Moscow:20260914T093000
+ORGANIZER;CN=Соколова Анна Игоревна:mailto:a.sokolova@mipt-example.ru
+LOCATION:Главный корпус\, ауд. 202\, Институтский пер.\, 9
+SUMMARY:Линейная алгебра (лекция)
+COMMENT:Перенос из-за учёного совета
+RELATED-TO;RELTYPE=SIBLING:7kq3p0v1s2d9f8g6h5j4l3m2n1@google.com
+SEQUENCE:3
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20261015
+DTEND;VALUE=DATE:20261016
+DTSTAMP:20260901T120000Z
+UID:birthday-4471@example.com
+SUMMARY:День рождения Кирилла Волкова 🎂
+LOCATION:Главный корпус\, ауд. 202\, Институтский пер.\, 9
+URL:https://vk.example.com/kirill.volkov.1998
+CONTACT:Кирилл Волков\, +7 (916) 123-45-67
+GEO:55.929701;37.520287
+X-GOOGLE-CONFERENCE:https://meet.google.com/abc-defg-hij
+END:VEVENT
+END:VCALENDAR

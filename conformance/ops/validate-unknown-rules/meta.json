@@ -1,0 +1,7 @@
+{
+  "id": "validate-unknown-rules",
+  "operation": "validate",
+  "description": "An unknown set of rules is refused.",
+  "source": "synthetic",
+  "license": "CC0-1.0"
+}

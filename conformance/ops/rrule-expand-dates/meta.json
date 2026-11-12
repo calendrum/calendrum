@@ -1,0 +1,7 @@
+{
+  "id": "rrule-expand-dates",
+  "operation": "rrule_expand",
+  "description": "A date gives dates. The prefix RRULE: is accepted.",
+  "source": "synthetic",
+  "license": "CC0-1.0"
+}

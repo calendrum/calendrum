@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://calendrum.invalid/ops/anonymize.result.schema.json",
+  "title": "The result of anonymize",
+  "type": "object",
+  "properties": {
+    "ics": {
+      "type": "string",
+      "x-untrusted": true,
+      "description": "What the anonymizer keeps: the names of properties and the structure."
+    },
+    "shift_weeks": {
+      "type": "integer"
+    },
+    "problems": {
+      "$ref": "common.schema.json#/$defs/problems"
+    },
+    "problem_count": {
+      "type": "integer",
+      "description": "The problems found, also the ones beyond the list. Past 1000 the parser stops reporting them, and the result is truncated."
+    }
+  },
+  "required": [
+    "ics",
+    "shift_weeks",
+    "problems",
+    "problem_count"
+  ],
+  "additionalProperties": false
+}

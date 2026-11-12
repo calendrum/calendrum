@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://calendrum.invalid/ops/fix.result.schema.json",
+  "title": "The result of fix",
+  "type": "object",
+  "properties": {
+    "changes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "fixup": {
+            "type": "string",
+            "description": "The name of the repair as a request spells it, such as windows_tzids, or lint."
+          },
+          "code": {
+            "type": "string"
+          },
+          "path": {
+            "type": "string",
+            "x-untrusted": true
+          }
+        },
+        "required": [
+          "fixup",
+          "path"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "changed": {
+      "type": "boolean"
+    },
+    "ics": {
+      "type": "string",
+      "x-untrusted": true
+    },
+    "problems": {
+      "$ref": "common.schema.json#/$defs/problems"
+    },
+    "problem_count": {
+      "type": "integer",
+      "description": "The problems found, also the ones beyond the list. Past 1000 the parser stops reporting them, and the result is truncated."
+    }
+  },
+  "required": [
+    "changes",
+    "changed",
+    "ics",
+    "problems",
+    "problem_count"
+  ],
+  "additionalProperties": false
+}

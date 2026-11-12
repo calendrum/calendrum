@@ -1,0 +1,20 @@
+{
+  "summary": "Plan; review, part 2\nsecond line",
+  "description": "Notes",
+  "location": "Room 1",
+  "start": "2026-01-05T10:00:00Z",
+  "end": "2026-01-05T11:00:00Z",
+  "organizer": "boss@example.com",
+  "uid": "fixed@example.com",
+  "dtstamp": "2026-01-01T00:00:00Z",
+  "attendees": [
+    {
+      "address": "alice@example.com",
+      "name": "Alice, A.",
+      "rsvp": true
+    },
+    {
+      "address": "mailto:bob@example.com"
+    }
+  ]
+}

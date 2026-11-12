@@ -1,0 +1,7 @@
+{
+  "id": "convert-not-an-array",
+  "operation": "convert",
+  "description": "jCal is an array.",
+  "source": "synthetic",
+  "license": "CC0-1.0"
+}

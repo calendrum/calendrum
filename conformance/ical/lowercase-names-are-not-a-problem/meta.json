@@ -1,0 +1,14 @@
+{
+  "id": "lowercase-names-are-not-a-problem",
+  "description": "Component, property and parameter names in lower case are valid; the original casing is not preserved.",
+  "tags": [
+    "names",
+    "case-insensitivity",
+    "fingerprints"
+  ],
+  "rfc": [
+    "RFC 5545 §2"
+  ],
+  "source": "synthetic",
+  "license": "CC0-1.0"
+}

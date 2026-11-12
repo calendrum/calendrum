@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Calendrum conformance expected problems (diagnostics.json)",
+  "description": "Problems in the order they are reported. Messages are not compared.",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "code",
+      "severity",
+      "line",
+      "column",
+      "offset"
+    ],
+    "properties": {
+      "code": {
+        "type": "string",
+        "pattern": "^ICAL-[A-Z][0-9]{3}$"
+      },
+      "severity": {
+        "enum": [
+          "info",
+          "warning",
+          "error"
+        ]
+      },
+      "line": {
+        "description": "Physical line, from 1.",
+        "type": "integer",
+        "minimum": 1,
+        "maximum": 2147483647
+      },
+      "column": {
+        "description": "Column in UTF-8 bytes from the start of the physical line, from 1.",
+        "type": "integer",
+        "minimum": 1,
+        "maximum": 2147483647
+      },
+      "offset": {
+        "description": "Offset in UTF-8 bytes from the start of the input, from 0; for transcoded input, in the decoded text.",
+        "type": "integer",
+        "minimum": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://calendrum.invalid/ops/freebusy.request.schema.json",
+  "title": "The request of freebusy",
+  "type": "object",
+  "properties": {
+    "ics": {
+      "type": "string",
+      "description": "The calendar as text."
+    },
+    "ics_base64": {
+      "type": "string",
+      "description": "The calendar as bytes in base64, in any encoding the library detects."
+    },
+    "from": {
+      "type": "string",
+      "description": "The start of the window, a moment in ISO 8601."
+    },
+    "to": {
+      "type": "string",
+      "description": "The end of the window, excluded."
+    },
+    "zone": {
+      "type": "string",
+      "description": "An IANA zone or an alias. It adds local times to the response and is the zone of floating times; without it floating times are read in UTC."
+    },
+    "conflicts": {
+      "type": "boolean",
+      "description": "Whether to look for conflicts; true by default. Above 2000 occurrences they are not computed, and the response is truncated."
+    },
+    "limit": {
+      "$ref": "common.schema.json#/$defs/limit"
+    }
+  },
+  "required": [
+    "from",
+    "to"
+  ]
+}

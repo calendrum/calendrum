@@ -1,0 +1,10 @@
+{
+  "id": "tz-resolve-default-moment",
+  "operation": "tz_resolve",
+  "description": "The moment defaults to the clock of the environment.",
+  "source": "synthetic",
+  "license": "CC0-1.0",
+  "ignore_fields": [
+    "tzdb_version"
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "id": "expand-weekly-in-zone",
+  "operation": "expand",
+  "description": "A weekly series, with local times in the zone of the request.",
+  "source": "synthetic",
+  "license": "CC0-1.0"
+}

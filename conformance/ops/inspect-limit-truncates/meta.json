@@ -1,0 +1,7 @@
+{
+  "id": "inspect-limit-truncates",
+  "operation": "inspect",
+  "description": "The limit cuts the list of events and the response says so.",
+  "source": "synthetic",
+  "license": "CC0-1.0"
+}

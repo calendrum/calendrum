@@ -1,0 +1,63 @@
+name: Size
+
+on:
+  workflow_dispatch:
+  workflow_call:
+  # Automatic runs stay off until a maintainer enables them. To enable, uncomment:
+  # pull_request:
+  #   paths-ignore:
+  #     - 'docs/**'
+  #     - '**/*.md'
+  # # Runs on the default branch fill the caches that pull requests read.
+  # push:
+  #   branches: [main]
+  #   paths-ignore:
+  #     - 'docs/**'
+  #     - '**/*.md'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: size-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  budget:
+    name: Size budget (JVM, JS, Wasm, Android)
+    runs-on: ubuntu-24.04
+    timeout-minutes: 40
+    steps:
+      - name: Check out
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Set up the build
+        uses: ./.github/actions/setup-build
+        with:
+          targets: web
+
+      - name: Size budget
+        run: size-budget/run.sh --platforms jvm,js,wasmJs,android
+
+      - name: Upload the size report
+        if: always()
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: size-report
+          path: size-budget/build/size-report.*
+          retention-days: 7
+          if-no-files-found: ignore
+          overwrite: true
+
+      - name: Upload reports
+        if: failure()
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: size-reports
+          path: |
+            **/build/reports/
+          retention-days: 7
+          if-no-files-found: ignore
+          overwrite: true

@@ -1,0 +1,14 @@
+{
+  "id": "rfc5545-mime-meeting-example",
+  "description": "RFC 5545 example: an interoperability planning meeting (the iCalendar object part of a MIME message).",
+  "tags": [
+    "rfc5545-example",
+    "folding",
+    "parameters"
+  ],
+  "rfc": [
+    "RFC 5545 §4"
+  ],
+  "source": "rfc",
+  "license": "IETF-Trust-BSD"
+}

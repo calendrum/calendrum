@@ -1,0 +1,86 @@
+{
+  "ops_version": 1,
+  "ok": true,
+  "result": {
+    "charset": "UTF-8",
+    "calendars": [
+      {
+        "prod_id": "-//Example//Cases//EN",
+        "version": "2.0",
+        "names": [],
+        "event_count": 1,
+        "todo_count": 0,
+        "journal_count": 0,
+        "free_busy_count": 0,
+        "time_zones": [],
+        "events": [
+          {
+            "uid": "a@example.com",
+            "summary": "Standup",
+            "start": "2026-01-05T10:00:00Z"
+          }
+        ]
+      }
+    ],
+    "problems": [],
+    "problem_count": 0,
+    "jcal": [
+      [
+        "vcalendar",
+        [
+          [
+            "version",
+            {},
+            "text",
+            "2.0"
+          ],
+          [
+            "prodid",
+            {},
+            "text",
+            "-//Example//Cases//EN"
+          ]
+        ],
+        [
+          [
+            "vevent",
+            [
+              [
+                "uid",
+                {},
+                "text",
+                "a@example.com"
+              ],
+              [
+                "dtstamp",
+                {},
+                "date-time",
+                "2026-01-01T00:00:00Z"
+              ],
+              [
+                "dtstart",
+                {},
+                "date-time",
+                "2026-01-05T10:00:00Z"
+              ],
+              [
+                "duration",
+                {},
+                "duration",
+                "PT1H"
+              ],
+              [
+                "summary",
+                {},
+                "text",
+                "Standup"
+              ]
+            ],
+            []
+          ]
+        ]
+      ]
+    ]
+  },
+  "truncated": false
+}

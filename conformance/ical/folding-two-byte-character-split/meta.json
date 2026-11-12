@@ -1,0 +1,11 @@
+{
+  "id": "folding-two-byte-character-split",
+  "description": "A fold breaks in the middle of a two-byte UTF-8 sequence; unfolding restores the character.",
+  "tags": [
+    "folding",
+    "utf8"
+  ],
+  "rfc": [],
+  "source": "synthetic",
+  "license": "CC0-1.0"
+}

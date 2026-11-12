@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://calendrum.invalid/ops/convert.request.schema.json",
+  "title": "The request of convert",
+  "type": "object",
+  "properties": {
+    "ics": {
+      "type": "string",
+      "description": "The calendar as text."
+    },
+    "ics_base64": {
+      "type": "string",
+      "description": "The calendar as bytes in base64, in any encoding the library detects."
+    },
+    "jcal": {
+      "type": "array",
+      "description": "A jCal array (RFC 7265). Give it, or a calendar in ICS."
+    }
+  }
+}

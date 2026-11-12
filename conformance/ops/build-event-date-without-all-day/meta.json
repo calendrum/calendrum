@@ -1,0 +1,7 @@
+{
+  "id": "build-event-date-without-all-day",
+  "operation": "build_event",
+  "description": "A date needs all_day.",
+  "source": "synthetic",
+  "license": "CC0-1.0"
+}

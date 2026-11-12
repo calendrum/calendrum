@@ -1,0 +1,5 @@
+public final class io/github/calendrum/ical4j/Ical4jInterop {
+	public static final fun toCalendrum (Lnet/fortuna/ical4j/model/Calendar;)Lio/github/calendrum/model/VCalendar;
+	public static final fun toIcal4j (Lio/github/calendrum/model/VCalendar;)Lnet/fortuna/ical4j/model/Calendar;
+}
+

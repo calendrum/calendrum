@@ -1,0 +1,19 @@
+<Project>
+  <PropertyGroup>
+    <LangVersion>12</LangVersion>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <AnalysisLevel>latest-recommended</AnalysisLevel>
+    <EnforceCodeStyleInBuild>false</EnforceCodeStyleInBuild>
+    <!-- Everything a build writes stays in build/, which is ignored and which a clean of the module removes. -->
+    <UseArtifactsOutput>true</UseArtifactsOutput>
+    <ArtifactsPath>$(MSBuildThisFileDirectory)build/artifacts</ArtifactsPath>
+    <!-- The same bytes on every machine, without the paths of this one. -->
+    <Deterministic>true</Deterministic>
+    <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
+    <PathMap>$(MSBuildThisFileDirectory)=/_/</PathMap>
+    <SatelliteResourceLanguages>en</SatelliteResourceLanguages>
+    <NuGetAudit>false</NuGetAudit>
+  </PropertyGroup>
+</Project>

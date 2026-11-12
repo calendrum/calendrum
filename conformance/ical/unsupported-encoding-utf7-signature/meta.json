@@ -1,0 +1,11 @@
+{
+  "id": "unsupported-encoding-utf7-signature",
+  "description": "The input starts with a UTF-7 signature, an encoding this library never reads.",
+  "tags": [
+    "encoding-signature",
+    "robustness"
+  ],
+  "rfc": [],
+  "source": "synthetic",
+  "license": "CC0-1.0"
+}

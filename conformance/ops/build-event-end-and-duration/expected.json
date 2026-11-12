@@ -1,0 +1,8 @@
+{
+  "ops_version": 1,
+  "ok": false,
+  "error": {
+    "code": "OPS-BAD-ARGUMENT",
+    "message": "Give only one of end and duration"
+  }
+}

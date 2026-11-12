@@ -1,0 +1,9 @@
+{
+  "summary": "Weekly sync",
+  "start": "2026-10-05T10:00:00",
+  "duration": "PT1H",
+  "zone": "Europe/Berlin",
+  "rrule": "FREQ=WEEKLY;BYDAY=MO;COUNT=3",
+  "uid": "fixed@example.com",
+  "dtstamp": "2026-01-01T00:00:00Z"
+}

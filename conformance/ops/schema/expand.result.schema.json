@@ -1,0 +1,83 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://calendrum.invalid/ops/expand.result.schema.json",
+  "title": "The result of expand",
+  "type": "object",
+  "properties": {
+    "occurrences": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "calendar_index": {
+            "type": "integer"
+          },
+          "component": {
+            "type": "string",
+            "x-untrusted": true
+          },
+          "uid": {
+            "type": "string",
+            "x-untrusted": true
+          },
+          "summary": {
+            "type": "string",
+            "x-untrusted": true
+          },
+          "start": {
+            "$ref": "common.schema.json#/$defs/moment"
+          },
+          "end": {
+            "$ref": "common.schema.json#/$defs/moment"
+          },
+          "all_day": {
+            "type": "boolean"
+          },
+          "local_start": {
+            "type": "string",
+            "description": "The start in the zone of the request."
+          },
+          "local_end": {
+            "type": "string"
+          },
+          "recurrence_id": {
+            "type": "string",
+            "x-untrusted": true
+          },
+          "recurrence_id_zone": {
+            "type": "string",
+            "x-untrusted": true
+          },
+          "cancelled": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "calendar_index",
+          "component",
+          "start",
+          "end",
+          "all_day"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "count": {
+      "type": "integer"
+    },
+    "problems": {
+      "$ref": "common.schema.json#/$defs/problems"
+    },
+    "problem_count": {
+      "type": "integer",
+      "description": "The problems found, also the ones beyond the list. Past 1000 the parser stops reporting them, and the result is truncated."
+    }
+  },
+  "required": [
+    "occurrences",
+    "count",
+    "problems",
+    "problem_count"
+  ],
+  "additionalProperties": false
+}

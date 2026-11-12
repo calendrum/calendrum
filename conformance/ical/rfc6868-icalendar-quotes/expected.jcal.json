@@ -1,0 +1,16 @@
+[
+  [
+    "x",
+    [
+      [
+        "attendee",
+        {
+          "cn": "George Herman \"Babe\" Ruth"
+        },
+        "cal-address",
+        "mailto:babe@example.com"
+      ]
+    ],
+    []
+  ]
+]

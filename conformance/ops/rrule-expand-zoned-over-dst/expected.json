@@ -1,0 +1,32 @@
+{
+  "ops_version": 1,
+  "ok": true,
+  "result": {
+    "dates": [
+      {
+        "date": "2026-02-01T10:00:00",
+        "date_zone": "Europe/Berlin",
+        "utc": "2026-02-01T09:00:00Z"
+      },
+      {
+        "date": "2026-03-01T10:00:00",
+        "date_zone": "Europe/Berlin",
+        "utc": "2026-03-01T09:00:00Z"
+      },
+      {
+        "date": "2026-04-01T10:00:00",
+        "date_zone": "Europe/Berlin",
+        "utc": "2026-04-01T08:00:00Z"
+      },
+      {
+        "date": "2026-05-01T10:00:00",
+        "date_zone": "Europe/Berlin",
+        "utc": "2026-05-01T08:00:00Z"
+      }
+    ],
+    "count": 4,
+    "problems": [],
+    "problem_count": 0
+  },
+  "truncated": false
+}

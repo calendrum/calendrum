@@ -1,0 +1,7 @@
+{
+  "id": "anonymize-shift",
+  "operation": "anonymize",
+  "description": "Dates move by whole weeks. A PRODID that names no known calendar program is text, and is replaced.",
+  "source": "synthetic",
+  "license": "CC0-1.0"
+}

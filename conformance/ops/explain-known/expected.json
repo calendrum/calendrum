@@ -1,0 +1,11 @@
+{
+  "ops_version": 1,
+  "ok": true,
+  "result": {
+    "code": "ICAL-S003",
+    "severity": "warning",
+    "constant": "BareLf",
+    "meaning": "A bare LF is used as a line ending. It is accepted as one. Reported once per input; the rest are only counted."
+  },
+  "truncated": false
+}

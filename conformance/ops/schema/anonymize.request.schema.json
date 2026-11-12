@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://calendrum.invalid/ops/anonymize.request.schema.json",
+  "title": "The request of anonymize",
+  "type": "object",
+  "properties": {
+    "ics": {
+      "type": "string",
+      "description": "The calendar as text."
+    },
+    "ics_base64": {
+      "type": "string",
+      "description": "The calendar as bytes in base64, in any encoding the library detects."
+    },
+    "shift_weeks": {
+      "type": "integer",
+      "description": "Moves every date by whole weeks, so the days of the week stay; 0 by default."
+    }
+  }
+}

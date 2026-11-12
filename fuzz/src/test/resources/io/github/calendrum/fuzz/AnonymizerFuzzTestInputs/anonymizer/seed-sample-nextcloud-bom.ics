@@ -1,0 +1,38 @@
+﻿BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Sabre//Sabre VObject 4.5.4//EN
+CALSCALE:GREGORIAN
+BEGIN:VTODO
+UID:f3a9c1d2-7b6e-4a5f-8c3d-2e1f0a9b8c7d
+CREATED:20260901T070000Z
+LAST-MODIFIED:20260915T191500Z
+DTSTAMP:20260915T191500Z
+SUMMARY:Подготовить отчёт для ООО «Вектор-Плюс»
+DESCRIPTION:Сверить акты с бухгалтерией (Никитина Г. П.\, доб. 2317).\nДоступ к папке: \\\\fileserver\\projects\\vector\\2026
+PERCENT-COMPLETE:40
+PRIORITY:3
+STATUS:IN-PROCESS
+DUE;TZID=Europe/Moscow:20261001T180000
+CONTACT:mailto:g.nikitina@vector-plus.example
+RESOURCES:Проектор,Переговорная 3
+CLASS:CONFIDENTIAL
+COMMENT:Пароль от архива передан лично
+END:VTODO
+BEGIN:VJOURNAL
+UID:9d8c7b6a-5f4e-4d3c-2b1a-0f9e8d7c6b5a
+DTSTAMP:20260916T080000Z
+DTSTART;VALUE=DATE:20260916
+SUMMARY:Заметки с планёрки
+DESCRIPTION:1) Шестаков уходит в отпуск с 20.09\n2) Новый пропуск на 5 этаж — у Зарины
+END:VJOURNAL
+BEGIN:VEVENT
+UID:c4b3a291-8f7e-4d6c-9b5a-1e2d3c4b5a69
+DTSTAMP:20260915T191500Z
+DTSTART;TZID=Europe/Moscow:20260918T150000
+DURATION:PT1H30M
+SUMMARY:Созвон с подрядчиком
+ATTENDEE;CN=Ринат Галиев;PARTSTAT=TENTATIVE;EMAIL=r.galiev@build-example.ru:urn:uuid:5a1c2d3e-4f50-6172-8394-a5b6c7d8e9f0
+CONFERENCE;VALUE=URI;FEATURE=AUDIO,VIDEO;LABEL=Комната Яндекс Телемоста:https://telemost.yandex.example/j/12345678901234
+REQUEST-STATUS:2.0;Успешно
+END:VEVENT
+END:VCALENDAR

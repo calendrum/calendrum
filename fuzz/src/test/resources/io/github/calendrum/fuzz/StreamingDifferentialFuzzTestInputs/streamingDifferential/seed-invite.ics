@@ -1,0 +1,66 @@
+BEGIN:VCALENDAR
+PRODID:-//ics-mp//Benchmark Corpus Generator//EN
+VERSION:2.0
+METHOD:REQUEST
+CALSCALE:GREGORIAN
+BEGIN:VTIMEZONE
+TZID:Europe/Moscow
+BEGIN:STANDARD
+TZOFFSETFROM:+0300
+TZOFFSETTO:+0300
+TZNAME:MSK
+DTSTART:19700101T000000
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:invite-0@example.com
+DTSTAMP:20260825T090000Z
+SEQUENCE:0
+CLASS:PUBLIC
+STATUS:CONFIRMED
+CREATED:20260825T090000Z
+LAST-MODIFIED:20260831T153000Z
+ORGANIZER;CN=Victor Ingram:mailto:victor.ingram0@example.org
+ATTENDEE;CN=Frank Baker;ROLE=CHAIR;PARTSTAT=TENTATIVE;RSVP=TRUE;CUTYPE=INDI
+ VIDUAL:mailto:frank.baker0@example.com
+ATTENDEE;CN=Frank Garcia;ROLE=CHAIR;PARTSTAT=ACCEPTED;RSVP=FALSE;CUTYPE=IND
+ IVIDUAL:mailto:frank.garcia1@example.net
+ATTENDEE;CN=Иван Соколова;ROLE=OPT-PARTICIPANT;PARTSTAT=DECLINE
+ D;RSVP=TRUE;CUTYPE=INDIVIDUAL:mailto:ivan.sokolova2@example.com
+ATTENDEE;CN=Henry Johnson;ROLE=NON-PARTICIPANT;PARTSTAT=TENTATIVE;RSVP=TRUE
+ ;CUTYPE=INDIVIDUAL:mailto:henry.johnson3@example.com
+ATTENDEE;CN=Егор Фролова;ROLE=CHAIR;PARTSTAT=TENTATIVE;RSVP=TRUE
+ ;CUTYPE=INDIVIDUAL:mailto:egor.frolova4@example.com
+ATTENDEE;CN=Тимофей Орлова;ROLE=OPT-PARTICIPANT;PARTSTAT=TENTA
+ TIVE;RSVP=TRUE;CUTYPE=INDIVIDUAL:mailto:timofej.orlova5@example.org
+SUMMARY:Onboarding
+LOCATION:Актовый зал
+DESCRIPTION:Note: rooms are subject to change\; check the board on arrival.
+  Bring your laptop and the latest report — numbers may change. Please re
+ view the attached agenda before joining. Note: rooms are subject to change
+ \; check the board on arrival. Note: rooms are subject to change\; check t
+ he board on arrival. Note: rooms are subject to change\; check the board o
+ n arrival. Note: rooms are subject to change\; check the board on arrival.
+  場所は変更の可能性があります。確認をお願いします
+ 。 Обсудим статус задач и риски на следую
+ щий спринт 🚀. Не забудьте распечатать м
+ атериалы — они понадобятся на месте 📄. L
+ équipe présentera les résultats du trimestre\; café offert ☕. Please
+  review the attached agenda before joining. Обсудим статус з
+ адач и риски на следующий спринт 🚀. Agenda: 
+ intros\; status\; open questions\; next steps\; wrap-up 📝. Agenda: intr
+ os\; status\; open questions\; next steps\; wrap-up 📝. Please review th
+ e attached agenda before joining.
+CATEGORIES:WORK
+DTSTART;TZID=Europe/Moscow:20260901T100000
+DTEND;TZID=Europe/Moscow:20260901T110000
+X-MICROSOFT-CDO-BUSYSTATUS:BUSY
+X-MICROSOFT-CDO-IMPORTANCE:1
+X-MICROSOFT-DISALLOW-COUNTER:FALSE
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Reminder
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+END:VCALENDAR

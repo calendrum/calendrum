@@ -1,0 +1,5 @@
+BEGIN:VEVENT
+DESCRIPTION:abc	end
+ATTENDEE;CN="xy";NOVALUE:mailto:a@example.com
+X_BAD:1
+END:VEVENT

@@ -1,0 +1,24 @@
+{
+  "charset": "UTF-8",
+  "components": [
+    {
+      "name": "X",
+      "properties": [
+        {
+          "name": "X-CUSTOM-PROP",
+          "parameters": [
+            {
+              "name": "X-PARAM",
+              "values": [
+                "1",
+                "2"
+              ]
+            }
+          ],
+          "value": "raw"
+        }
+      ],
+      "components": []
+    }
+  ]
+}

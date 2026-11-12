@@ -1,0 +1,36 @@
+{
+  "ops_version": 1,
+  "ok": true,
+  "result": {
+    "charset": "UTF-8",
+    "calendars": [
+      {
+        "prod_id": "-//Example//Cases//EN",
+        "version": "2.0",
+        "names": [],
+        "event_count": 3,
+        "todo_count": 0,
+        "journal_count": 0,
+        "free_busy_count": 0,
+        "time_zones": [],
+        "events": [
+          {
+            "uid": "a@example.com",
+            "summary": "First",
+            "start": "2026-01-05T10:00:00Z",
+            "end": "2026-01-05T11:00:00Z"
+          },
+          {
+            "uid": "b@example.com",
+            "summary": "Second",
+            "start": "2026-01-05T10:30:00Z",
+            "end": "2026-01-05T11:30:00Z"
+          }
+        ]
+      }
+    ],
+    "problems": [],
+    "problem_count": 0
+  },
+  "truncated": true
+}

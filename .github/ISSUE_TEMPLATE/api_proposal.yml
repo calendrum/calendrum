@@ -1,0 +1,66 @@
+name: API proposal
+description: "A new or changed public API. Discussed before any code is written."
+title: "API proposal: "
+labels: ["type:api"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Any public API change starts with an issue like this; code is written after discussion
+        (see CONTRIBUTING.md, "API proposal first"). The API rules are in the checklist below.
+
+        If you add an `.ics` example, remove personal data from it: use made-up names, addresses and meeting text.
+  - type: textarea
+    id: motivation
+    attributes:
+      label: Motivation
+      description: "What task the API solves and who needs it. Links to issues, requests, the standard."
+    validations:
+      required: true
+  - type: textarea
+    id: kotlin-sketch
+    attributes:
+      label: Kotlin sketch
+      description: "Signatures of the public declarations with KDoc and a short call example."
+      render: kotlin
+    validations:
+      required: true
+  - type: textarea
+    id: java
+    attributes:
+      label: What it looks like from Java
+      description: "The same example in Java. Where `@JvmStatic`, `@JvmOverloads`, `@JvmName`, or a builder instead of a DSL are needed."
+      render: java
+    validations:
+      required: true
+  - type: textarea
+    id: swift
+    attributes:
+      label: What it looks like from Swift
+      description: "The same example in Swift via the Objective-C export. What throws (`@Throws`), where overloads replace default parameters."
+      render: swift
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives
+      description: "What options were considered and why they were rejected. \"Change nothing\" is also an option."
+    validations:
+      required: true
+  - type: textarea
+    id: compatibility
+    attributes:
+      label: Compatibility
+      description: "What changes in the ABI dump, whether source or binary compatibility breaks, whether deprecation or opt-in (`@ExperimentalICalApi`) is needed."
+  - type: checkboxes
+    id: api-rules
+    attributes:
+      label: API rules
+      description: "The rules for the public API, the ABI and the Java and Swift interop."
+      options:
+        - label: "No `data class` in the public API (binary compatibility)."
+        - label: "New options go into settings objects and builders, not new default parameters."
+        - label: "Everything that can throw is marked `@Throws`."
+        - label: "No experimental stdlib APIs or `kotlin.Result` in signatures."
+        - label: "Everything is usable from Java without `inline` and `reified`."

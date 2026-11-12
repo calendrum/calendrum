@@ -1,0 +1,6 @@
+BEGIN:A
+BEGIN:B
+X:1
+END:B
+Y:2
+END:A

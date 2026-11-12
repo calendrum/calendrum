@@ -1,0 +1,23 @@
+{
+  "charset": "UTF-8",
+  "components": [
+    {
+      "name": "X",
+      "properties": [
+        {
+          "name": "GEO",
+          "parameters": [
+            {
+              "name": "X-ADDRESS",
+              "values": [
+                "Pittsburgh Pirates\n115 Federal St\nPittsburgh, PA 15212"
+              ]
+            }
+          ],
+          "value": "geo:40.446816,-80.00566"
+        }
+      ],
+      "components": []
+    }
+  ]
+}

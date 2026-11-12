@@ -1,0 +1,13 @@
+{
+  "id": "quoted-parameter-value-with-comma",
+  "description": "A parameter value containing a comma is quoted, as RFC 5545 requires.",
+  "tags": [
+    "parameters",
+    "values"
+  ],
+  "rfc": [
+    "RFC 5545 §3.2"
+  ],
+  "source": "synthetic",
+  "license": "CC0-1.0"
+}

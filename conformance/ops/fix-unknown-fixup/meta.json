@@ -1,0 +1,7 @@
+{
+  "id": "fix-unknown-fixup",
+  "operation": "fix",
+  "description": "An unknown fixup is refused.",
+  "source": "synthetic",
+  "license": "CC0-1.0"
+}

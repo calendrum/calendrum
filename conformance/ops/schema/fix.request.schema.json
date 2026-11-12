@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://calendrum.invalid/ops/fix.request.schema.json",
+  "title": "The request of fix",
+  "type": "object",
+  "properties": {
+    "ics": {
+      "type": "string",
+      "description": "The calendar as text."
+    },
+    "ics_base64": {
+      "type": "string",
+      "description": "The calendar as bytes in base64, in any encoding the library detects."
+    },
+    "fixups": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "by_prod_id",
+          "windows_tzids",
+          "x_wr_timezone",
+          "x_wr_calname",
+          "outlook",
+          "lotus_notes",
+          "google",
+          "vcalendar10",
+          "lint"
+        ]
+      },
+      "description": "The repairs, in order. By default by_prod_id, then lint."
+    }
+  }
+}

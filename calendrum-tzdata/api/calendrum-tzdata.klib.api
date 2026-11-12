@@ -1,0 +1,33 @@
+// Klib ABI Dump
+// Targets: [androidNativeArm32, androidNativeArm64, androidNativeX64, androidNativeX86, iosArm64, iosSimulatorArm64, iosX64, js, linuxArm64, linuxX64, macosArm64, macosX64, mingwX64, tvosArm64, tvosSimulatorArm64, tvosX64, wasmJs, wasmWasi, watchosArm64, watchosDeviceArm64, watchosSimulatorArm64]
+// Rendering settings:
+// - Signature version: 2
+// - Show manifest properties: true
+// - Show declarations: true
+
+// Library unique name: <io.github.calendrum:calendrum-tzdata>
+final enum class io.github.calendrum.tzdata/VTimeZoneMode : kotlin/Enum<io.github.calendrum.tzdata/VTimeZoneMode> { // io.github.calendrum.tzdata/VTimeZoneMode|null[0]
+    enum entry Full // io.github.calendrum.tzdata/VTimeZoneMode.Full|null[0]
+    enum entry OutlookCompatible // io.github.calendrum.tzdata/VTimeZoneMode.OutlookCompatible|null[0]
+
+    final val entries // io.github.calendrum.tzdata/VTimeZoneMode.entries|#static{}entries[0]
+        final fun <get-entries>(): kotlin.enums/EnumEntries<io.github.calendrum.tzdata/VTimeZoneMode> // io.github.calendrum.tzdata/VTimeZoneMode.entries.<get-entries>|<get-entries>#static(){}[0]
+
+    final fun valueOf(kotlin/String): io.github.calendrum.tzdata/VTimeZoneMode // io.github.calendrum.tzdata/VTimeZoneMode.valueOf|valueOf#static(kotlin.String){}[0]
+    final fun values(): kotlin/Array<io.github.calendrum.tzdata/VTimeZoneMode> // io.github.calendrum.tzdata/VTimeZoneMode.values|values#static(){}[0]
+}
+
+final object io.github.calendrum.tzdata/TzData : io.github.calendrum.syntax/VTimeZoneSource { // io.github.calendrum.tzdata/TzData|null[0]
+    final val resolver // io.github.calendrum.tzdata/TzData.resolver|{}resolver[0]
+        final fun <get-resolver>(): io.github.calendrum.tz/TimeZoneResolver // io.github.calendrum.tzdata/TzData.resolver.<get-resolver>|<get-resolver>(){}[0]
+    final val version // io.github.calendrum.tzdata/TzData.version|{}version[0]
+        final fun <get-version>(): kotlin/String // io.github.calendrum.tzdata/TzData.version.<get-version>|<get-version>(){}[0]
+    final val zoneIds // io.github.calendrum.tzdata/TzData.zoneIds|{}zoneIds[0]
+        final fun <get-zoneIds>(): kotlin.collections/Set<kotlin/String> // io.github.calendrum.tzdata/TzData.zoneIds.<get-zoneIds>|<get-zoneIds>(){}[0]
+
+    final fun toString(): kotlin/String // io.github.calendrum.tzdata/TzData.toString|toString(){}[0]
+    final fun vtimezone(kotlin/String): io.github.calendrum.syntax/ICalComponent? // io.github.calendrum.tzdata/TzData.vtimezone|vtimezone(kotlin.String){}[0]
+    final fun vtimezone(kotlin/String, io.github.calendrum.tzdata/VTimeZoneMode, kotlin.time/Instant? = ...): io.github.calendrum.model/VTimeZone? // io.github.calendrum.tzdata/TzData.vtimezone|vtimezone(kotlin.String;io.github.calendrum.tzdata.VTimeZoneMode;kotlin.time.Instant?){}[0]
+    final fun vtimezone(kotlin/String, io.github.calendrum.tzdata/VTimeZoneMode, kotlin.time/Instant?, io.github.calendrum/ProblemListener?): io.github.calendrum.model/VTimeZone? // io.github.calendrum.tzdata/TzData.vtimezone|vtimezone(kotlin.String;io.github.calendrum.tzdata.VTimeZoneMode;kotlin.time.Instant?;io.github.calendrum.ProblemListener?){}[0]
+    final fun zone(kotlin/String): io.github.calendrum.tz/ICalTimeZone? // io.github.calendrum.tzdata/TzData.zone|zone(kotlin.String){}[0]
+}

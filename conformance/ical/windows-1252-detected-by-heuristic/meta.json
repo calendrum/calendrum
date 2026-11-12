@@ -1,0 +1,10 @@
+{
+  "id": "windows-1252-detected-by-heuristic",
+  "description": "Latin-1 text in windows-1252 with no charset hint is detected by the heuristic.",
+  "tags": [
+    "charset"
+  ],
+  "rfc": [],
+  "source": "synthetic",
+  "license": "CC0-1.0"
+}

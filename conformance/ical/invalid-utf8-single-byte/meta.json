@@ -1,0 +1,11 @@
+{
+  "id": "invalid-utf8-single-byte",
+  "description": "A single invalid UTF-8 byte among plenty of valid multi-byte sequences is replaced with U+FFFD; the input stays UTF-8.",
+  "tags": [
+    "utf8",
+    "robustness"
+  ],
+  "rfc": [],
+  "source": "synthetic",
+  "license": "CC0-1.0"
+}

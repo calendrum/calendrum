@@ -1,0 +1,7 @@
+{
+  "id": "rrule-expand-weekly-utc",
+  "operation": "rrule_expand",
+  "description": "A rule from a moment in UTC.",
+  "source": "synthetic",
+  "license": "CC0-1.0"
+}

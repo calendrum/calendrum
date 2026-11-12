@@ -1,0 +1,7 @@
+{
+  "id": "inspect-bare-lf-and-bad-line",
+  "operation": "inspect",
+  "description": "Problems of parsing are data, not errors of the operation.",
+  "source": "synthetic",
+  "license": "CC0-1.0"
+}

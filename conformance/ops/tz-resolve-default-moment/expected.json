@@ -1,0 +1,15 @@
+{
+  "ops_version": 1,
+  "ok": true,
+  "result": {
+    "id": "Asia/Tokyo",
+    "alias": false,
+    "at": "2026-01-01T00:00:00Z",
+    "offset_seconds": 32400,
+    "offset": "+09:00",
+    "tzdb_version": "2026e",
+    "problems": [],
+    "problem_count": 0
+  },
+  "truncated": false
+}

@@ -1,0 +1,10 @@
+{
+  "id": "utf16le-without-byte-order-mark",
+  "description": "UTF-16LE without a byte order mark is recognized by its zero bytes and transcoded to UTF-8.",
+  "tags": [
+    "charset"
+  ],
+  "rfc": [],
+  "source": "synthetic",
+  "license": "CC0-1.0"
+}

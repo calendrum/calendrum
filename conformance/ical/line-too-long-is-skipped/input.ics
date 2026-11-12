@@ -1,0 +1,3 @@
+BEGIN:X
+SUMMARY:this line is deliberately much longer than the configured limit
+END:X

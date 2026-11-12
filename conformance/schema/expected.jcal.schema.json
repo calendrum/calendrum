@@ -1,0 +1,99 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Calendrum conformance expected jCal (expected.jcal.json)",
+  "description": "The top-level components of input.ics in jCal form (RFC 7265), in input order.",
+  "type": "array",
+  "items": {
+    "$ref": "#/$defs/component"
+  },
+  "$defs": {
+    "component": {
+      "description": "A component: its lowercase name, its properties and its subcomponents, in input order.",
+      "type": "array",
+      "minItems": 3,
+      "prefixItems": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/property"
+          }
+        },
+        {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/component"
+          }
+        }
+      ],
+      "items": false
+    },
+    "property": {
+      "description": "A property: its lowercase name, its parameters (VALUE is never one: the type says it), its value type and one or more values.",
+      "type": "array",
+      "minItems": 4,
+      "prefixItems": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "object",
+          "additionalProperties": {
+            "oneOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "array",
+                "minItems": 2,
+                "items": {
+                  "type": "string"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "enum": [
+            "binary",
+            "boolean",
+            "cal-address",
+            "date",
+            "date-time",
+            "duration",
+            "float",
+            "integer",
+            "period",
+            "recur",
+            "text",
+            "time",
+            "uri",
+            "utc-offset",
+            "unknown"
+          ]
+        }
+      ],
+      "items": {
+        "oneOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "number"
+          },
+          {
+            "type": "boolean"
+          },
+          {
+            "type": "array"
+          },
+          {
+            "type": "object"
+          }
+        ]
+      }
+    }
+  }
+}

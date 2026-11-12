@@ -1,0 +1,7 @@
+{
+  "id": "anonymize-shift-out-of-range",
+  "operation": "anonymize",
+  "description": "The shift has a bound.",
+  "source": "synthetic",
+  "license": "CC0-1.0"
+}

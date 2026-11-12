@@ -1,0 +1,7 @@
+{
+  "id": "expand-from-after-to",
+  "operation": "expand",
+  "description": "The window must not be empty.",
+  "source": "synthetic",
+  "license": "CC0-1.0"
+}

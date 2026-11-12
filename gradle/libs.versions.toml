@@ -1,0 +1,53 @@
+[versions]
+biweekly = "0.6.8"
+dokka = "2.1.0"
+ical4j = "4.3.0"
+ical4j-interop = "4.0.0"
+jazzer = "0.30.0"
+junit = "5.9.0"
+
+# Published artifacts are built with the minimum supported Kotlin: stay on 2.3.x.
+kotlin = "2.3.21"
+kotlinx-datetime = "0.7.0"
+kotlinx-io = "0.3.1"
+kotlinx-benchmark = "0.5.0"
+kotlinx-kover = "0.9.9"
+kotlinx-serialization = "1.6.2"
+ktor = "3.0.0"
+okio = "3.7.0"
+ktlint = "1.8.0"
+spotless = "8.10.2"
+
+[libraries]
+biweekly = { module = "net.sf.biweekly:biweekly", version.ref = "biweekly" }
+ical4j = { module = "org.mnode.ical4j:ical4j", version.ref = "ical4j" }
+ical4j-interop = { module = "org.mnode.ical4j:ical4j", version.ref = "ical4j-interop" }
+jazzer-junit = { module = "com.code-intelligence:jazzer-junit", version.ref = "jazzer" }
+junit-bom = { module = "org.junit:junit-bom", version.ref = "junit" }
+junit-jupiter = { module = "org.junit.jupiter:junit-jupiter" }
+junit-platform-launcher = { module = "org.junit.platform:junit-platform-launcher" }
+
+# Gradle plugins used by the convention plugins in build-logic.
+dokka-gradle-plugin = { module = "org.jetbrains.dokka:dokka-gradle-plugin", version.ref = "dokka" }
+kotlin-gradle-plugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
+kotlin-allopen-gradle-plugin = { module = "org.jetbrains.kotlin:kotlin-allopen", version.ref = "kotlin" }
+kotlinx-benchmark-gradle-plugin = { module = "org.jetbrains.kotlinx:kotlinx-benchmark-plugin", version.ref = "kotlinx-benchmark" }
+kotlinx-datetime = { module = "org.jetbrains.kotlinx:kotlinx-datetime", version.ref = "kotlinx-datetime" }
+kotlinx-io-core = { module = "org.jetbrains.kotlinx:kotlinx-io-core", version.ref = "kotlinx-io" }
+kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinx-serialization" }
+ktor-serialization = { module = "io.ktor:ktor-serialization", version.ref = "ktor" }
+ktor-server-core = { module = "io.ktor:ktor-server-core", version.ref = "ktor" }
+ktor-server-test-host = { module = "io.ktor:ktor-server-test-host", version.ref = "ktor" }
+ktor-server-content-negotiation = { module = "io.ktor:ktor-server-content-negotiation", version.ref = "ktor" }
+ktor-client-content-negotiation = { module = "io.ktor:ktor-client-content-negotiation", version.ref = "ktor" }
+ktor-client-mock = { module = "io.ktor:ktor-client-mock", version.ref = "ktor" }
+okio = { module = "com.squareup.okio:okio", version.ref = "okio" }
+
+# Runtime of the benchmarks module; the kotlinx-benchmark plugin itself is `kotlinx-benchmark-gradle-plugin`.
+kotlinx-benchmark-runtime = { module = "org.jetbrains.kotlinx:kotlinx-benchmark-runtime", version.ref = "kotlinx-benchmark" }
+kotlinx-kover-gradle-plugin = { module = "org.jetbrains.kotlinx:kover-gradle-plugin", version.ref = "kotlinx-kover" }
+spotless-gradle-plugin = { module = "com.diffplug.spotless:spotless-plugin-gradle", version.ref = "spotless" }
+
+[plugins]
+dokka = { id = "org.jetbrains.dokka", version.ref = "dokka" }
+kotlinx-kover = { id = "org.jetbrains.kotlinx.kover", version.ref = "kotlinx-kover" }

@@ -1,0 +1,9 @@
+[
+  {
+    "code": "ICAL-S002",
+    "severity": "warning",
+    "line": 1,
+    "column": 8,
+    "offset": 7
+  }
+]

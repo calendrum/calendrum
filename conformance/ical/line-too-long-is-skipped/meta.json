@@ -1,0 +1,16 @@
+{
+  "id": "line-too-long-is-skipped",
+  "description": "A logical line exceeds a small configured length limit and is skipped whole.",
+  "tags": [
+    "limits",
+    "robustness"
+  ],
+  "rfc": [],
+  "source": "synthetic",
+  "license": "CC0-1.0",
+  "options": {
+    "limits": {
+      "maxLineOctets": 20
+    }
+  }
+}

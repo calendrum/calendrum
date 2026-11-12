@@ -1,0 +1,7 @@
+{
+  "id": "diff-same",
+  "operation": "diff",
+  "description": "DTSTAMP does not count as a change.",
+  "source": "synthetic",
+  "license": "CC0-1.0"
+}

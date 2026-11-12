@@ -1,0 +1,11 @@
+{
+  "id": "windows-1251-detected-by-heuristic",
+  "description": "Cyrillic text in windows-1251 with no charset hint is detected by the heuristic.",
+  "tags": [
+    "charset",
+    "fingerprints"
+  ],
+  "rfc": [],
+  "source": "synthetic",
+  "license": "CC0-1.0"
+}

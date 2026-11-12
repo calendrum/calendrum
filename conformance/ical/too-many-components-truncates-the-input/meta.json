@@ -1,0 +1,16 @@
+{
+  "id": "too-many-components-truncates-the-input",
+  "description": "A small configured component-count limit stops the parse before the input ends.",
+  "tags": [
+    "limits",
+    "structure"
+  ],
+  "rfc": [],
+  "source": "synthetic",
+  "license": "CC0-1.0",
+  "options": {
+    "limits": {
+      "maxComponents": 2
+    }
+  }
+}

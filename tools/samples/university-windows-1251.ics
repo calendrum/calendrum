@@ -1,0 +1,39 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//RUZ Export//Schedule 3.1//RU
+X-WR-CALNAME:Группа ИВТ-21: весенний семестр
+X-WR-TIMEZONE:Europe/Moscow
+BEGIN:VEVENT
+UID:ruz-2027-02-10-ivt21-1@ruz.univ-example.ru
+DTSTAMP:20270120T090000Z
+DTSTART;TZID=Europe/Moscow:20270210T084500
+DTEND;TZID=Europe/Moscow:20270210T101500
+RRULE:FREQ=WEEKLY;INTERVAL=1;BYDAY=WE;COUNT=16
+SUMMARY:Базы данных (лаб.)
+LOCATION:Корпус Б\, ауд. 417 (компьютерный класс)
+DESCRIPTION:Преподаватель: доц. Кузьмина Ольга Викторовна\nПодгруппа 2\nСсылка на курс: https://lms.univ-example.ru/course/view.php?id=5521
+ORGANIZER;CN="Кузьмина О. В.":mailto:kuzmina.ov@univ-example.ru
+CATEGORIES:Лабораторная работа
+END:VEVENT
+BEGIN:VEVENT
+UID:ruz-2027-02-11-ivt21-2@ruz.univ-example.ru
+DTSTAMP:20270120T090000Z
+DTSTART;TZID=Europe/Moscow:20270211T103000
+DTEND;TZID=Europe/Moscow:20270211T120000
+RRULE:FREQ=WEEKLY;INTERVAL=2;BYDAY=TH;UNTIL=20270527T205959Z
+EXDATE;TZID=Europe/Moscow:20270225T103000
+SUMMARY:Философия (семинар)
+LOCATION:Главный корпус\, ауд. 1205
+DESCRIPTION:Преподаватель: проф. Белоусов Аркадий Семёнович\nТема: «Этика ответственности»
+ORGANIZER;CN="Белоусов А. С.":mailto:belousov.as@univ-example.ru
+CATEGORIES:Семинар
+END:VEVENT
+BEGIN:VEVENT
+UID:ruz-2027-03-08-holiday@ruz.univ-example.ru
+DTSTAMP:20270120T090000Z
+DTSTART;VALUE=DATE:20270308
+DTEND;VALUE=DATE:20270309
+SUMMARY:Праздничный день — занятий нет
+TRANSP:TRANSPARENT
+END:VEVENT
+END:VCALENDAR

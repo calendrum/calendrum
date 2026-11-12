@@ -1,0 +1,7 @@
+{
+  "id": "rrule-expand-not-a-rule",
+  "operation": "rrule_expand",
+  "description": "Text that is not a rule is refused.",
+  "source": "synthetic",
+  "license": "CC0-1.0"
+}

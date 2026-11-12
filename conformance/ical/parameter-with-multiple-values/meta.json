@@ -1,0 +1,13 @@
+{
+  "id": "parameter-with-multiple-values",
+  "description": "A parameter has a comma-separated list of values.",
+  "tags": [
+    "parameters",
+    "values"
+  ],
+  "rfc": [
+    "RFC 5545 §3.2"
+  ],
+  "source": "synthetic",
+  "license": "CC0-1.0"
+}

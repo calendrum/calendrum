@@ -1,0 +1,7 @@
+{
+  "id": "expand-utc-without-zone",
+  "operation": "expand",
+  "description": "Without a zone the moments are in UTC and nothing local is written.",
+  "source": "synthetic",
+  "license": "CC0-1.0"
+}

@@ -1,0 +1,3 @@
+BEGIN:X
+ATTENDEE;MEMBER="mailto:a@example.com","mailto:b@example.com":mailto:c@example.com
+END:X

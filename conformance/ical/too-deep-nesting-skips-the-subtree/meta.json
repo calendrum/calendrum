@@ -1,0 +1,16 @@
+{
+  "id": "too-deep-nesting-skips-the-subtree",
+  "description": "Component nesting exceeds a small configured depth limit; the deep subtree is skipped.",
+  "tags": [
+    "limits",
+    "structure"
+  ],
+  "rfc": [],
+  "source": "synthetic",
+  "license": "CC0-1.0",
+  "options": {
+    "limits": {
+      "maxDepth": 1
+    }
+  }
+}

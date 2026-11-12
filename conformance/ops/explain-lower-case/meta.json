@@ -1,0 +1,7 @@
+{
+  "id": "explain-lower-case",
+  "operation": "explain",
+  "description": "The case does not matter.",
+  "source": "synthetic",
+  "license": "CC0-1.0"
+}

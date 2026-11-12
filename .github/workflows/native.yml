@@ -1,0 +1,68 @@
+# Kotlin/Native on Linux: linuxX64 tests and the klibs of every target. Apple klibs are cross-compiled, which works
+# while we have no cinterop. Later nightly and on the ci:native label.
+name: Native
+
+on:
+  workflow_dispatch:
+  workflow_call:
+  # Automatic runs stay off until a maintainer enables them. To enable, uncomment:
+  # schedule:
+  #   - cron: '17 2 * * *'
+  # pull_request:
+  #   types: [opened, synchronize, reopened, labeled]
+  #   paths-ignore:
+  #     - 'docs/**'
+  #     - '**/*.md'
+
+permissions:
+  contents: read
+
+jobs:
+  linux-native:
+    name: Linux (Kotlin/Native)
+
+    # Pull requests run it only with the ci:native label; adding some other label does not start it.
+    if: >-
+      github.event_name != 'pull_request' ||
+      (contains(github.event.pull_request.labels.*.name, 'ci:native') &&
+      (github.event.action != 'labeled' || github.event.label.name == 'ci:native'))
+    runs-on: ubuntu-24.04
+    timeout-minutes: 40
+
+    # At job level, after the `if`, so that a skipped run does not cancel a running one.
+    concurrency:
+      group: native-${{ github.ref }}
+      cancel-in-progress: true
+    steps:
+      - name: Check out
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Set up the build
+        uses: ./.github/actions/setup-build
+        with:
+          targets: all
+          konan-cache: 'true'
+
+      # publishToMavenLocal builds the klib of every target, as a release does.
+      - name: linuxX64 tests and klibs of all targets
+        run: ./gradlew --continue linuxX64Test publishToMavenLocal
+
+      # The kmp cases of compat-tests with linuxX64 only, against the artifacts the previous step published; their tests
+      # run here because this is a Linux host.
+      - name: linuxX64 consumers
+        run: compat-tests/run.sh --skip-publish --targets linuxX64
+
+      - name: Upload reports
+        if: failure()
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: native-reports
+          path: |
+            compat-tests/build/logs/
+            **/build/reports/
+            **/build/test-results/
+          retention-days: 7
+          if-no-files-found: ignore
+          overwrite: true

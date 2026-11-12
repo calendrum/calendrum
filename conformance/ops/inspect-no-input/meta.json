@@ -1,0 +1,7 @@
+{
+  "id": "inspect-no-input",
+  "operation": "inspect",
+  "description": "A calendar is required.",
+  "source": "synthetic",
+  "license": "CC0-1.0"
+}

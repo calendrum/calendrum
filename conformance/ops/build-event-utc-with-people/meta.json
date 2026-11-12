@@ -1,0 +1,7 @@
+{
+  "id": "build-event-utc-with-people",
+  "operation": "build_event",
+  "description": "Text is escaped and an address without a scheme becomes mailto.",
+  "source": "synthetic",
+  "license": "CC0-1.0"
+}

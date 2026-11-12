@@ -1,0 +1,10 @@
+public final class io/github/calendrum/kotlinxio/ICalKotlinxIo {
+	public static final fun asByteInput (Lkotlinx/io/Source;)Lio/github/calendrum/ByteInput;
+	public static final fun asByteOutput (Lkotlinx/io/Sink;)Lio/github/calendrum/ByteOutput;
+	public static final fun components (Lio/github/calendrum/syntax/ICalParser;Lkotlinx/io/Source;)Lio/github/calendrum/syntax/ComponentStream;
+	public static final fun parse (Lio/github/calendrum/syntax/ICalParser;Lkotlinx/io/Source;)Lio/github/calendrum/syntax/ParseResult;
+	public static final fun reader (Lio/github/calendrum/syntax/ICalParser;Lkotlinx/io/Source;)Lio/github/calendrum/syntax/ICalReader;
+	public static final fun write (Lio/github/calendrum/syntax/ICalWriter;Lio/github/calendrum/syntax/ICalComponent;Lkotlinx/io/Sink;)V
+	public static final fun write (Lio/github/calendrum/syntax/ICalWriter;Ljava/util/List;Lkotlinx/io/Sink;)V
+}
+

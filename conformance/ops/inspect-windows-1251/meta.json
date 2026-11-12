@@ -1,0 +1,7 @@
+{
+  "id": "inspect-windows-1251",
+  "operation": "inspect",
+  "description": "Bytes in base64 are decoded by the detection of the library.",
+  "source": "synthetic",
+  "license": "CC0-1.0"
+}

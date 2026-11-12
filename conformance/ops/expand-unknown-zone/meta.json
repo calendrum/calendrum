@@ -1,0 +1,7 @@
+{
+  "id": "expand-unknown-zone",
+  "operation": "expand",
+  "description": "An unknown zone is an error, not UTC.",
+  "source": "synthetic",
+  "license": "CC0-1.0"
+}

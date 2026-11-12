@@ -1,0 +1,11 @@
+BEGIN:VCALENDAR
+X;NOVALUE;=empty;A=b"c:v
+X;A=b:c;D=e
+NO COLON HERE
+x_bad;y@z=1:v
+;A=b:v
+:v
+X;A=,,:v
+X;A="":v
+X;A="a""b":v
+END:VCALENDAR

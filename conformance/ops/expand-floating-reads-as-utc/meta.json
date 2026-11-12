@@ -1,0 +1,7 @@
+{
+  "id": "expand-floating-reads-as-utc",
+  "operation": "expand",
+  "description": "Without a zone floating times are read in UTC.",
+  "source": "synthetic",
+  "license": "CC0-1.0"
+}

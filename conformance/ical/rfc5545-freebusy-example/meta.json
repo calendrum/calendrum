@@ -1,0 +1,13 @@
+{
+  "id": "rfc5545-freebusy-example",
+  "description": "RFC 5545 example: published free/busy time information.",
+  "tags": [
+    "rfc5545-example",
+    "structure"
+  ],
+  "rfc": [
+    "RFC 5545 §4"
+  ],
+  "source": "rfc",
+  "license": "IETF-Trust-BSD"
+}

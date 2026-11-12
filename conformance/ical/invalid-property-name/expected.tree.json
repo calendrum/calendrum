@@ -1,0 +1,16 @@
+{
+  "charset": "UTF-8",
+  "components": [
+    {
+      "name": "X",
+      "properties": [
+        {
+          "name": "SUM@ARY",
+          "parameters": [],
+          "value": "v"
+        }
+      ],
+      "components": []
+    }
+  ]
+}

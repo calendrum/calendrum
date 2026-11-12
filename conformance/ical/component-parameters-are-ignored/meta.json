@@ -1,0 +1,14 @@
+{
+  "id": "component-parameters-are-ignored",
+  "description": "A BEGIN line carries parameters, which RFC 5545 does not allow; they are ignored.",
+  "tags": [
+    "structure",
+    "parameters",
+    "robustness"
+  ],
+  "rfc": [
+    "RFC 5545 §3.6"
+  ],
+  "source": "synthetic",
+  "license": "CC0-1.0"
+}

@@ -1,0 +1,7 @@
+{
+  "id": "convert-ics-to-jcal",
+  "operation": "convert",
+  "description": "ICS to jCal.",
+  "source": "synthetic",
+  "license": "CC0-1.0"
+}

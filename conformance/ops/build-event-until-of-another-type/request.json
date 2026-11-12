@@ -1,0 +1,6 @@
+{
+  "summary": "Weekly",
+  "start": "2026-01-05T10:00:00Z",
+  "duration": "PT1H",
+  "rrule": "FREQ=WEEKLY;UNTIL=20261231;BYDAY=MO"
+}

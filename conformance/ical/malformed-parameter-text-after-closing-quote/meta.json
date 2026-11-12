@@ -1,0 +1,13 @@
+{
+  "id": "malformed-parameter-text-after-closing-quote",
+  "description": "Extra text follows the closing quote of a parameter value.",
+  "tags": [
+    "parameters",
+    "robustness"
+  ],
+  "rfc": [
+    "RFC 5545 §3.2"
+  ],
+  "source": "synthetic",
+  "license": "CC0-1.0"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "several-calendars-in-sequence",
+  "description": "Two complete VCALENDAR objects follow each other in the same input.",
+  "tags": [
+    "structure",
+    "fingerprints"
+  ],
+  "rfc": [],
+  "source": "synthetic",
+  "license": "CC0-1.0"
+}

@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://calendrum.invalid/ops/diff.request.schema.json",
+  "title": "The request of diff",
+  "type": "object",
+  "properties": {
+    "before": {
+      "type": "string",
+      "description": "The earlier calendar."
+    },
+    "before_base64": {
+      "type": "string"
+    },
+    "after": {
+      "type": "string",
+      "description": "The later calendar."
+    },
+    "after_base64": {
+      "type": "string"
+    },
+    "limit": {
+      "$ref": "common.schema.json#/$defs/limit"
+    }
+  }
+}

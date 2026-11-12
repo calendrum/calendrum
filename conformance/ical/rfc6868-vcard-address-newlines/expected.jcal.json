@@ -1,0 +1,16 @@
+[
+  [
+    "x",
+    [
+      [
+        "geo",
+        {
+          "x-address": "Pittsburgh Pirates\n115 Federal St\nPittsburgh, PA 15212"
+        },
+        "unknown",
+        "geo:40.446816,-80.00566"
+      ]
+    ],
+    []
+  ]
+]

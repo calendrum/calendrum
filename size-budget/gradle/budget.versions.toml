@@ -1,0 +1,7 @@
+[versions]
+agp = "9.0.1"
+r8 = "9.4.24"
+
+[libraries]
+android-gradle-plugin = { module = "com.android.tools.build:gradle", version.ref = "agp" }
+r8 = { module = "com.android.tools:r8", version.ref = "r8" }

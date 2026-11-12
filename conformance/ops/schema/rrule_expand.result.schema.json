@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://calendrum.invalid/ops/rrule_expand.result.schema.json",
+  "title": "The result of rrule_expand",
+  "type": "object",
+  "properties": {
+    "dates": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "date": {
+            "type": "string"
+          },
+          "date_zone": {
+            "type": "string"
+          },
+          "utc": {
+            "$ref": "common.schema.json#/$defs/moment"
+          }
+        },
+        "required": [
+          "date"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "count": {
+      "type": "integer"
+    },
+    "problems": {
+      "$ref": "common.schema.json#/$defs/problems"
+    },
+    "problem_count": {
+      "type": "integer",
+      "description": "The problems found, also the ones beyond the list. Past 1000 the parser stops reporting them, and the result is truncated."
+    }
+  },
+  "required": [
+    "dates",
+    "count",
+    "problems",
+    "problem_count"
+  ],
+  "additionalProperties": false
+}

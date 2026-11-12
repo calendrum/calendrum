@@ -1,0 +1,7 @@
+{
+  "id": "validate-no-calendar",
+  "operation": "validate",
+  "description": "An input with no calendar is not valid, whatever it holds.",
+  "source": "synthetic",
+  "license": "CC0-1.0"
+}

@@ -1,0 +1,15 @@
+// Klib ABI Dump
+// Targets: [androidNativeArm32, androidNativeArm64, androidNativeX64, androidNativeX86, iosArm64, iosSimulatorArm64, iosX64, js, linuxArm64, linuxX64, macosArm64, macosX64, mingwX64, tvosArm64, tvosSimulatorArm64, tvosX64, wasmJs, wasmWasi, watchosArm64, watchosDeviceArm64, watchosSimulatorArm64]
+// Rendering settings:
+// - Signature version: 2
+// - Show manifest properties: true
+// - Show declarations: true
+
+// Library unique name: <io.github.calendrum:calendrum-kotlinx-io>
+final fun (io.github.calendrum.syntax/ICalParser).io.github.calendrum.kotlinxio/components(kotlinx.io/Source): io.github.calendrum.syntax/ComponentStream // io.github.calendrum.kotlinxio/components|components@io.github.calendrum.syntax.ICalParser(kotlinx.io.Source){}[0]
+final fun (io.github.calendrum.syntax/ICalParser).io.github.calendrum.kotlinxio/parse(kotlinx.io/Source): io.github.calendrum.syntax/ParseResult // io.github.calendrum.kotlinxio/parse|parse@io.github.calendrum.syntax.ICalParser(kotlinx.io.Source){}[0]
+final fun (io.github.calendrum.syntax/ICalParser).io.github.calendrum.kotlinxio/reader(kotlinx.io/Source): io.github.calendrum.syntax/ICalReader // io.github.calendrum.kotlinxio/reader|reader@io.github.calendrum.syntax.ICalParser(kotlinx.io.Source){}[0]
+final fun (io.github.calendrum.syntax/ICalWriter).io.github.calendrum.kotlinxio/write(io.github.calendrum.syntax/ICalComponent, kotlinx.io/Sink) // io.github.calendrum.kotlinxio/write|write@io.github.calendrum.syntax.ICalWriter(io.github.calendrum.syntax.ICalComponent;kotlinx.io.Sink){}[0]
+final fun (io.github.calendrum.syntax/ICalWriter).io.github.calendrum.kotlinxio/write(kotlin.collections/List<io.github.calendrum.syntax/ICalComponent>, kotlinx.io/Sink) // io.github.calendrum.kotlinxio/write|write@io.github.calendrum.syntax.ICalWriter(kotlin.collections.List<io.github.calendrum.syntax.ICalComponent>;kotlinx.io.Sink){}[0]
+final fun (kotlinx.io/Sink).io.github.calendrum.kotlinxio/asByteOutput(): io.github.calendrum/ByteOutput // io.github.calendrum.kotlinxio/asByteOutput|asByteOutput@kotlinx.io.Sink(){}[0]
+final fun (kotlinx.io/Source).io.github.calendrum.kotlinxio/asByteInput(): io.github.calendrum/ByteInput // io.github.calendrum.kotlinxio/asByteInput|asByteInput@kotlinx.io.Source(){}[0]

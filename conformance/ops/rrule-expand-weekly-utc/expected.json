@@ -1,0 +1,24 @@
+{
+  "ops_version": 1,
+  "ok": true,
+  "result": {
+    "dates": [
+      {
+        "date": "2026-01-05T10:00:00Z",
+        "utc": "2026-01-05T10:00:00Z"
+      },
+      {
+        "date": "2026-01-12T10:00:00Z",
+        "utc": "2026-01-12T10:00:00Z"
+      },
+      {
+        "date": "2026-01-19T10:00:00Z",
+        "utc": "2026-01-19T10:00:00Z"
+      }
+    ],
+    "count": 3,
+    "problems": [],
+    "problem_count": 0
+  },
+  "truncated": false
+}

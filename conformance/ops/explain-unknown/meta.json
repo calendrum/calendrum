@@ -1,0 +1,7 @@
+{
+  "id": "explain-unknown",
+  "operation": "explain",
+  "description": "An unknown code is an error.",
+  "source": "synthetic",
+  "license": "CC0-1.0"
+}

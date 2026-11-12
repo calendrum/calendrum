@@ -1,0 +1,7 @@
+{
+  "id": "fix-x-wr-timezone",
+  "operation": "fix",
+  "description": "Floating times get the zone of X-WR-TIMEZONE.",
+  "source": "synthetic",
+  "license": "CC0-1.0"
+}

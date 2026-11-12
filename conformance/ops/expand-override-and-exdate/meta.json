@@ -1,0 +1,7 @@
+{
+  "id": "expand-override-and-exdate",
+  "operation": "expand",
+  "description": "An override and an excluded date change the series.",
+  "source": "synthetic",
+  "license": "CC0-1.0"
+}

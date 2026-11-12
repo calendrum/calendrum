@@ -1,0 +1,13 @@
+{
+  "id": "rfc6868-icalendar-quotes",
+  "description": "RFC 6868 §3.1 example: an unquoted CN parameter with ^' escapes for embedded double quotes.",
+  "tags": [
+    "rfc6868-example",
+    "parameters"
+  ],
+  "rfc": [
+    "RFC 6868 §3.1"
+  ],
+  "source": "rfc",
+  "license": "IETF-Trust-BSD"
+}

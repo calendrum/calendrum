@@ -1,0 +1,11 @@
+{
+  "ops_version": 1,
+  "ok": true,
+  "result": {
+    "code": "ICAL-L001",
+    "severity": "error",
+    "constant": "MissingProperty",
+    "meaning": "A required property is missing."
+  },
+  "truncated": false
+}

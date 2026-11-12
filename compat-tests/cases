@@ -1,0 +1,7 @@
+case          template  kotlin       gradle  gradle-sha256                                                     targets
+jvm-2.2       jvm       2.2.0        8.14.5  6f74b601422d6d6fc4e1f9a1ab6522f642c2fdcbc15ae33ebd30ba3d7198e854  jvm
+jvm-2.3       jvm       2.3.0        9.0.0   8fad3d78296ca518113f3d29016617c7f9367dc005f932bd9d93bf45ba46072b  jvm
+kmp-2.3       kmp       2.3.0        9.0.0   8fad3d78296ca518113f3d29016617c7f9367dc005f932bd9d93bf45ba46072b  jvm,linuxX64
+web-2.3.20    kmp       2.3.20       9.3.1   b266d5ff6b90eada6dc3b20cb090e3731302e553a27c5d3e4df1f0d76beaff06  js,wasmJs
+kmp-2.4       kmp       2.4.20       9.3.1   b266d5ff6b90eada6dc3b20cb090e3731302e553a27c5d3e4df1f0d76beaff06  jvm,js,wasmJs,linuxX64
+kmp-2.5-beta  kmp       2.5.0-Beta1  9.3.1   b266d5ff6b90eada6dc3b20cb090e3731302e553a27c5d3e4df1f0d76beaff06  jvm,js,wasmJs,linuxX64

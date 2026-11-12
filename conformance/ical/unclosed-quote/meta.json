@@ -1,0 +1,13 @@
+{
+  "id": "unclosed-quote",
+  "description": "A quoted parameter value is opened but never closed on the same line.",
+  "tags": [
+    "parameters",
+    "robustness"
+  ],
+  "rfc": [
+    "RFC 5545 §3.2"
+  ],
+  "source": "synthetic",
+  "license": "CC0-1.0"
+}

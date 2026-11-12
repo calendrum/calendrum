@@ -1,0 +1,72 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://calendrum.invalid/ops/validate.result.schema.json",
+  "title": "The result of validate",
+  "type": "object",
+  "properties": {
+    "issues": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "calendar_index": {
+            "type": "integer"
+          },
+          "code": {
+            "type": "string"
+          },
+          "severity": {
+            "type": "string",
+            "enum": [
+              "info",
+              "warning",
+              "error"
+            ]
+          },
+          "path": {
+            "type": "string",
+            "x-untrusted": true,
+            "description": "Names of components and properties, which a file can choose."
+          },
+          "message": {
+            "type": "string"
+          },
+          "fixable": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "calendar_index",
+          "code",
+          "severity",
+          "path",
+          "message"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "valid": {
+      "type": "boolean",
+      "description": "False if an issue or a problem is an error, and false for an input that has no calendar."
+    },
+    "calendar_count": {
+      "type": "integer",
+      "description": "How many calendars the input has. With none, valid is false."
+    },
+    "problems": {
+      "$ref": "common.schema.json#/$defs/problems"
+    },
+    "problem_count": {
+      "type": "integer",
+      "description": "The problems found, also the ones beyond the list. Past 1000 the parser stops reporting them, and the result is truncated."
+    }
+  },
+  "required": [
+    "issues",
+    "calendar_count",
+    "valid",
+    "problems",
+    "problem_count"
+  ],
+  "additionalProperties": false
+}

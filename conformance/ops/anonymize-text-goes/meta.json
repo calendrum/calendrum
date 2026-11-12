@@ -1,0 +1,7 @@
+{
+  "id": "anonymize-text-goes",
+  "operation": "anonymize",
+  "description": "Text and addresses go, the shape stays.",
+  "source": "synthetic",
+  "license": "CC0-1.0"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "rfc5545-todo-example",
+  "description": "RFC 5545 example: a to-do with a VALARM and a folded ATTACH.",
+  "tags": [
+    "rfc5545-example",
+    "folding",
+    "structure"
+  ],
+  "rfc": [
+    "RFC 5545 §4"
+  ],
+  "source": "rfc",
+  "license": "IETF-Trust-BSD"
+}

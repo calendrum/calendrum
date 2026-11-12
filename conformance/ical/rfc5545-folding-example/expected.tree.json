@@ -1,0 +1,16 @@
+{
+  "charset": "UTF-8",
+  "components": [
+    {
+      "name": "VEVENT",
+      "properties": [
+        {
+          "name": "DESCRIPTION",
+          "parameters": [],
+          "value": "This is a long description that exists on a long line."
+        }
+      ],
+      "components": []
+    }
+  ]
+}

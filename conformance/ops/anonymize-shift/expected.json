@@ -1,0 +1,11 @@
+{
+  "ops_version": 1,
+  "ok": true,
+  "result": {
+    "ics": "BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//Qaejnol//Dlzar//LT\r\nBEGIN:VEVENT\r\nUID:6c12a75a87a7d7de@example.invalid\r\nDTSTAMP:20260115T000000Z\r\nDTSTART:20260119T100000Z\r\nDURATION:PT1H\r\nSUMMARY:Rmsshpb\r\nEND:VEVENT\r\nEND:VCALENDAR\r\n",
+    "shift_weeks": 2,
+    "problems": [],
+    "problem_count": 0
+  },
+  "truncated": false
+}

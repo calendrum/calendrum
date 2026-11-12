@@ -1,0 +1,76 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://calendrum.invalid/ops/build_event.request.schema.json",
+  "title": "The request of build_event",
+  "type": "object",
+  "properties": {
+    "summary": {
+      "type": "string"
+    },
+    "start": {
+      "type": "string",
+      "description": "A local time with a zone, a moment with its offset, or a date with all_day."
+    },
+    "end": {
+      "type": "string",
+      "description": "In the form of start; excluded for a date."
+    },
+    "duration": {
+      "type": "string",
+      "description": "In the form of RFC 5545 §3.3.6, such as PT1H."
+    },
+    "zone": {
+      "type": "string",
+      "description": "An IANA zone or an alias."
+    },
+    "all_day": {
+      "type": "boolean"
+    },
+    "description": {
+      "type": "string"
+    },
+    "location": {
+      "type": "string"
+    },
+    "rrule": {
+      "type": "string",
+      "description": "A rule such as FREQ=WEEKLY;COUNT=3."
+    },
+    "organizer": {
+      "type": "string",
+      "description": "An address; mailto: is added when there is no scheme."
+    },
+    "attendees": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "address": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "rsvp": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "address"
+        ]
+      }
+    },
+    "uid": {
+      "type": "string",
+      "description": "Generated when absent."
+    },
+    "dtstamp": {
+      "type": "string",
+      "description": "A moment; the clock by default."
+    }
+  },
+  "required": [
+    "summary",
+    "start"
+  ]
+}

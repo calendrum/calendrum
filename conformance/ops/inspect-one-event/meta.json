@@ -1,0 +1,7 @@
+{
+  "id": "inspect-one-event",
+  "operation": "inspect",
+  "description": "One event with a summary.",
+  "source": "synthetic",
+  "license": "CC0-1.0"
+}

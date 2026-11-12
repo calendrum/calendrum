@@ -1,0 +1,66 @@
+{
+  "ops_version": 1,
+  "ok": true,
+  "result": {
+    "jcal": [
+      [
+        "vcalendar",
+        [
+          [
+            "version",
+            {},
+            "text",
+            "2.0"
+          ],
+          [
+            "prodid",
+            {},
+            "text",
+            "-//Example//Cases//EN"
+          ]
+        ],
+        [
+          [
+            "vevent",
+            [
+              [
+                "uid",
+                {},
+                "text",
+                "a@example.com"
+              ],
+              [
+                "dtstamp",
+                {},
+                "date-time",
+                "2026-01-01T00:00:00Z"
+              ],
+              [
+                "dtstart",
+                {},
+                "date-time",
+                "2026-01-05T10:00:00Z"
+              ],
+              [
+                "duration",
+                {},
+                "duration",
+                "PT1H"
+              ],
+              [
+                "summary",
+                {},
+                "text",
+                "Standup"
+              ]
+            ],
+            []
+          ]
+        ]
+      ]
+    ],
+    "problems": [],
+    "problem_count": 0
+  },
+  "truncated": false
+}

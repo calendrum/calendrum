@@ -1,0 +1,16 @@
+{
+  "algorithmVersion": 1,
+  "entries": [
+    {
+      "calendarIndex": -1,
+      "name": "A",
+      "uid": null,
+      "recurrenceId": null,
+      "tzid": null,
+      "ordinal": 0,
+      "hash": "e55a7aff86a04f7d",
+      "startOffset": 0,
+      "endOffset": 23
+    }
+  ]
+}

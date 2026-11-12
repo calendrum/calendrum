@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://calendrum.invalid/ops/convert.result.schema.json",
+  "title": "The result of convert",
+  "type": "object",
+  "properties": {
+    "jcal": {
+      "type": "array",
+      "x-untrusted": true
+    },
+    "ics": {
+      "type": "string",
+      "x-untrusted": true
+    },
+    "problems": {
+      "$ref": "common.schema.json#/$defs/problems"
+    },
+    "problem_count": {
+      "type": "integer",
+      "description": "The problems found, also the ones beyond the list. Past 1000 the parser stops reporting them, and the result is truncated."
+    }
+  },
+  "required": [
+    "problems",
+    "problem_count"
+  ],
+  "additionalProperties": false
+}

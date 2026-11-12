@@ -1,0 +1,7 @@
+{
+  "id": "validate-lint-fixable",
+  "operation": "validate",
+  "description": "The linter finds what breaks clients and says what it can repair.",
+  "source": "synthetic",
+  "license": "CC0-1.0"
+}

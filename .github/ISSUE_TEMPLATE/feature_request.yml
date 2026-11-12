@@ -1,0 +1,55 @@
+name: Feature request
+description: "A task the library does not currently solve."
+labels: ["type:feature"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Describe the **problem**, not a ready-made solution. The maintainers triage requests by whether the problem is
+        in scope for 1.0, belongs in a later milestone, can be solved with a recipe on top of the library, or is out of scope.
+
+        - Does the library violate the RFC or fail on real data? That's a bug or a fixup — open the "Bug" form instead.
+        - **Boundary:** the library provides mechanisms that any iCalendar application needs.
+          Product-level meaning — what counts as a "reschedule", recurrence rule wording, meeting time picking — stays in the application.
+        - Possible answers: 1.0, 1.x, a documentation recipe, "community" (an extension point already exists), or "no" —
+          always with an explanation. If a new public API is needed, we open an "API proposal" after triage.
+
+        **Remove personal data.** Calendars are personal data: names, addresses, e-mails, places, meeting text.
+        Replace them with made-up values in any example you attach.
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: "What needs to be done and why it currently can't. A task, not a way to solve it."
+    validations:
+      required: true
+  - type: textarea
+    id: audience
+    attributes:
+      label: Who is affected
+      description: "Which applications and scenarios run into this. Does it exist in other libraries (ical4j, biweekly, ical.js, etc.)?"
+    validations:
+      required: true
+  - type: textarea
+    id: workaround
+    attributes:
+      label: Current workaround
+      description: "The workaround and what's wrong with it. Might an existing extension point already cover it: keys, the registry, transport, selective parsing?"
+  - type: input
+    id: standard
+    attributes:
+      label: Standard reference
+      description: "The RFC and section, if any."
+      placeholder: "RFC 5545 §3.8.5.3"
+  - type: textarea
+    id: ics
+    attributes:
+      label: Example .ics
+      description: "A minimal example with no personal data: made-up names, addresses and meeting text."
+      render: text
+  - type: checkboxes
+    id: boundary
+    attributes:
+      label: Boundary check
+      options:
+        - label: "Any application that works with iCalendar needs this, regardless of its domain."

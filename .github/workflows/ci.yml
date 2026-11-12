@@ -1,0 +1,132 @@
+# Linux checks: workflow lint, ktlint, ABI dumps (JVM and klib), JVM, JS and Wasm tests; the Dokka HTML reference as an
+# artifact. The per-PR set once the owner enables automatic runs.
+name: CI
+
+on:
+  workflow_dispatch:
+  workflow_call:
+  # Automatic runs stay off until a maintainer enables them. To enable, uncomment:
+  # pull_request:
+  #   paths-ignore:
+  #     - 'docs/**'
+  #     - '**/*.md'
+  # # Runs on the default branch fill the caches that pull requests read.
+  # push:
+  #   branches: [main]
+  #   paths-ignore:
+  #     - 'docs/**'
+  #     - '**/*.md'
+
+permissions:
+  contents: read
+
+# A literal prefix: a called workflow sees its caller's name in github.workflow.
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  linux:
+    name: Linux
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - name: Check out
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      # A pinned release binary takes seconds; `go install` would take half a minute.
+      - name: Lint workflows
+        env:
+          ACTIONLINT_VERSION: 1.7.12
+
+          # SHA-256 of actionlint_<version>_linux_amd64.tar.gz from the release checksums. Update both together.
+          ACTIONLINT_SHA256: 8aca8db96f1b94770f1b0d72b6dddcb1ebb8123cb3712530b08cc387b349a3d8
+        run: |
+          curl -fsSL -o "$RUNNER_TEMP/actionlint.tar.gz" \
+            "https://github.com/rhysd/actionlint/releases/download/v${ACTIONLINT_VERSION}/actionlint_${ACTIONLINT_VERSION}_linux_amd64.tar.gz"
+          echo "${ACTIONLINT_SHA256}  $RUNNER_TEMP/actionlint.tar.gz" | sha256sum --check --strict -
+          tar -xzf "$RUNNER_TEMP/actionlint.tar.gz" -C "$RUNNER_TEMP" actionlint
+
+          # Also runs shellcheck, preinstalled on the runner, on every `run:` script.
+          "$RUNNER_TEMP/actionlint"
+
+      - name: Set up the build
+        uses: ./.github/actions/setup-build
+        with:
+          targets: all
+          konan-cache: 'true'
+
+      # Tests by task name, so no native test binary is linked here. The klib ABI dump compiles every klib. `--continue`
+      # reports all failures of one paid run.
+      - name: Lint, ABI and tests
+        run: >-
+          ./gradlew --continue lint checkKotlinAbi jvmTest jvmTestKiritimati jvmTestStJohns jsNodeTest wasmJsNodeTest
+          wasmWasiNodeTest :fuzz:test
+          :tools:test koverXmlReport koverLog
+
+      # Includes the actual ABI dumps to compare with the committed ones.
+      - name: Upload reports
+        if: failure()
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: ci-reports
+          path: |
+            **/build/reports/
+            **/build/test-results/
+            **/build/kotlin/abi-legacy/
+          retention-days: 7
+          if-no-files-found: ignore
+          overwrite: true
+
+      - name: Upload coverage report
+        if: always()
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: kover-report
+          path: '**/build/reports/kover/'
+          retention-days: 7
+          if-no-files-found: ignore
+          overwrite: true
+
+  # The HTML API reference of every published module as an artifact. Separate from `linux`, so a failing
+  # test does not hide the reference and the reference does not slow the tests.
+  docs:
+    name: Dokka HTML
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - name: Check out
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Set up the build
+        uses: ./.github/actions/setup-build
+        with:
+          targets: all
+          konan-cache: 'true'
+
+      - name: Generate the API reference
+        run: ./gradlew --continue dokkaGenerate
+
+      - name: Upload the API reference
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: dokka-html
+          path: build/dokka/html
+          retention-days: 7
+          if-no-files-found: error
+          overwrite: true
+
+      - name: Upload reports
+        if: failure()
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: docs-reports
+          path: |
+            **/build/reports/
+          retention-days: 7
+          if-no-files-found: ignore
+          overwrite: true

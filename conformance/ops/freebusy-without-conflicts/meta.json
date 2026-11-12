@@ -1,0 +1,7 @@
+{
+  "id": "freebusy-without-conflicts",
+  "operation": "freebusy",
+  "description": "Conflicts can be left out.",
+  "source": "synthetic",
+  "license": "CC0-1.0"
+}

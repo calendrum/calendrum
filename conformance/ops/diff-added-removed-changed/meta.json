@@ -1,0 +1,7 @@
+{
+  "id": "diff-added-removed-changed",
+  "operation": "diff",
+  "description": "One event of each kind.",
+  "source": "synthetic",
+  "license": "CC0-1.0"
+}

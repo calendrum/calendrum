@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://calendrum.invalid/ops/explain.request.schema.json",
+  "title": "The request of explain",
+  "type": "object",
+  "properties": {
+    "code": {
+      "type": "string",
+      "description": "A code such as ICAL-S003; the case does not matter."
+    }
+  },
+  "required": [
+    "code"
+  ]
+}

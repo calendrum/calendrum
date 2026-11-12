@@ -1,0 +1,16 @@
+{
+  "charset": "UTF-16LE",
+  "components": [
+    {
+      "name": "X",
+      "properties": [
+        {
+          "name": "SUMMARY",
+          "parameters": [],
+          "value": "Лекция по алгебре"
+        }
+      ],
+      "components": []
+    }
+  ]
+}

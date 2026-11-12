@@ -1,0 +1,9 @@
+[
+  {
+    "code": "ICAL-S010",
+    "severity": "error",
+    "line": 2,
+    "column": 1,
+    "offset": 9
+  }
+]

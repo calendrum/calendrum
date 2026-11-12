@@ -1,0 +1,17 @@
+{
+  "ops_version": 1,
+  "ok": true,
+  "result": {
+    "changes": [
+      {
+        "fixup": "windows_tzids",
+        "path": "VCALENDAR[0]/VEVENT[0]/DTSTART[0]"
+      }
+    ],
+    "changed": true,
+    "ics": "BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//Microsoft Corporation//Outlook 16.0 MIMEDIR//EN\r\nBEGIN:VEVENT\r\nUID:a@example.com\r\nDTSTAMP:20260101T000000Z\r\nDTSTART;TZID=Europe/Berlin:20260105T100000\r\nEND:VEVENT\r\nEND:VCALENDAR\r\n",
+    "problems": [],
+    "problem_count": 0
+  },
+  "truncated": false
+}

@@ -1,0 +1,16 @@
+{
+  "id": "fingerprints-keys-and-offsets",
+  "description": "Fingerprint keys: TZID, UID with and without RECURRENCE-ID, ordinals without a UID, and a second calendar.",
+  "tags": [
+    "fingerprints",
+    "structure",
+    "case-insensitivity",
+    "folding"
+  ],
+  "rfc": [
+    "RFC 5545 §3.8.4.4",
+    "RFC 5545 §3.8.4.7"
+  ],
+  "source": "synthetic",
+  "license": "CC0-1.0"
+}

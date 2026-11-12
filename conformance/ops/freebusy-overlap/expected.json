@@ -1,0 +1,39 @@
+{
+  "ops_version": 1,
+  "ok": true,
+  "result": {
+    "busy": [
+      {
+        "start": "2026-01-05T10:00:00Z",
+        "end": "2026-01-05T11:30:00Z",
+        "type": "BUSY"
+      },
+      {
+        "start": "2026-01-05T15:00:00Z",
+        "end": "2026-01-05T16:00:00Z",
+        "type": "BUSY-TENTATIVE"
+      }
+    ],
+    "conflicts": [
+      {
+        "start": "2026-01-05T10:30:00Z",
+        "end": "2026-01-05T11:00:00Z",
+        "first": {
+          "uid": "a@example.com",
+          "summary": "First",
+          "start": "2026-01-05T10:00:00Z",
+          "end": "2026-01-05T11:00:00Z"
+        },
+        "second": {
+          "uid": "b@example.com",
+          "summary": "Second",
+          "start": "2026-01-05T10:30:00Z",
+          "end": "2026-01-05T11:30:00Z"
+        }
+      }
+    ],
+    "problems": [],
+    "problem_count": 0
+  },
+  "truncated": false
+}

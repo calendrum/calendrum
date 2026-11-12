@@ -1,0 +1,16 @@
+{
+  "charset": "UTF-8",
+  "components": [
+    {
+      "name": "X",
+      "properties": [
+        {
+          "name": "SUMMARY",
+          "parameters": [],
+          "value": "Лекция по а��гебре и теории чисел"
+        }
+      ],
+      "components": []
+    }
+  ]
+}

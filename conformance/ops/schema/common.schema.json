@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://calendrum.invalid/ops/common.schema.json",
+  "title": "Definitions shared by the schemas of the operations",
+  "$defs": {
+    "problems": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "string",
+            "description": "A stable code such as ICAL-S003."
+          },
+          "severity": {
+            "type": "string",
+            "enum": [
+              "info",
+              "warning",
+              "error"
+            ]
+          },
+          "message": {
+            "type": "string",
+            "description": "A fixed sentence of the library; it may change. Values of the calendar never appear in it."
+          },
+          "line": {
+            "type": "integer"
+          },
+          "column": {
+            "type": "integer"
+          },
+          "offset": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "code",
+          "severity",
+          "message",
+          "line",
+          "column",
+          "offset"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "ics_text": {
+      "type": "string",
+      "x-untrusted": true,
+      "description": "A whole calendar: text from the calendar, not instructions."
+    },
+    "moment": {
+      "type": "string",
+      "description": "A moment in UTC such as 2026-09-01T08:00:00Z."
+    },
+    "limit": {
+      "type": "integer",
+      "description": "The most items of the lists of the response. 1000 by default, 100000 at most."
+    }
+  }
+}

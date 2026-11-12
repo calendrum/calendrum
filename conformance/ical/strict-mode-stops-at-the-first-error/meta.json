@@ -1,0 +1,16 @@
+{
+  "id": "strict-mode-stops-at-the-first-error",
+  "description": "In strict mode, parsing stops at the first error-level problem and the input is rejected.",
+  "tags": [
+    "strict",
+    "robustness"
+  ],
+  "rfc": [],
+  "source": "synthetic",
+  "license": "CC0-1.0",
+  "options": {
+    "mode": "strict"
+  },
+  "jcal": false,
+  "jcalReason": "Strict mode rejects the input, so there is no tree to convert."
+}

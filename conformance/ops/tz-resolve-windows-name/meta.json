@@ -1,0 +1,10 @@
+{
+  "id": "tz-resolve-windows-name",
+  "operation": "tz_resolve",
+  "description": "A Windows name resolves to an IANA zone.",
+  "source": "synthetic",
+  "license": "CC0-1.0",
+  "ignore_fields": [
+    "tzdb_version"
+  ]
+}

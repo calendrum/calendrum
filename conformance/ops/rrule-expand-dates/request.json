@@ -1,0 +1,4 @@
+{
+  "rrule": "RRULE:FREQ=YEARLY;COUNT=2",
+  "start": "2026-02-28"
+}

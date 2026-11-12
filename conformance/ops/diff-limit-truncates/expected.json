@@ -1,0 +1,20 @@
+{
+  "ops_version": 1,
+  "ok": true,
+  "result": {
+    "added": [],
+    "removed": [
+      {
+        "calendar_index": 0,
+        "name": "VEVENT",
+        "uid": "a@example.com",
+        "ordinal": -1
+      }
+    ],
+    "changed": [],
+    "unchanged_count": 0,
+    "problems": [],
+    "problem_count": 0
+  },
+  "truncated": true
+}

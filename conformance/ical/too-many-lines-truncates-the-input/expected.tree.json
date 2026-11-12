@@ -1,0 +1,28 @@
+{
+  "charset": "UTF-8",
+  "components": [
+    {
+      "name": "A",
+      "properties": [
+        {
+          "name": "P",
+          "parameters": [],
+          "value": "1"
+        }
+      ],
+      "components": [
+        {
+          "name": "B",
+          "properties": [
+            {
+              "name": "Q",
+              "parameters": [],
+              "value": "2"
+            }
+          ],
+          "components": []
+        }
+      ]
+    }
+  ]
+}

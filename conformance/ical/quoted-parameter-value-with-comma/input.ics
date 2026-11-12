@@ -1,0 +1,3 @@
+BEGIN:X
+ATTENDEE;CN="Doe, Jane":mailto:jane@example.com
+END:X

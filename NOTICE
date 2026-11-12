@@ -1,0 +1,21 @@
+Calendrum
+Copyright 2026 The Calendrum Authors
+
+Licensed under the Apache License, Version 2.0; the full text is in LICENSE.
+
+This product includes data from third parties. The pinned source files, their versions and checksums are listed in
+third_party/README.md.
+
+IANA Time Zone Database (tzdb), release 2026e
+https://www.iana.org/time-zones
+The tz code and data are in the public domain. Used by calendrum-tzdata (all zones) and calendrum-core (time zone links).
+
+Unicode Common Locale Data Repository (CLDR), release 48: windowsZones.xml
+https://cldr.unicode.org
+Copyright © 2004-2025 Unicode, Inc. Unicode and the Unicode Logo are registered trademarks of Unicode, Inc.
+in the United States and other countries.
+Licensed under the Unicode License v3; the full text is in third_party/cldr/LICENSE.
+Used by calendrum-core (Windows and Outlook time zone names).
+
+Examples from RFC 5545, RFC 5546, RFC 7529 and other RFCs are used in tests under the IETF Trust Legal Provisions
+(Simplified BSD License for code components).

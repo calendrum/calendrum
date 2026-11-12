@@ -1,0 +1,45 @@
+{
+  "ops_version": 1,
+  "ok": true,
+  "result": {
+    "issues": [
+      {
+        "calendar_index": 0,
+        "code": "ICAL-L016",
+        "severity": "error",
+        "path": "VCALENDAR[0]/VEVENT[0]/URL[0]",
+        "message": "A value does not decode as its type; the details are an ICAL-V problem from reading.",
+        "fixable": false
+      },
+      {
+        "calendar_index": 0,
+        "code": "ICAL-L023",
+        "severity": "info",
+        "path": "VCALENDAR[0]/X-WR-CALNAME[0]",
+        "message": "X-WR-CALNAME without the standard NAME of RFC 7986. Found by the linter.",
+        "fixable": true
+      },
+      {
+        "calendar_index": 0,
+        "code": "ICAL-L024",
+        "severity": "info",
+        "path": "VCALENDAR[0]/VEVENT[0]/ATTENDEE[0]",
+        "message": "An ORGANIZER or ATTENDEE with the scheme in upper case, MAILTO:. Found by the linter.",
+        "fixable": true
+      },
+      {
+        "calendar_index": 0,
+        "code": "ICAL-L025",
+        "severity": "warning",
+        "path": "VCALENDAR[0]/VEVENT[0]/URL[0]",
+        "message": "An empty value of a non-text property, such as DTEND: or RRULE:. Found by the linter.",
+        "fixable": true
+      }
+    ],
+    "calendar_count": 1,
+    "valid": false,
+    "problems": [],
+    "problem_count": 0
+  },
+  "truncated": false
+}

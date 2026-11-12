@@ -1,0 +1,27 @@
+{
+  "algorithmVersion": 1,
+  "entries": [
+    {
+      "calendarIndex": 0,
+      "name": "VTIMEZONE",
+      "uid": null,
+      "recurrenceId": null,
+      "tzid": "America/New_York",
+      "ordinal": -1,
+      "hash": "ddf2427e700e5775",
+      "startOffset": 75,
+      "endOffset": 340
+    },
+    {
+      "calendarIndex": 0,
+      "name": "VEVENT",
+      "uid": "guid-1.example.com",
+      "recurrenceId": null,
+      "tzid": null,
+      "ordinal": -1,
+      "hash": "46b89d25478eb24f",
+      "startOffset": 340,
+      "endOffset": 794
+    }
+  ]
+}

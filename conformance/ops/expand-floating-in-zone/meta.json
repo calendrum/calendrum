@@ -1,0 +1,7 @@
+{
+  "id": "expand-floating-in-zone",
+  "operation": "expand",
+  "description": "With a zone floating times are read in it.",
+  "source": "synthetic",
+  "license": "CC0-1.0"
+}

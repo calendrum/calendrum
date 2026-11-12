@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://calendrum.invalid/ops/rrule_expand.request.schema.json",
+  "title": "The request of rrule_expand",
+  "type": "object",
+  "properties": {
+    "rrule": {
+      "type": "string",
+      "description": "A rule such as FREQ=WEEKLY;COUNT=3; the prefix RRULE: is accepted."
+    },
+    "start": {
+      "type": "string",
+      "description": "The first date: a date, a moment with its offset, or a local time with a zone."
+    },
+    "zone": {
+      "type": "string",
+      "description": "An IANA zone or an alias, for a local start."
+    },
+    "limit": {
+      "$ref": "common.schema.json#/$defs/limit"
+    }
+  },
+  "required": [
+    "rrule",
+    "start"
+  ]
+}

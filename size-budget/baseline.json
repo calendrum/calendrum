@@ -1,0 +1,21 @@
+{
+    "thresholds": {
+        "percent": 5,
+        "bytes": 1024,
+        "classes": 5
+    },
+    "contributions": {
+        "jvm.r8.bytes": 261469,
+        "jvm.r8.classes": 225,
+        "js.bytes": 262268,
+        "js.gzip": 85747,
+        "wasmJs.wasm.bytes": 268877,
+        "wasmJs.wasm.gzip": 98330,
+        "wasmJs.js.bytes": 194978,
+        "wasmJs.js.gzip": 40217,
+        "android.dex.bytes": 156832,
+        "android.dex.classes": 145,
+        "ios.framework.bytes": 940264,
+        "ios.sections.bytes": 712830
+    }
+}

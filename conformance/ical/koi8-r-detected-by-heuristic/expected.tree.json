@@ -1,0 +1,22 @@
+{
+  "charset": "KOI8-R",
+  "components": [
+    {
+      "name": "VCALENDAR",
+      "properties": [],
+      "components": [
+        {
+          "name": "VEVENT",
+          "properties": [
+            {
+              "name": "SUMMARY",
+              "parameters": [],
+              "value": "Лекция по алгебре"
+            }
+          ],
+          "components": []
+        }
+      ]
+    }
+  ]
+}

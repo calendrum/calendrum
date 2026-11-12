@@ -1,0 +1,11 @@
+{
+  "id": "no-trailing-newline",
+  "description": "The last logical line has no line ending; this is not a problem.",
+  "tags": [
+    "robustness",
+    "edge-case"
+  ],
+  "rfc": [],
+  "source": "synthetic",
+  "license": "CC0-1.0"
+}

@@ -1,0 +1,33 @@
+{
+  "charset": "UTF-16LE",
+  "components": [
+    {
+      "name": "VCALENDAR",
+      "properties": [
+        {
+          "name": "PRODID",
+          "parameters": [],
+          "value": "-//Example//UTF-16//EN"
+        }
+      ],
+      "components": [
+        {
+          "name": "VEVENT",
+          "properties": [
+            {
+              "name": "UID",
+              "parameters": [],
+              "value": "utf16@example.com"
+            },
+            {
+              "name": "SUMMARY",
+              "parameters": [],
+              "value": "Привет"
+            }
+          ],
+          "components": []
+        }
+      ]
+    }
+  ]
+}

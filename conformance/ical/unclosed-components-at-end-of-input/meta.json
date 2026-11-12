@@ -1,0 +1,14 @@
+{
+  "id": "unclosed-components-at-end-of-input",
+  "description": "The input ends while components are still open, as a truncated feed would; they are closed implicitly.",
+  "tags": [
+    "structure",
+    "robustness",
+    "fingerprints"
+  ],
+  "rfc": [
+    "RFC 5545 §3.6"
+  ],
+  "source": "synthetic",
+  "license": "CC0-1.0"
+}

@@ -1,0 +1,217 @@
+{
+  "charset": "UTF-8",
+  "components": [
+    {
+      "name": "VCALENDAR",
+      "properties": [
+        {
+          "name": "VERSION",
+          "parameters": [],
+          "value": "2.0"
+        },
+        {
+          "name": "PRODID",
+          "parameters": [],
+          "value": "-//Example Corp.//Example Client//EN"
+        }
+      ],
+      "components": [
+        {
+          "name": "VTIMEZONE",
+          "properties": [
+            {
+              "name": "LAST-MODIFIED",
+              "parameters": [],
+              "value": "20040110T032845Z"
+            },
+            {
+              "name": "TZID",
+              "parameters": [],
+              "value": "US/Eastern"
+            }
+          ],
+          "components": [
+            {
+              "name": "DAYLIGHT",
+              "properties": [
+                {
+                  "name": "DTSTART",
+                  "parameters": [],
+                  "value": "20000404T020000"
+                },
+                {
+                  "name": "RRULE",
+                  "parameters": [],
+                  "value": "FREQ=YEARLY;BYDAY=1SU;BYMONTH=4"
+                },
+                {
+                  "name": "TZNAME",
+                  "parameters": [],
+                  "value": "EDT"
+                },
+                {
+                  "name": "TZOFFSETFROM",
+                  "parameters": [],
+                  "value": "-0500"
+                },
+                {
+                  "name": "TZOFFSETTO",
+                  "parameters": [],
+                  "value": "-0400"
+                }
+              ],
+              "components": []
+            },
+            {
+              "name": "STANDARD",
+              "properties": [
+                {
+                  "name": "DTSTART",
+                  "parameters": [],
+                  "value": "20001026T020000"
+                },
+                {
+                  "name": "RRULE",
+                  "parameters": [],
+                  "value": "FREQ=YEARLY;BYDAY=-1SU;BYMONTH=10"
+                },
+                {
+                  "name": "TZNAME",
+                  "parameters": [],
+                  "value": "EST"
+                },
+                {
+                  "name": "TZOFFSETFROM",
+                  "parameters": [],
+                  "value": "-0400"
+                },
+                {
+                  "name": "TZOFFSETTO",
+                  "parameters": [],
+                  "value": "-0500"
+                }
+              ],
+              "components": []
+            }
+          ]
+        },
+        {
+          "name": "VEVENT",
+          "properties": [
+            {
+              "name": "DTSTAMP",
+              "parameters": [],
+              "value": "20060206T001121Z"
+            },
+            {
+              "name": "DTSTART",
+              "parameters": [
+                {
+                  "name": "TZID",
+                  "values": [
+                    "US/Eastern"
+                  ]
+                }
+              ],
+              "value": "20060102T120000"
+            },
+            {
+              "name": "DURATION",
+              "parameters": [],
+              "value": "PT1H"
+            },
+            {
+              "name": "RRULE",
+              "parameters": [],
+              "value": "FREQ=DAILY;COUNT=5"
+            },
+            {
+              "name": "RDATE",
+              "parameters": [
+                {
+                  "name": "TZID",
+                  "values": [
+                    "US/Eastern"
+                  ]
+                },
+                {
+                  "name": "VALUE",
+                  "values": [
+                    "PERIOD"
+                  ]
+                }
+              ],
+              "value": "20060102T150000/PT2H"
+            },
+            {
+              "name": "SUMMARY",
+              "parameters": [],
+              "value": "Event #2"
+            },
+            {
+              "name": "DESCRIPTION",
+              "parameters": [],
+              "value": "We are having a meeting all this week at 12 pm for one hour\\, with an additional meeting on the first day 2 hours long.\\nPlease bring your own lunch for the 12 pm meetings."
+            },
+            {
+              "name": "UID",
+              "parameters": [],
+              "value": "00959BC664CA650E933C892C@example.com"
+            }
+          ],
+          "components": []
+        },
+        {
+          "name": "VEVENT",
+          "properties": [
+            {
+              "name": "DTSTAMP",
+              "parameters": [],
+              "value": "20060206T001121Z"
+            },
+            {
+              "name": "DTSTART",
+              "parameters": [
+                {
+                  "name": "TZID",
+                  "values": [
+                    "US/Eastern"
+                  ]
+                }
+              ],
+              "value": "20060104T140000"
+            },
+            {
+              "name": "DURATION",
+              "parameters": [],
+              "value": "PT1H"
+            },
+            {
+              "name": "RECURRENCE-ID",
+              "parameters": [
+                {
+                  "name": "TZID",
+                  "values": [
+                    "US/Eastern"
+                  ]
+                }
+              ],
+              "value": "20060104T120000"
+            },
+            {
+              "name": "SUMMARY",
+              "parameters": [],
+              "value": "Event #2 bis"
+            },
+            {
+              "name": "UID",
+              "parameters": [],
+              "value": "00959BC664CA650E933C892C@example.com"
+            }
+          ],
+          "components": []
+        }
+      ]
+    }
+  ]
+}

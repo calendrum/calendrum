@@ -1,0 +1,22 @@
+public final class io/github/calendrum/tzdata/TzData : io/github/calendrum/syntax/VTimeZoneSource {
+	public static final field INSTANCE Lio/github/calendrum/tzdata/TzData;
+	public static final fun getResolver ()Lio/github/calendrum/tz/TimeZoneResolver;
+	public static final fun getVersion ()Ljava/lang/String;
+	public static final fun getZoneIds ()Ljava/util/Set;
+	public fun toString ()Ljava/lang/String;
+	public fun vtimezone (Ljava/lang/String;)Lio/github/calendrum/syntax/ICalComponent;
+	public static final fun vtimezone (Ljava/lang/String;Lio/github/calendrum/tzdata/VTimeZoneMode;)Lio/github/calendrum/model/VTimeZone;
+	public static final fun vtimezone (Ljava/lang/String;Lio/github/calendrum/tzdata/VTimeZoneMode;Lkotlin/time/Instant;)Lio/github/calendrum/model/VTimeZone;
+	public static final fun vtimezone (Ljava/lang/String;Lio/github/calendrum/tzdata/VTimeZoneMode;Lkotlin/time/Instant;Lio/github/calendrum/ProblemListener;)Lio/github/calendrum/model/VTimeZone;
+	public static synthetic fun vtimezone$default (Ljava/lang/String;Lio/github/calendrum/tzdata/VTimeZoneMode;Lkotlin/time/Instant;ILjava/lang/Object;)Lio/github/calendrum/model/VTimeZone;
+	public static final fun zone (Ljava/lang/String;)Lio/github/calendrum/tz/ICalTimeZone;
+}
+
+public final class io/github/calendrum/tzdata/VTimeZoneMode : java/lang/Enum {
+	public static final field Full Lio/github/calendrum/tzdata/VTimeZoneMode;
+	public static final field OutlookCompatible Lio/github/calendrum/tzdata/VTimeZoneMode;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public static fun valueOf (Ljava/lang/String;)Lio/github/calendrum/tzdata/VTimeZoneMode;
+	public static fun values ()[Lio/github/calendrum/tzdata/VTimeZoneMode;
+}
+

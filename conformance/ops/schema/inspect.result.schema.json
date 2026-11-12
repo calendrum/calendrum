@@ -1,0 +1,126 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://calendrum.invalid/ops/inspect.result.schema.json",
+  "title": "The result of inspect",
+  "type": "object",
+  "properties": {
+    "charset": {
+      "type": "string"
+    },
+    "calendars": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "prod_id": {
+            "type": "string",
+            "x-untrusted": true
+          },
+          "version": {
+            "type": "string",
+            "x-untrusted": true
+          },
+          "method": {
+            "type": "string",
+            "x-untrusted": true
+          },
+          "names": {
+            "type": "array",
+            "x-untrusted": true,
+            "items": {
+              "type": "string"
+            }
+          },
+          "event_count": {
+            "type": "integer"
+          },
+          "todo_count": {
+            "type": "integer"
+          },
+          "journal_count": {
+            "type": "integer"
+          },
+          "free_busy_count": {
+            "type": "integer"
+          },
+          "time_zones": {
+            "type": "array",
+            "x-untrusted": true,
+            "items": {
+              "type": "string"
+            }
+          },
+          "events": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "uid": {
+                  "type": "string",
+                  "x-untrusted": true
+                },
+                "summary": {
+                  "type": "string",
+                  "x-untrusted": true
+                },
+                "start": {
+                  "type": "string",
+                  "x-untrusted": true
+                },
+                "start_zone": {
+                  "type": "string",
+                  "x-untrusted": true
+                },
+                "end": {
+                  "type": "string",
+                  "x-untrusted": true
+                },
+                "end_zone": {
+                  "type": "string",
+                  "x-untrusted": true
+                },
+                "rrule": {
+                  "type": "string",
+                  "x-untrusted": true
+                },
+                "status": {
+                  "type": "string",
+                  "x-untrusted": true
+                }
+              },
+              "additionalProperties": false
+            }
+          }
+        },
+        "required": [
+          "event_count",
+          "todo_count",
+          "journal_count",
+          "free_busy_count",
+          "names",
+          "time_zones",
+          "events"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "problems": {
+      "$ref": "common.schema.json#/$defs/problems"
+    },
+    "problem_count": {
+      "type": "integer",
+      "description": "The problems found, also the ones beyond the list. Past 1000 the parser stops reporting them, and the result is truncated."
+    },
+    "jcal": {
+      "type": "array",
+      "x-untrusted": true
+    }
+  },
+  "required": [
+    "charset",
+    "calendars",
+    "problems",
+    "problem_count"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,38 @@
+{
+  "ops_version": 1,
+  "ok": true,
+  "result": {
+    "charset": "windows-1251",
+    "calendars": [
+      {
+        "prod_id": "-//Example//Cases//EN",
+        "version": "2.0",
+        "names": [],
+        "event_count": 1,
+        "todo_count": 0,
+        "journal_count": 0,
+        "free_busy_count": 0,
+        "time_zones": [],
+        "events": [
+          {
+            "uid": "a@example.com",
+            "summary": "Лекция по математике и физике",
+            "start": "2026-01-05T10:00:00Z"
+          }
+        ]
+      }
+    ],
+    "problems": [
+      {
+        "code": "ICAL-S025",
+        "severity": "warning",
+        "message": "input encoding detected by a heuristic: windows-1251, confidence 99%",
+        "line": 8,
+        "column": 9,
+        "offset": 153
+      }
+    ],
+    "problem_count": 1
+  },
+  "truncated": false
+}

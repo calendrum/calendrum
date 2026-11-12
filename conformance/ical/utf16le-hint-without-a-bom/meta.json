@@ -1,0 +1,14 @@
+{
+  "id": "utf16le-hint-without-a-bom",
+  "description": "A UTF-16LE charset hint applies to data with no byte order mark.",
+  "tags": [
+    "charset",
+    "bom"
+  ],
+  "rfc": [],
+  "source": "synthetic",
+  "license": "CC0-1.0",
+  "options": {
+    "charset": "UTF-16LE"
+  }
+}

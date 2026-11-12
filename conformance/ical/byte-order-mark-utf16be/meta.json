@@ -1,0 +1,12 @@
+{
+  "id": "byte-order-mark-utf16be",
+  "description": "A UTF-16BE byte order mark makes the whole input transcoded to UTF-8.",
+  "tags": [
+    "bom",
+    "charset",
+    "fingerprints"
+  ],
+  "rfc": [],
+  "source": "synthetic",
+  "license": "CC0-1.0"
+}

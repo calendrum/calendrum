@@ -1,0 +1,23 @@
+{
+  "charset": "UTF-8",
+  "components": [
+    {
+      "name": "X",
+      "properties": [
+        {
+          "name": "SUMMARY",
+          "parameters": [
+            {
+              "name": "P@R",
+              "values": [
+                "1"
+              ]
+            }
+          ],
+          "value": "v"
+        }
+      ],
+      "components": []
+    }
+  ]
+}

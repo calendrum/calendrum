@@ -1,0 +1,13 @@
+{
+  "id": "mixed-line-endings",
+  "description": "The input mixes CRLF, bare LF and bare CR line endings.",
+  "tags": [
+    "line-endings",
+    "robustness"
+  ],
+  "rfc": [
+    "RFC 5545 §3.1"
+  ],
+  "source": "synthetic",
+  "license": "CC0-1.0"
+}

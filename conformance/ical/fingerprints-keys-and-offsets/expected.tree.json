@@ -1,0 +1,215 @@
+{
+  "charset": "UTF-8",
+  "components": [
+    {
+      "name": "VCALENDAR",
+      "properties": [
+        {
+          "name": "VERSION",
+          "parameters": [],
+          "value": "2.0"
+        },
+        {
+          "name": "PRODID",
+          "parameters": [],
+          "value": "-//ics-mp//Conformance//EN"
+        }
+      ],
+      "components": [
+        {
+          "name": "VTIMEZONE",
+          "properties": [
+            {
+              "name": "TZID",
+              "parameters": [],
+              "value": "Europe/Moscow"
+            }
+          ],
+          "components": [
+            {
+              "name": "STANDARD",
+              "properties": [
+                {
+                  "name": "DTSTART",
+                  "parameters": [],
+                  "value": "19700101T000000"
+                },
+                {
+                  "name": "TZOFFSETFROM",
+                  "parameters": [],
+                  "value": "+0300"
+                },
+                {
+                  "name": "TZOFFSETTO",
+                  "parameters": [],
+                  "value": "+0300"
+                }
+              ],
+              "components": []
+            }
+          ]
+        },
+        {
+          "name": "VEVENT",
+          "properties": [
+            {
+              "name": "UID",
+              "parameters": [],
+              "value": "lecture@example.com"
+            },
+            {
+              "name": "DTSTAMP",
+              "parameters": [],
+              "value": "20260101T000000Z"
+            },
+            {
+              "name": "DTSTART",
+              "parameters": [
+                {
+                  "name": "TZID",
+                  "values": [
+                    "Europe/Moscow"
+                  ]
+                }
+              ],
+              "value": "20260105T100000"
+            },
+            {
+              "name": "RRULE",
+              "parameters": [],
+              "value": "FREQ=WEEKLY;COUNT=4"
+            },
+            {
+              "name": "SUMMARY",
+              "parameters": [],
+              "value": "Lecture"
+            }
+          ],
+          "components": [
+            {
+              "name": "VALARM",
+              "properties": [
+                {
+                  "name": "ACTION",
+                  "parameters": [],
+                  "value": "DISPLAY"
+                },
+                {
+                  "name": "TRIGGER",
+                  "parameters": [],
+                  "value": "-PT15M"
+                }
+              ],
+              "components": []
+            }
+          ]
+        },
+        {
+          "name": "VEVENT",
+          "properties": [
+            {
+              "name": "UID",
+              "parameters": [],
+              "value": "lecture@example.com"
+            },
+            {
+              "name": "RECURRENCE-ID",
+              "parameters": [
+                {
+                  "name": "TZID",
+                  "values": [
+                    "Europe/Moscow"
+                  ]
+                }
+              ],
+              "value": "20260112T100000"
+            },
+            {
+              "name": "DTSTAMP",
+              "parameters": [],
+              "value": "20260101T000000Z"
+            },
+            {
+              "name": "DTSTART",
+              "parameters": [
+                {
+                  "name": "TZID",
+                  "values": [
+                    "Europe/Moscow"
+                  ]
+                }
+              ],
+              "value": "20260112T120000"
+            },
+            {
+              "name": "SUMMARY",
+              "parameters": [],
+              "value": "Lecture (moved)"
+            }
+          ],
+          "components": []
+        },
+        {
+          "name": "VTODO",
+          "properties": [
+            {
+              "name": "SUMMARY",
+              "parameters": [],
+              "value": "A to-do without a UID, written in lower case and folded"
+            }
+          ],
+          "components": []
+        },
+        {
+          "name": "VTODO",
+          "properties": [
+            {
+              "name": "SUMMARY",
+              "parameters": [],
+              "value": "Another to-do without a UID"
+            }
+          ],
+          "components": []
+        }
+      ]
+    },
+    {
+      "name": "VCALENDAR",
+      "properties": [
+        {
+          "name": "VERSION",
+          "parameters": [],
+          "value": "2.0"
+        },
+        {
+          "name": "PRODID",
+          "parameters": [],
+          "value": "-//ics-mp//Conformance//EN"
+        }
+      ],
+      "components": [
+        {
+          "name": "VEVENT",
+          "properties": [
+            {
+              "name": "UID",
+              "parameters": [],
+              "value": "lecture@example.com"
+            },
+            {
+              "name": "DTSTAMP",
+              "parameters": [],
+              "value": "20260101T000000Z"
+            },
+            {
+              "name": "SUMMARY",
+              "parameters": [],
+              "value": "The same UID in another calendar"
+            }
+          ],
+          "components": []
+        }
+      ]
+    }
+  ]
+}

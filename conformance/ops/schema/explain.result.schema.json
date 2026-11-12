@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://calendrum.invalid/ops/explain.result.schema.json",
+  "title": "The result of explain",
+  "type": "object",
+  "properties": {
+    "code": {
+      "type": "string"
+    },
+    "severity": {
+      "type": "string",
+      "enum": [
+        "info",
+        "warning",
+        "error"
+      ]
+    },
+    "constant": {
+      "type": "string"
+    },
+    "meaning": {
+      "type": "string",
+      "description": "From the public guide."
+    }
+  },
+  "required": [
+    "code",
+    "severity",
+    "constant",
+    "meaning"
+  ],
+  "additionalProperties": false
+}

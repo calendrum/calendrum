@@ -1,0 +1,16 @@
+{
+  "charset": "windows-1252",
+  "components": [
+    {
+      "name": "X",
+      "properties": [
+        {
+          "name": "SUMMARY",
+          "parameters": [],
+          "value": "Café € “quoted”"
+        }
+      ],
+      "components": []
+    }
+  ]
+}

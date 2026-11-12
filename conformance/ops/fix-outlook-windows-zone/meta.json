@@ -1,0 +1,7 @@
+{
+  "id": "fix-outlook-windows-zone",
+  "operation": "fix",
+  "description": "A Windows zone name becomes an IANA identifier, chosen by PRODID.",
+  "source": "synthetic",
+  "license": "CC0-1.0"
+}

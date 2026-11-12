@@ -1,0 +1,95 @@
+name: Fuzz
+
+on:
+  workflow_dispatch:
+    inputs:
+      duration:
+        description: Fuzzing time per target (Jazzer duration).
+        type: choice
+        options:
+          - 5m
+          - 10m
+          - 20m
+          - 30m
+        default: 10m
+  # Automatic runs stay off until a maintainer enables them. To enable, uncomment:
+  # schedule:
+  #   - cron: '41 2 * * *'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: fuzz-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  linux:
+    name: Linux (Jazzer, ${{ matrix.group }})
+    runs-on: ubuntu-24.04
+
+    # The longest group fuzzes five targets: 150 minutes at 30m per target, plus the build and the Gradle start of each
+    # target; at least 30 minutes of margin. A new target goes to the group with the fewest targets.
+    timeout-minutes: 210
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - group: syntax
+            targets: Lexer,Reader,WriterRoundTrip,Text,Utf8Differential
+          - group: tree
+            targets: CharsetDifferential,TreeRoundTrip,Anonymizer,StreamingDifferential,Fixups
+          - group: model
+            targets: Interceptor,Fingerprint,ValueCodecs,Patch,Recurrence
+          - group: semantics
+            targets: TimeZone,Occurrences,Validation,ITip,Canonical
+          - group: integrations
+            targets: JCal,Schema,Selection,Adapters
+    steps:
+      - name: Check out
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Set up the build
+        uses: ./.github/actions/setup-build
+        with:
+          targets: jvm
+
+      - name: Fuzz
+        shell: bash
+        env:
+          DURATION: ${{ inputs.duration || '10m' }}
+          TARGETS: ${{ matrix.targets }}
+        run: |
+          ./gradlew --continue :fuzz:fuzz "-Pfuzz.target=$TARGETS" "-Pfuzz.duration=$DURATION" 2>&1 | tee "$RUNNER_TEMP/fuzz.log"
+
+      - name: Job summary
+        if: always()
+        shell: bash
+        env:
+          GROUP: ${{ matrix.group }}
+        run: |
+          {
+            echo "### Group $GROUP"
+            echo "| Target | libFuzzer summary |"
+            echo "|---|---|"
+            awk '/^> Task :fuzz:fuzz[A-Z]/ { target = substr($3, 11) }
+              /DONE +cov:/ { sub(/^ +/, ""); print "| " target " | `" $0 "` |" }' "$RUNNER_TEMP/fuzz.log"
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Upload findings
+        if: failure()
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: fuzz-findings-${{ matrix.group }}
+          path: |
+            fuzz/src/test/resources/**/crash-*
+            fuzz/src/test/resources/**/timeout-*
+            fuzz/src/test/resources/**/oom-*
+            fuzz/src/test/resources/**/slow-unit-*
+            fuzz/build/reports/
+            fuzz/build/test-results/
+          retention-days: 7
+          if-no-files-found: ignore
+          overwrite: true

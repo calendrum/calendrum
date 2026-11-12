@@ -1,0 +1,96 @@
+# Release: publishes every target from Linux (Apple klibs are cross-compiled) to GitHub Packages of this repository,
+# then tags the commit v<version>. Manual only; run full.yml on the same commit first. Maven Central, signing and the
+# full POM wait for a license.
+name: Publish
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: Release version, SemVer without -SNAPSHOT, for example 0.1.0-alpha01
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+# Releases queue up instead of cancelling each other.
+concurrency:
+  group: publish
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    name: Publish ${{ inputs.version }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    permissions:
+      contents: read
+      packages: write
+    env:
+      VERSION: ${{ inputs.version }}
+    steps:
+      - name: Check out
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      # Fails before any build minute is spent. A published version cannot be replaced in GitHub Packages.
+      - name: Check the version
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if [[ ! "$VERSION" =~ ^[0-9]+\.[0-9]+\.[0-9]+(-[0-9A-Za-z.-]+)?$ || "$VERSION" == *-SNAPSHOT ]]; then
+            echo "::error::'$VERSION' is not a release version: SemVer without -SNAPSHOT"
+            exit 1
+          fi
+          if gh api "repos/$GITHUB_REPOSITORY/git/ref/tags/v$VERSION" --silent 2>/dev/null; then
+            echo "::error::Tag v$VERSION already exists"
+            exit 1
+          fi
+
+      - name: Set up the build
+        uses: ./.github/actions/setup-build
+        with:
+          targets: all
+          konan-cache: 'true'
+
+      # VERSION_NAME from the input also becomes Calendrum.VERSION. calendrum.publishing reads the credentials only here.
+      - name: Check ABI and publish
+        env:
+          ORG_GRADLE_PROJECT_GitHubPackagesUsername: ${{ github.actor }}
+          ORG_GRADLE_PROJECT_GitHubPackagesPassword: ${{ secrets.GITHUB_TOKEN }}
+        run: ./gradlew -PVERSION_NAME="$VERSION" checkKotlinAbi publishAllPublicationsToGitHubPackagesRepository
+
+      - name: Upload reports
+        if: failure()
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: publish-reports
+          path: |
+            **/build/reports/
+            **/build/kotlin/abi-legacy/
+          retention-days: 7
+          if-no-files-found: ignore
+          overwrite: true
+
+  # A separate job: only this one can push, and it runs no build code.
+  tag:
+    name: Tag v${{ inputs.version }}
+    needs: publish
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    permissions:
+      contents: write
+    env:
+      VERSION: ${{ inputs.version }}
+    steps:
+      - name: Check out
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - name: Tag the released commit
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git tag -a "v$VERSION" -m "Calendrum $VERSION" "$GITHUB_SHA"
+          git push origin "refs/tags/v$VERSION"

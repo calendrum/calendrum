@@ -1,0 +1,7 @@
+{
+  "id": "build-event-local-without-zone",
+  "operation": "build_event",
+  "description": "A local time needs a zone: nothing is assumed.",
+  "source": "synthetic",
+  "license": "CC0-1.0"
+}

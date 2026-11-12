@@ -1,0 +1,7 @@
+{
+  "id": "fix-nothing-to-do",
+  "operation": "fix",
+  "description": "A correct calendar comes back unchanged.",
+  "source": "synthetic",
+  "license": "CC0-1.0"
+}

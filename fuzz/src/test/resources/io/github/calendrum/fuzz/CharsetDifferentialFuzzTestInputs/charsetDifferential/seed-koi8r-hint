@@ -1,0 +1,9 @@
+BEGIN:VCALENDAR
+BEGIN:VEVENT
+SUMMARY:Лекция: Математический анализ
+LOCATION:Ауд. 214, корпус Б
+DESCRIPTION:Преподаватель Фёдоров П.С. Приносите тетради.\nЗанятие по у
+ чебнику.
+END:VEVENT
+END:VCALENDAR
+

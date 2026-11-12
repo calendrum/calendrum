@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://calendrum.invalid/ops/validate.request.schema.json",
+  "title": "The request of validate",
+  "type": "object",
+  "properties": {
+    "ics": {
+      "type": "string",
+      "description": "The calendar as text."
+    },
+    "ics_base64": {
+      "type": "string",
+      "description": "The calendar as bytes in base64, in any encoding the library detects."
+    },
+    "rules": {
+      "type": "string",
+      "enum": [
+        "rfc5545",
+        "lint"
+      ]
+    },
+    "limit": {
+      "$ref": "common.schema.json#/$defs/limit"
+    }
+  }
+}

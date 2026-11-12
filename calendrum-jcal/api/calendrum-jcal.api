@@ -1,0 +1,57 @@
+public final class io/github/calendrum/jcal/ICalSerializers {
+	public static final field INSTANCE Lio/github/calendrum/jcal/ICalSerializers;
+	public static final fun getComponent ()Lkotlinx/serialization/KSerializer;
+	public static final fun getDateTime ()Lkotlinx/serialization/KSerializer;
+	public static final fun getDuration ()Lkotlinx/serialization/KSerializer;
+	public static final fun getPeriod ()Lkotlinx/serialization/KSerializer;
+	public static final fun getRecur ()Lkotlinx/serialization/KSerializer;
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class io/github/calendrum/jcal/JCal {
+	public static final field INSTANCE Lio/github/calendrum/jcal/JCal;
+	public static final fun decodeFromJsonElement (Lkotlinx/serialization/json/JsonElement;)Lio/github/calendrum/jcal/JCalResult;
+	public static final fun decodeFromJsonElement (Lkotlinx/serialization/json/JsonElement;Lio/github/calendrum/jcal/JCalOptions;)Lio/github/calendrum/jcal/JCalResult;
+	public static synthetic fun decodeFromJsonElement$default (Lkotlinx/serialization/json/JsonElement;Lio/github/calendrum/jcal/JCalOptions;ILjava/lang/Object;)Lio/github/calendrum/jcal/JCalResult;
+	public static final fun decodeFromString (Ljava/lang/String;)Lio/github/calendrum/jcal/JCalResult;
+	public static final fun decodeFromString (Ljava/lang/String;Lio/github/calendrum/jcal/JCalOptions;)Lio/github/calendrum/jcal/JCalResult;
+	public static synthetic fun decodeFromString$default (Ljava/lang/String;Lio/github/calendrum/jcal/JCalOptions;ILjava/lang/Object;)Lio/github/calendrum/jcal/JCalResult;
+	public static final fun encodeToJsonElement (Ljava/util/List;)Lkotlinx/serialization/json/JsonElement;
+	public static final fun encodeToJsonElement (Ljava/util/List;Lio/github/calendrum/jcal/JCalOptions;)Lkotlinx/serialization/json/JsonElement;
+	public static synthetic fun encodeToJsonElement$default (Ljava/util/List;Lio/github/calendrum/jcal/JCalOptions;ILjava/lang/Object;)Lkotlinx/serialization/json/JsonElement;
+	public static final fun encodeToString (Ljava/util/List;)Ljava/lang/String;
+	public static final fun encodeToString (Ljava/util/List;Lio/github/calendrum/jcal/JCalOptions;)Ljava/lang/String;
+	public static synthetic fun encodeToString$default (Ljava/util/List;Lio/github/calendrum/jcal/JCalOptions;ILjava/lang/Object;)Ljava/lang/String;
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class io/github/calendrum/jcal/JCalOptions {
+	public static final field Companion Lio/github/calendrum/jcal/JCalOptions$Companion;
+	public static final field Default Lio/github/calendrum/jcal/JCalOptions;
+	public static final fun builder ()Lio/github/calendrum/jcal/JCalOptions$Builder;
+	public final fun getMaxDepth ()I
+	public final fun getRegistry ()Lio/github/calendrum/model/ICalRegistry;
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class io/github/calendrum/jcal/JCalOptions$Builder {
+	public final fun build ()Lio/github/calendrum/jcal/JCalOptions;
+	public final fun getMaxDepth ()I
+	public final fun getRegistry ()Lio/github/calendrum/model/ICalRegistry;
+	public final fun maxDepth (I)Lio/github/calendrum/jcal/JCalOptions$Builder;
+	public final fun registry (Lio/github/calendrum/model/ICalRegistry;)Lio/github/calendrum/jcal/JCalOptions$Builder;
+	public final fun setMaxDepth (I)V
+	public final fun setRegistry (Lio/github/calendrum/model/ICalRegistry;)V
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class io/github/calendrum/jcal/JCalOptions$Companion {
+	public final fun builder ()Lio/github/calendrum/jcal/JCalOptions$Builder;
+}
+
+public final class io/github/calendrum/jcal/JCalResult {
+	public final fun getComponents ()Ljava/util/List;
+	public final fun getProblems ()Ljava/util/List;
+	public fun toString ()Ljava/lang/String;
+}
+

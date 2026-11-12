@@ -1,0 +1,16 @@
+{
+  "id": "too-many-problems-reaches-the-limit",
+  "description": "Many broken lines exceed a small configured problem limit; further problems are only counted.",
+  "tags": [
+    "limits",
+    "robustness"
+  ],
+  "rfc": [],
+  "source": "synthetic",
+  "license": "CC0-1.0",
+  "options": {
+    "limits": {
+      "maxProblems": 3
+    }
+  }
+}

@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <!-- The checks run this on the newest and on the oldest .NET the package is for. -->
+    <TestFramework Condition="'$(TestFramework)' == ''">net10.0</TestFramework>
+    <TargetFramework>$(TestFramework)</TargetFramework>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Calendrum.Tests</RootNamespace>
+    <AssemblyName>Calendrum.Tests</AssemblyName>
+    <LangVersion>14</LangVersion>
+    <AnalysisLevel>latest</AnalysisLevel>
+    <IsPackable>false</IsPackable>
+    <InvariantGlobalization>true</InvariantGlobalization>
+    <NoWarn>$(NoWarn);CA1416</NoWarn>
+    <NativeBuild>$(MSBuildThisFileDirectory)../../sdk-c/build</NativeBuild>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="../Calendrum/Calendrum.csproj" />
+    <!-- The library of this host next to the program, where the search of the package finds it. -->
+    <None Include="$(NativeBuild)/bin/macosArm64/releaseShared/libcalendrum.dylib" Link="libcalendrum.dylib" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
+</Project>

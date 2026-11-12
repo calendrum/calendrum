@@ -1,0 +1,19 @@
+[
+  [
+    "x",
+    [
+      [
+        "attendee",
+        {
+          "member": [
+            "mailto:a@example.com",
+            "mailto:b@example.com"
+          ]
+        },
+        "cal-address",
+        "mailto:c@example.com"
+      ]
+    ],
+    []
+  ]
+]

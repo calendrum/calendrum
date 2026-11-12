@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://calendrum.invalid/ops/tz_resolve.request.schema.json",
+  "title": "The request of tz_resolve",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "An IANA zone or an alias, such as a Windows name."
+    },
+    "at": {
+      "type": "string",
+      "description": "The moment of the offset; the clock by default."
+    }
+  },
+  "required": [
+    "name"
+  ]
+}

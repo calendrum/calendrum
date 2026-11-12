@@ -1,0 +1,7 @@
+{
+  "id": "build-event-end-and-duration",
+  "operation": "build_event",
+  "description": "An event has an end or a duration, not both.",
+  "source": "synthetic",
+  "license": "CC0-1.0"
+}

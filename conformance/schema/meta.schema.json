@@ -1,0 +1,142 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Calendrum conformance case metadata (meta.json)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "description",
+    "tags",
+    "rfc",
+    "source",
+    "license"
+  ],
+  "properties": {
+    "id": {
+      "description": "Stable kebab-case identifier, equal to the case directory name.",
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+      "maxLength": 64
+    },
+    "description": {
+      "description": "One short English sentence: what the case checks.",
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 200
+    },
+    "tags": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "enum": [
+          "rfc5545-example",
+          "rfc6868-example",
+          "rfc7265-example",
+          "folding",
+          "line-endings",
+          "bom",
+          "charset",
+          "utf8",
+          "parameters",
+          "values",
+          "names",
+          "structure",
+          "robustness",
+          "limits",
+          "strict",
+          "encoding-signature",
+          "case-insensitivity",
+          "edge-case",
+          "fingerprints"
+        ]
+      }
+    },
+    "rfc": {
+      "description": "Sections the case is based on, for example \"RFC 5545 §3.1\"; empty if none.",
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "pattern": "^RFC [0-9]+( §[0-9]+(\\.[0-9]+)*)?$"
+      }
+    },
+    "source": {
+      "description": "rfc: the input contains an example from an RFC; synthetic: written for the suite; anonymized-real: derived from a real calendar with the calendrum anonymizer.",
+      "enum": [
+        "rfc",
+        "synthetic",
+        "anonymized-real"
+      ]
+    },
+    "license": {
+      "description": "IETF-Trust-BSD for inputs with RFC fragments (IETF Trust Legal Provisions, Simplified BSD License for code components), private for a case cut from a real calendar (named real-*, never in the repository), CC0-1.0 for everything else.",
+      "enum": [
+        "IETF-Trust-BSD",
+        "CC0-1.0",
+        "private"
+      ]
+    },
+    "options": {
+      "description": "Parse options that differ from the defaults: lenient mode, no charset hint, default limits.",
+      "type": "object",
+      "additionalProperties": false,
+      "minProperties": 1,
+      "properties": {
+        "mode": {
+          "enum": [
+            "lenient",
+            "strict"
+          ]
+        },
+        "charset": {
+          "description": "Charset hint: a charset label or a Content-Type value.",
+          "type": "string",
+          "minLength": 1
+        },
+        "limits": {
+          "type": "object",
+          "additionalProperties": false,
+          "minProperties": 1,
+          "properties": {
+            "maxLineOctets": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 2147483647
+            },
+            "maxLines": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 2147483647
+            },
+            "maxProblems": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 2147483647
+            },
+            "maxDepth": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 2147483647
+            },
+            "maxComponents": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 2147483647
+            }
+          }
+        }
+      }
+    },
+    "jcal": {
+      "description": "false when the input has no jCal form (a strict-mode rejection, or a tree that canonical writing rejects: a name that is not a token, a control character, a parameter without a value); expected.jcal.json is then absent.",
+      "const": false
+    },
+    "jcalReason": {
+      "description": "Why the case has no jCal form; required together with jcal: false.",
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 200
+    }
+  }
+}

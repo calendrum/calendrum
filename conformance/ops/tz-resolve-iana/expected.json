@@ -1,0 +1,19 @@
+{
+  "ops_version": 1,
+  "ok": true,
+  "result": {
+    "id": "Europe/Berlin",
+    "alias": false,
+    "at": "2026-01-15T12:00:00Z",
+    "offset_seconds": 3600,
+    "offset": "+01:00",
+    "tzdb_version": "2026e",
+    "next_transition": {
+      "at": "2026-03-29T01:00:00Z",
+      "offset_seconds_after": 7200
+    },
+    "problems": [],
+    "problem_count": 0
+  },
+  "truncated": false
+}

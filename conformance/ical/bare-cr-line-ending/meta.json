@@ -1,0 +1,13 @@
+{
+  "id": "bare-cr-line-ending",
+  "description": "The whole input uses bare CR line endings instead of CRLF.",
+  "tags": [
+    "line-endings",
+    "robustness"
+  ],
+  "rfc": [
+    "RFC 5545 §3.1"
+  ],
+  "source": "synthetic",
+  "license": "CC0-1.0"
+}

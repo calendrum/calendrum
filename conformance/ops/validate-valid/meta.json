@@ -1,0 +1,7 @@
+{
+  "id": "validate-valid",
+  "operation": "validate",
+  "description": "A correct calendar has no issues.",
+  "source": "synthetic",
+  "license": "CC0-1.0"
+}

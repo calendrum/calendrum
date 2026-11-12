@@ -1,0 +1,7 @@
+{
+  "id": "rrule-expand-zoned-over-dst",
+  "operation": "rrule_expand",
+  "description": "Local times stay the same over the change of the offset.",
+  "source": "synthetic",
+  "license": "CC0-1.0"
+}

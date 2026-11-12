@@ -1,0 +1,13 @@
+{
+  "id": "missing-colon",
+  "description": "A content line has no colon after the name and parameters and is skipped.",
+  "tags": [
+    "robustness",
+    "structure"
+  ],
+  "rfc": [
+    "RFC 5545 §3.1"
+  ],
+  "source": "synthetic",
+  "license": "CC0-1.0"
+}

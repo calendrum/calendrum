@@ -1,0 +1,63 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://calendrum.invalid/ops/tz_resolve.result.schema.json",
+  "title": "The result of tz_resolve",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "The IANA identifier."
+    },
+    "alias": {
+      "type": "boolean",
+      "description": "Whether the name differs from the identifier."
+    },
+    "at": {
+      "$ref": "common.schema.json#/$defs/moment"
+    },
+    "offset_seconds": {
+      "type": "integer"
+    },
+    "offset": {
+      "type": "string",
+      "description": "Such as +01:00."
+    },
+    "tzdb_version": {
+      "type": "string"
+    },
+    "next_transition": {
+      "type": "object",
+      "properties": {
+        "at": {
+          "$ref": "common.schema.json#/$defs/moment"
+        },
+        "offset_seconds_after": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "at",
+        "offset_seconds_after"
+      ],
+      "additionalProperties": false
+    },
+    "problems": {
+      "$ref": "common.schema.json#/$defs/problems"
+    },
+    "problem_count": {
+      "type": "integer",
+      "description": "The problems found, also the ones beyond the list. Past 1000 the parser stops reporting them, and the result is truncated."
+    }
+  },
+  "required": [
+    "id",
+    "alias",
+    "at",
+    "offset_seconds",
+    "offset",
+    "tzdb_version",
+    "problems",
+    "problem_count"
+  ],
+  "additionalProperties": false
+}

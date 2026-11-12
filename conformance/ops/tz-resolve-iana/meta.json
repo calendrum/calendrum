@@ -1,0 +1,10 @@
+{
+  "id": "tz-resolve-iana",
+  "operation": "tz_resolve",
+  "description": "An IANA zone, with its offset and next change.",
+  "source": "synthetic",
+  "license": "CC0-1.0",
+  "ignore_fields": [
+    "tzdb_version"
+  ]
+}

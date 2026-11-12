@@ -1,0 +1,7 @@
+{
+  "id": "fix-lint-mailto",
+  "operation": "fix",
+  "description": "The repairs of the linter.",
+  "source": "synthetic",
+  "license": "CC0-1.0"
+}

@@ -1,0 +1,91 @@
+name: Bug
+description: "The library crashes, returns a wrong result, or violates the RFC."
+labels: ["type:bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the report. The smaller the repro, the faster the fix.
+
+        **Remove personal data.** Calendars are personal data: names, addresses, e-mails, places, meeting text.
+        Replace them with made-up values and keep the file structure as-is.
+  - type: textarea
+    id: summary
+    attributes:
+      label: What happened
+      description: "Briefly: what you did and what went wrong."
+    validations:
+      required: true
+  - type: textarea
+    id: ics
+    attributes:
+      label: Minimal .ics
+      description: |
+        The shortest calendar that reproduces the bug, with no personal data.
+        If bytes matter (CRLF, BOM, encoding), attach the file as an archive in the "Additional" field.
+      render: text
+  - type: textarea
+    id: code
+    attributes:
+      label: Code
+      description: "Minimal code that reproduces the bug: Kotlin, Java, or Swift."
+      render: kotlin
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected
+      description: "If the RFC defines the behavior, cite the section."
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual
+      description: "The result, an exception with a stack trace, or diagnostics."
+    validations:
+      required: true
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Platform
+      multiple: true
+      options:
+        - JVM
+        - Android
+        - iOS
+        - macOS
+        - tvOS or watchOS
+        - Linux
+        - Windows
+        - JS
+        - Wasm (wasmJs)
+        - WASI (wasmWasi)
+        - Android Native
+    validations:
+      required: true
+  - type: input
+    id: target
+    attributes:
+      label: Target and environment
+      description: "Kotlin target (e.g. `iosSimulatorArm64`), JDK or Android API version, Node.js or browser, OS."
+  - type: input
+    id: library-version
+    attributes:
+      label: Calendrum version
+      description: "The `Calendrum.VERSION` value; for a `-SNAPSHOT` version, also the commit."
+      placeholder: "0.1.0-SNAPSHOT, commit 648445d"
+    validations:
+      required: true
+  - type: input
+    id: kotlin-version
+    attributes:
+      label: Kotlin version
+      description: "The Kotlin version in your project."
+      placeholder: "2.3.21"
+    validations:
+      required: true
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional
+      description: "Anything else that helps. Files can be attached here."

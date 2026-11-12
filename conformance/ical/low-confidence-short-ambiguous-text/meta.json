@@ -1,0 +1,10 @@
+{
+  "id": "low-confidence-short-ambiguous-text",
+  "description": "A short, all-uppercase Cyrillic abbreviation gives the heuristic low confidence between windows-1251 and KOI8-R.",
+  "tags": [
+    "charset"
+  ],
+  "rfc": [],
+  "source": "synthetic",
+  "license": "CC0-1.0"
+}

@@ -1,0 +1,18 @@
+{
+  "ops_version": 1,
+  "ok": true,
+  "result": {
+    "changes": [
+      {
+        "fixup": "lint",
+        "code": "ICAL-L024",
+        "path": "VCALENDAR[0]/VEVENT[0]/ATTENDEE[0]"
+      }
+    ],
+    "changed": true,
+    "ics": "BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//Example//Cases//EN\r\nBEGIN:VEVENT\r\nUID:a@example.com\r\nDTSTAMP:20260101T000000Z\r\nDTSTART:20260105T100000Z\r\nATTENDEE:mailto:a@example.com\r\nEND:VEVENT\r\nEND:VCALENDAR\r\n",
+    "problems": [],
+    "problem_count": 0
+  },
+  "truncated": false
+}

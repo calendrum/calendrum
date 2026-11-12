@@ -1,0 +1,8 @@
+BEGIN:VCALENDAR
+BEGIN:VEVENT
+UID:lf@example.com
+SUMMARY:A summary that is long enough to be folded across two physical lines
+  of text
+ATTENDEE:mailto:a@example.com
+END:VEVENT
+END:VCALENDAR

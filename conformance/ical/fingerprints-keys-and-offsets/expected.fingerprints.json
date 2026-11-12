@@ -1,0 +1,71 @@
+{
+  "algorithmVersion": 1,
+  "entries": [
+    {
+      "calendarIndex": 0,
+      "name": "VTIMEZONE",
+      "uid": null,
+      "recurrenceId": null,
+      "tzid": "Europe/Moscow",
+      "ordinal": -1,
+      "hash": "7b39bc31c0ebb8d6",
+      "startOffset": 65,
+      "endOffset": 210
+    },
+    {
+      "calendarIndex": 0,
+      "name": "VEVENT",
+      "uid": "lecture@example.com",
+      "recurrenceId": null,
+      "tzid": null,
+      "ordinal": -1,
+      "hash": "6fc42a12d87371be",
+      "startOffset": 210,
+      "endOffset": 433
+    },
+    {
+      "calendarIndex": 0,
+      "name": "VEVENT",
+      "uid": "lecture@example.com",
+      "recurrenceId": "20260112T100000",
+      "tzid": null,
+      "ordinal": -1,
+      "hash": "09cbc6bfe54b3488",
+      "startOffset": 433,
+      "endOffset": 629
+    },
+    {
+      "calendarIndex": 0,
+      "name": "VTODO",
+      "uid": null,
+      "recurrenceId": null,
+      "tzid": null,
+      "ordinal": 0,
+      "hash": "baac9c7eca1eaed5",
+      "startOffset": 629,
+      "endOffset": 721
+    },
+    {
+      "calendarIndex": 0,
+      "name": "VTODO",
+      "uid": null,
+      "recurrenceId": null,
+      "tzid": null,
+      "ordinal": 1,
+      "hash": "0e62514bab1f6963",
+      "startOffset": 721,
+      "endOffset": 782
+    },
+    {
+      "calendarIndex": 1,
+      "name": "VEVENT",
+      "uid": "lecture@example.com",
+      "recurrenceId": null,
+      "tzid": null,
+      "ordinal": -1,
+      "hash": "9dd7d327de989f17",
+      "startOffset": 862,
+      "endOffset": 981
+    }
+  ]
+}

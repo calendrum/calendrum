@@ -1,0 +1,28 @@
+{
+  "ops_version": 1,
+  "ok": true,
+  "result": {
+    "id": "Europe/Berlin",
+    "alias": true,
+    "at": "2026-07-15T12:00:00Z",
+    "offset_seconds": 7200,
+    "offset": "+02:00",
+    "tzdb_version": "2026e",
+    "next_transition": {
+      "at": "2026-10-25T01:00:00Z",
+      "offset_seconds_after": 3600
+    },
+    "problems": [
+      {
+        "code": "ICAL-Z002",
+        "severity": "info",
+        "message": "TZID resolved through an alias",
+        "line": 0,
+        "column": 0,
+        "offset": 0
+      }
+    ],
+    "problem_count": 1
+  },
+  "truncated": false
+}

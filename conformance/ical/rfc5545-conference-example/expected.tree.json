@@ -1,0 +1,73 @@
+{
+  "charset": "UTF-8",
+  "components": [
+    {
+      "name": "VCALENDAR",
+      "properties": [
+        {
+          "name": "PRODID",
+          "parameters": [],
+          "value": "-//xyz Corp//NONSGML PDA Calendar Version 1.0//EN"
+        },
+        {
+          "name": "VERSION",
+          "parameters": [],
+          "value": "2.0"
+        }
+      ],
+      "components": [
+        {
+          "name": "VEVENT",
+          "properties": [
+            {
+              "name": "DTSTAMP",
+              "parameters": [],
+              "value": "19960704T120000Z"
+            },
+            {
+              "name": "UID",
+              "parameters": [],
+              "value": "uid1@example.com"
+            },
+            {
+              "name": "ORGANIZER",
+              "parameters": [],
+              "value": "mailto:jsmith@example.com"
+            },
+            {
+              "name": "DTSTART",
+              "parameters": [],
+              "value": "19960918T143000Z"
+            },
+            {
+              "name": "DTEND",
+              "parameters": [],
+              "value": "19960920T220000Z"
+            },
+            {
+              "name": "STATUS",
+              "parameters": [],
+              "value": "CONFIRMED"
+            },
+            {
+              "name": "CATEGORIES",
+              "parameters": [],
+              "value": "CONFERENCE"
+            },
+            {
+              "name": "SUMMARY",
+              "parameters": [],
+              "value": "Networld+Interop Conference"
+            },
+            {
+              "name": "DESCRIPTION",
+              "parameters": [],
+              "value": "Networld+Interop Conference and Exhibit\\nAtlanta World Congress Center\\nAtlanta\\, Georgia"
+            }
+          ],
+          "components": []
+        }
+      ]
+    }
+  ]
+}

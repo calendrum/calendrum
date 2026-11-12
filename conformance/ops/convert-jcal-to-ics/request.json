@@ -1,0 +1,53 @@
+{
+  "jcal": [
+    "vcalendar",
+    [
+      [
+        "version",
+        {},
+        "text",
+        "2.0"
+      ],
+      [
+        "prodid",
+        {},
+        "text",
+        "-//Example//Cases//EN"
+      ]
+    ],
+    [
+      [
+        "vevent",
+        [
+          [
+            "uid",
+            {},
+            "text",
+            "a@example.com"
+          ],
+          [
+            "dtstamp",
+            {},
+            "date-time",
+            "2026-01-01T00:00:00Z"
+          ],
+          [
+            "dtstart",
+            {
+              "tzid": "Europe/Berlin"
+            },
+            "date-time",
+            "2026-01-05T10:00:00"
+          ],
+          [
+            "summary",
+            {},
+            "text",
+            "Standup"
+          ]
+        ],
+        []
+      ]
+    ]
+  ]
+}

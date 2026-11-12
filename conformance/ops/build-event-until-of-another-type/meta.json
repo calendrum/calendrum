@@ -1,0 +1,7 @@
+{
+  "id": "build-event-until-of-another-type",
+  "operation": "build_event",
+  "description": "UNTIL has to have the type of the start: a date does not suit a moment, and the fields do not make a valid event.",
+  "source": "synthetic",
+  "license": "CC0-1.0"
+}

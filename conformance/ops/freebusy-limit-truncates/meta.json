@@ -1,0 +1,7 @@
+{
+  "id": "freebusy-limit-truncates",
+  "operation": "freebusy",
+  "description": "The limit cuts the list of intervals.",
+  "source": "synthetic",
+  "license": "CC0-1.0"
+}

@@ -1,0 +1,63 @@
+{
+  "charset": "UTF-8",
+  "components": [
+    {
+      "name": "VCALENDAR",
+      "properties": [
+        {
+          "name": "VERSION",
+          "parameters": [],
+          "value": "2.0"
+        },
+        {
+          "name": "PRODID",
+          "parameters": [],
+          "value": "-//ABC Corporation//NONSGML My Product//EN"
+        }
+      ],
+      "components": [
+        {
+          "name": "VJOURNAL",
+          "properties": [
+            {
+              "name": "DTSTAMP",
+              "parameters": [],
+              "value": "19970324T120000Z"
+            },
+            {
+              "name": "UID",
+              "parameters": [],
+              "value": "uid5@example.com"
+            },
+            {
+              "name": "ORGANIZER",
+              "parameters": [],
+              "value": "mailto:jsmith@example.com"
+            },
+            {
+              "name": "STATUS",
+              "parameters": [],
+              "value": "DRAFT"
+            },
+            {
+              "name": "CLASS",
+              "parameters": [],
+              "value": "PUBLIC"
+            },
+            {
+              "name": "CATEGORIES",
+              "parameters": [],
+              "value": "Project Report,XYZ,Weekly Meeting"
+            },
+            {
+              "name": "DESCRIPTION",
+              "parameters": [],
+              "value": "Project xyz Review Meeting Minutes\\nAgenda\\n1. Review of project version 1.0 requirements.\\n2. Definitionof project processes.\\n3. Review of project schedule.\\nParticipants: John Smith\\, Jane Doe\\, Jim Dandy\\n-It was decided that the requirements need to be signed off by product marketing.\\n-Project processes were accepted.\\n-Project schedule needs to account for scheduled holidays and employee vacation time. Check with HR for specific dates.\\n-New schedule will be distributed by Friday.\\n-Next weeks meeting is cancelled. No meeting until 3/23."
+            }
+          ],
+          "components": []
+        }
+      ]
+    }
+  ]
+}

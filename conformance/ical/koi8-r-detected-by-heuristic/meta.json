@@ -1,0 +1,10 @@
+{
+  "id": "koi8-r-detected-by-heuristic",
+  "description": "Cyrillic text in KOI8-R with no charset hint is detected by the heuristic.",
+  "tags": [
+    "charset"
+  ],
+  "rfc": [],
+  "source": "synthetic",
+  "license": "CC0-1.0"
+}

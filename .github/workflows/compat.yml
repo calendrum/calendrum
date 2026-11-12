@@ -1,0 +1,60 @@
+# Consumer compatibility: the compat-tests matrix without linuxX64, against artifacts published in the same job.
+# linuxX64 consumers run in native.yml. Per PR once the owner enables automatic runs.
+name: Compat
+
+on:
+  workflow_dispatch:
+  workflow_call:
+  # Automatic runs stay off until a maintainer enables them. To enable, uncomment:
+  # pull_request:
+  #   paths-ignore:
+  #     - 'docs/**'
+  #     - '**/*.md'
+  # # Runs on the default branch fill the caches that pull requests read.
+  # push:
+  #   branches: [main]
+  #   paths-ignore:
+  #     - 'docs/**'
+  #     - '**/*.md'
+
+permissions:
+  contents: read
+
+# A literal prefix: a called workflow sees its caller's name in github.workflow.
+concurrency:
+  group: compat-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  consumers:
+    name: Consumers (JVM, JS, Wasm)
+    runs-on: ubuntu-24.04
+    timeout-minutes: 40
+    steps:
+      - name: Check out
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      # web: publishToMavenLocal builds JVM, JS and Wasm only, without the Kotlin/Native toolchain.
+      - name: Set up the build
+        uses: ./.github/actions/setup-build
+        with:
+          targets: web
+
+      - name: Consumer builds
+        run: compat-tests/run.sh --targets jvm,js,wasmJs
+
+      # compat-tests/build/logs holds the full Gradle output of every case.
+      - name: Upload reports
+        if: failure()
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: compat-reports
+          path: |
+            compat-tests/build/logs/
+            **/build/reports/
+            **/build/test-results/
+          retention-days: 7
+          if-no-files-found: ignore
+          overwrite: true

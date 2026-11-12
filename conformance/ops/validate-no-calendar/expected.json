@@ -1,0 +1,37 @@
+{
+  "ops_version": 1,
+  "ok": true,
+  "result": {
+    "issues": [],
+    "calendar_count": 0,
+    "valid": false,
+    "problems": [
+      {
+        "code": "ICAL-S003",
+        "severity": "warning",
+        "message": "bare LF used as a line ending",
+        "line": 1,
+        "column": 20,
+        "offset": 19
+      },
+      {
+        "code": "ICAL-S007",
+        "severity": "error",
+        "message": "no ':' after the property name and parameters, line skipped",
+        "line": 1,
+        "column": 1,
+        "offset": 0
+      },
+      {
+        "code": "ICAL-S007",
+        "severity": "error",
+        "message": "no ':' after the property name and parameters, line skipped",
+        "line": 2,
+        "column": 1,
+        "offset": 20
+      }
+    ],
+    "problem_count": 3
+  },
+  "truncated": false
+}

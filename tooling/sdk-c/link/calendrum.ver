@@ -1,0 +1,9 @@
+{
+  global:
+    calendrum_abi_version;
+    calendrum_call;
+    calendrum_free;
+    calendrum_version;
+  local:
+    *;
+};

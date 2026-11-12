@@ -1,0 +1,15 @@
+{
+  "id": "rfc5545-group-meeting-example",
+  "description": "RFC 5545 example: a group-scheduled meeting with a VTIMEZONE and an attendee.",
+  "tags": [
+    "rfc5545-example",
+    "folding",
+    "parameters",
+    "fingerprints"
+  ],
+  "rfc": [
+    "RFC 5545 §4"
+  ],
+  "source": "rfc",
+  "license": "IETF-Trust-BSD"
+}

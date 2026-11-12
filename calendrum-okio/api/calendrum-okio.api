@@ -1,0 +1,10 @@
+public final class io/github/calendrum/okio/ICalOkio {
+	public static final fun asByteInput (Lokio/BufferedSource;)Lio/github/calendrum/ByteInput;
+	public static final fun asByteOutput (Lokio/BufferedSink;)Lio/github/calendrum/ByteOutput;
+	public static final fun components (Lio/github/calendrum/syntax/ICalParser;Lokio/BufferedSource;)Lio/github/calendrum/syntax/ComponentStream;
+	public static final fun parse (Lio/github/calendrum/syntax/ICalParser;Lokio/BufferedSource;)Lio/github/calendrum/syntax/ParseResult;
+	public static final fun reader (Lio/github/calendrum/syntax/ICalParser;Lokio/BufferedSource;)Lio/github/calendrum/syntax/ICalReader;
+	public static final fun write (Lio/github/calendrum/syntax/ICalWriter;Lio/github/calendrum/syntax/ICalComponent;Lokio/BufferedSink;)V
+	public static final fun write (Lio/github/calendrum/syntax/ICalWriter;Ljava/util/List;Lokio/BufferedSink;)V
+}
+

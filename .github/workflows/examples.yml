@@ -1,0 +1,82 @@
+name: Examples
+
+on:
+  workflow_dispatch:
+  workflow_call:
+  # Automatic runs stay off until a maintainer enables them. To enable, uncomment:
+  # pull_request:
+  #   paths-ignore:
+  #     - 'docs/**'
+  #     - '**/*.md'
+
+permissions:
+  contents: read
+
+jobs:
+  jvm:
+    name: Examples (CLI, Ktor, Android)
+    runs-on: ubuntu-24.04
+    timeout-minutes: 40
+    concurrency:
+      group: examples-jvm-${{ github.ref }}
+      cancel-in-progress: true
+    steps:
+      - name: Check out
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Set up the build
+        uses: ./.github/actions/setup-build
+        with:
+          targets: jvm
+
+      - name: Examples
+        run: examples/run.sh cli ktor-feed-server android-compose
+
+      - name: Upload reports
+        if: failure()
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: examples-jvm-reports
+          path: |
+            examples/build/logs/
+            examples/**/build/reports/
+            examples/**/build/test-results/
+          retention-days: 7
+          if-no-files-found: ignore
+          overwrite: true
+
+  ios:
+    name: Examples (iOS)
+    runs-on: macos-26
+    timeout-minutes: 40
+    concurrency:
+      group: examples-ios-${{ github.ref }}
+      cancel-in-progress: true
+    steps:
+      - name: Check out
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Set up the build
+        uses: ./.github/actions/setup-build
+        with:
+          targets: apple
+          konan-cache: 'true'
+
+      - name: Examples
+        run: examples/run.sh ios-swiftui
+
+      - name: Upload reports
+        if: failure()
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: examples-ios-reports
+          path: |
+            examples/build/logs/
+            examples/**/build/reports/
+          retention-days: 7
+          if-no-files-found: ignore
+          overwrite: true

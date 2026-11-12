@@ -1,0 +1,22 @@
+{
+  "charset": "windows-1251",
+  "components": [
+    {
+      "name": "VCALENDAR",
+      "properties": [],
+      "components": [
+        {
+          "name": "VEVENT",
+          "properties": [
+            {
+              "name": "SUMMARY",
+              "parameters": [],
+              "value": "Лекция по алгебре"
+            }
+          ],
+          "components": []
+        }
+      ]
+    }
+  ]
+}

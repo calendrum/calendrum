@@ -1,0 +1,63 @@
+{
+  "charset": "UTF-8",
+  "components": [
+    {
+      "name": "VCALENDAR",
+      "properties": [
+        {
+          "name": "VERSION",
+          "parameters": [],
+          "value": "2.0"
+        },
+        {
+          "name": "PRODID",
+          "parameters": [],
+          "value": "-//RDU Software//NONSGML HandCal//EN"
+        }
+      ],
+      "components": [
+        {
+          "name": "VFREEBUSY",
+          "properties": [
+            {
+              "name": "ORGANIZER",
+              "parameters": [],
+              "value": "mailto:jsmith@example.com"
+            },
+            {
+              "name": "DTSTART",
+              "parameters": [],
+              "value": "19980313T141711Z"
+            },
+            {
+              "name": "DTEND",
+              "parameters": [],
+              "value": "19980410T141711Z"
+            },
+            {
+              "name": "FREEBUSY",
+              "parameters": [],
+              "value": "19980314T233000Z/19980315T003000Z"
+            },
+            {
+              "name": "FREEBUSY",
+              "parameters": [],
+              "value": "19980316T153000Z/19980316T163000Z"
+            },
+            {
+              "name": "FREEBUSY",
+              "parameters": [],
+              "value": "19980318T030000Z/19980318T040000Z"
+            },
+            {
+              "name": "URL",
+              "parameters": [],
+              "value": "http://www.example.com/calendar/busytime/jsmith.ifb"
+            }
+          ],
+          "components": []
+        }
+      ]
+    }
+  ]
+}

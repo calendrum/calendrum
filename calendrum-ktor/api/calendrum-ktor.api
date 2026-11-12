@@ -1,0 +1,47 @@
+public final class io/github/calendrum/ktor/ICalContentConverter : io/ktor/serialization/ContentConverter {
+	public fun <init> ()V
+	public fun <init> (Lio/github/calendrum/syntax/ParseOptions;Lio/github/calendrum/syntax/ICalWriter;)V
+	public fun deserialize (Ljava/nio/charset/Charset;Lio/ktor/util/reflect/TypeInfo;Lio/ktor/utils/io/ByteReadChannel;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public final fun getParseOptions ()Lio/github/calendrum/syntax/ParseOptions;
+	public final fun getWriter ()Lio/github/calendrum/syntax/ICalWriter;
+	public fun serialize (Lio/ktor/http/ContentType;Ljava/nio/charset/Charset;Lio/ktor/util/reflect/TypeInfo;Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class io/github/calendrum/ktor/ICalKtor {
+	public static final fun getTextCalendar ()Lio/ktor/http/ContentType;
+	public static final fun iCalendar (Lio/ktor/serialization/Configuration;)V
+	public static final fun iCalendar (Lio/ktor/serialization/Configuration;Lio/github/calendrum/ktor/ICalContentConverter;Lio/ktor/http/ContentType;)V
+	public static synthetic fun iCalendar$default (Lio/ktor/serialization/Configuration;Lio/github/calendrum/ktor/ICalContentConverter;Lio/ktor/http/ContentType;ILjava/lang/Object;)V
+}
+
+public final class io/github/calendrum/ktor/IcsFeedOptions {
+	public static final field Companion Lio/github/calendrum/ktor/IcsFeedOptions$Companion;
+	public static final field Default Lio/github/calendrum/ktor/IcsFeedOptions;
+	public synthetic fun <init> (Ljava/lang/String;Lio/github/calendrum/syntax/ICalWriter;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public static final fun builder ()Lio/github/calendrum/ktor/IcsFeedOptions$Builder;
+	public final fun getCacheControl ()Ljava/lang/String;
+	public final fun getWriter ()Lio/github/calendrum/syntax/ICalWriter;
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class io/github/calendrum/ktor/IcsFeedOptions$Builder {
+	public final fun build ()Lio/github/calendrum/ktor/IcsFeedOptions;
+	public final fun cacheControl (Ljava/lang/String;)Lio/github/calendrum/ktor/IcsFeedOptions$Builder;
+	public final fun getCacheControl ()Ljava/lang/String;
+	public final fun getWriter ()Lio/github/calendrum/syntax/ICalWriter;
+	public final fun setCacheControl (Ljava/lang/String;)V
+	public final fun setWriter (Lio/github/calendrum/syntax/ICalWriter;)V
+	public fun toString ()Ljava/lang/String;
+	public final fun writer (Lio/github/calendrum/syntax/ICalWriter;)Lio/github/calendrum/ktor/IcsFeedOptions$Builder;
+}
+
+public final class io/github/calendrum/ktor/IcsFeedOptions$Companion {
+	public final fun builder ()Lio/github/calendrum/ktor/IcsFeedOptions$Builder;
+}
+
+public final class io/github/calendrum/ktor/IcsFeeds {
+	public static final fun icsFeed (Lio/ktor/server/routing/Route;Ljava/lang/String;Lio/github/calendrum/ktor/IcsFeedOptions;Lkotlin/jvm/functions/Function2;)Lio/ktor/server/routing/Route;
+	public static final fun icsFeed (Lio/ktor/server/routing/Route;Ljava/lang/String;Lkotlin/jvm/functions/Function2;)Lio/ktor/server/routing/Route;
+}
+

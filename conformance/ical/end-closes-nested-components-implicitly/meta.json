@@ -1,0 +1,13 @@
+{
+  "id": "end-closes-nested-components-implicitly",
+  "description": "An END line closes an inner open component before closing the one it names.",
+  "tags": [
+    "structure",
+    "robustness"
+  ],
+  "rfc": [
+    "RFC 5545 §3.6"
+  ],
+  "source": "synthetic",
+  "license": "CC0-1.0"
+}

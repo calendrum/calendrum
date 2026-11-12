@@ -1,0 +1,33 @@
+[
+  [
+    "vcalendar",
+    [
+      [
+        "prodid",
+        {},
+        "text",
+        "-//Example//UTF-16//EN"
+      ]
+    ],
+    [
+      [
+        "vevent",
+        [
+          [
+            "uid",
+            {},
+            "text",
+            "utf16@example.com"
+          ],
+          [
+            "summary",
+            {},
+            "text",
+            "Привет"
+          ]
+        ],
+        []
+      ]
+    ]
+  ]
+]

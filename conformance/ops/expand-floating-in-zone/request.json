@@ -1,0 +1,6 @@
+{
+  "ics": "BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//Example//Cases//EN\r\nBEGIN:VEVENT\r\nUID:f@example.com\r\nDTSTAMP:20260101T000000Z\r\nDTSTART:20260105T100000\r\nDURATION:PT1H\r\nEND:VEVENT\r\nEND:VCALENDAR\r\n",
+  "from": "2026-01-01T00:00:00Z",
+  "to": "2026-02-01T00:00:00Z",
+  "zone": "Europe/Berlin"
+}

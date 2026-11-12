@@ -1,0 +1,45 @@
+{
+  "ops_version": 1,
+  "ok": true,
+  "result": {
+    "charset": "UTF-8",
+    "calendars": [
+      {
+        "prod_id": "x",
+        "version": "2.0",
+        "names": [],
+        "event_count": 1,
+        "todo_count": 0,
+        "journal_count": 0,
+        "free_busy_count": 0,
+        "time_zones": [],
+        "events": [
+          {
+            "uid": "a",
+            "start": "2026-01-05"
+          }
+        ]
+      }
+    ],
+    "problems": [
+      {
+        "code": "ICAL-S003",
+        "severity": "warning",
+        "message": "bare LF used as a line ending",
+        "line": 1,
+        "column": 16,
+        "offset": 15
+      },
+      {
+        "code": "ICAL-S007",
+        "severity": "error",
+        "message": "no ':' after the property name and parameters, line skipped",
+        "line": 4,
+        "column": 1,
+        "offset": 37
+      }
+    ],
+    "problem_count": 2
+  },
+  "truncated": false
+}

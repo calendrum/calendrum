@@ -1,0 +1,16 @@
+{
+  "charset": "windows-1251",
+  "components": [
+    {
+      "name": "X",
+      "properties": [
+        {
+          "name": "SUMMARY",
+          "parameters": [],
+          "value": "мл"
+        }
+      ],
+      "components": []
+    }
+  ]
+}

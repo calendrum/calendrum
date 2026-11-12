@@ -1,0 +1,71 @@
+[
+  [
+    "vcalendar",
+    [
+      [
+        "version",
+        {},
+        "text",
+        "2.0"
+      ],
+      [
+        "prodid",
+        {},
+        "text",
+        "-//ABC Corporation//NONSGML My Product//EN"
+      ]
+    ],
+    [
+      [
+        "vjournal",
+        [
+          [
+            "dtstamp",
+            {},
+            "date-time",
+            "1997-03-24T12:00:00Z"
+          ],
+          [
+            "uid",
+            {},
+            "text",
+            "uid5@example.com"
+          ],
+          [
+            "organizer",
+            {},
+            "cal-address",
+            "mailto:jsmith@example.com"
+          ],
+          [
+            "status",
+            {},
+            "text",
+            "DRAFT"
+          ],
+          [
+            "class",
+            {},
+            "text",
+            "PUBLIC"
+          ],
+          [
+            "categories",
+            {},
+            "text",
+            "Project Report",
+            "XYZ",
+            "Weekly Meeting"
+          ],
+          [
+            "description",
+            {},
+            "text",
+            "Project xyz Review Meeting Minutes\nAgenda\n1. Review of project version 1.0 requirements.\n2. Definitionof project processes.\n3. Review of project schedule.\nParticipants: John Smith, Jane Doe, Jim Dandy\n-It was decided that the requirements need to be signed off by product marketing.\n-Project processes were accepted.\n-Project schedule needs to account for scheduled holidays and employee vacation time. Check with HR for specific dates.\n-New schedule will be distributed by Friday.\n-Next weeks meeting is cancelled. No meeting until 3/23."
+          ]
+        ],
+        []
+      ]
+    ]
+  ]
+]

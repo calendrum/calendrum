@@ -1,0 +1,69 @@
+// Klib ABI Dump
+// Targets: [androidNativeArm32, androidNativeArm64, androidNativeX64, androidNativeX86, iosArm64, iosSimulatorArm64, iosX64, js, linuxArm64, linuxX64, macosArm64, macosX64, mingwX64, tvosArm64, tvosSimulatorArm64, tvosX64, wasmJs, wasmWasi, watchosArm64, watchosDeviceArm64, watchosSimulatorArm64]
+// Rendering settings:
+// - Signature version: 2
+// - Show manifest properties: true
+// - Show declarations: true
+
+// Library unique name: <io.github.calendrum:calendrum-jcal>
+final class io.github.calendrum.jcal/JCalOptions { // io.github.calendrum.jcal/JCalOptions|null[0]
+    final val maxDepth // io.github.calendrum.jcal/JCalOptions.maxDepth|{}maxDepth[0]
+        final fun <get-maxDepth>(): kotlin/Int // io.github.calendrum.jcal/JCalOptions.maxDepth.<get-maxDepth>|<get-maxDepth>(){}[0]
+    final val registry // io.github.calendrum.jcal/JCalOptions.registry|{}registry[0]
+        final fun <get-registry>(): io.github.calendrum.model/ICalRegistry // io.github.calendrum.jcal/JCalOptions.registry.<get-registry>|<get-registry>(){}[0]
+
+    final fun toString(): kotlin/String // io.github.calendrum.jcal/JCalOptions.toString|toString(){}[0]
+
+    final class Builder { // io.github.calendrum.jcal/JCalOptions.Builder|null[0]
+        final var maxDepth // io.github.calendrum.jcal/JCalOptions.Builder.maxDepth|{}maxDepth[0]
+            final fun <get-maxDepth>(): kotlin/Int // io.github.calendrum.jcal/JCalOptions.Builder.maxDepth.<get-maxDepth>|<get-maxDepth>(){}[0]
+            final fun <set-maxDepth>(kotlin/Int) // io.github.calendrum.jcal/JCalOptions.Builder.maxDepth.<set-maxDepth>|<set-maxDepth>(kotlin.Int){}[0]
+        final var registry // io.github.calendrum.jcal/JCalOptions.Builder.registry|{}registry[0]
+            final fun <get-registry>(): io.github.calendrum.model/ICalRegistry // io.github.calendrum.jcal/JCalOptions.Builder.registry.<get-registry>|<get-registry>(){}[0]
+            final fun <set-registry>(io.github.calendrum.model/ICalRegistry) // io.github.calendrum.jcal/JCalOptions.Builder.registry.<set-registry>|<set-registry>(io.github.calendrum.model.ICalRegistry){}[0]
+
+        final fun build(): io.github.calendrum.jcal/JCalOptions // io.github.calendrum.jcal/JCalOptions.Builder.build|build(){}[0]
+        final fun maxDepth(kotlin/Int): io.github.calendrum.jcal/JCalOptions.Builder // io.github.calendrum.jcal/JCalOptions.Builder.maxDepth|maxDepth(kotlin.Int){}[0]
+        final fun registry(io.github.calendrum.model/ICalRegistry): io.github.calendrum.jcal/JCalOptions.Builder // io.github.calendrum.jcal/JCalOptions.Builder.registry|registry(io.github.calendrum.model.ICalRegistry){}[0]
+        final fun toString(): kotlin/String // io.github.calendrum.jcal/JCalOptions.Builder.toString|toString(){}[0]
+    }
+
+    final object Companion { // io.github.calendrum.jcal/JCalOptions.Companion|null[0]
+        final val Default // io.github.calendrum.jcal/JCalOptions.Companion.Default|{}Default[0]
+            final fun <get-Default>(): io.github.calendrum.jcal/JCalOptions // io.github.calendrum.jcal/JCalOptions.Companion.Default.<get-Default>|<get-Default>(){}[0]
+
+        final fun builder(): io.github.calendrum.jcal/JCalOptions.Builder // io.github.calendrum.jcal/JCalOptions.Companion.builder|builder(){}[0]
+    }
+}
+
+final class io.github.calendrum.jcal/JCalResult { // io.github.calendrum.jcal/JCalResult|null[0]
+    final val components // io.github.calendrum.jcal/JCalResult.components|{}components[0]
+        final fun <get-components>(): kotlin.collections/List<io.github.calendrum.syntax/ICalComponent> // io.github.calendrum.jcal/JCalResult.components.<get-components>|<get-components>(){}[0]
+    final val problems // io.github.calendrum.jcal/JCalResult.problems|{}problems[0]
+        final fun <get-problems>(): kotlin.collections/List<io.github.calendrum/Problem> // io.github.calendrum.jcal/JCalResult.problems.<get-problems>|<get-problems>(){}[0]
+
+    final fun toString(): kotlin/String // io.github.calendrum.jcal/JCalResult.toString|toString(){}[0]
+}
+
+final object io.github.calendrum.jcal/ICalSerializers { // io.github.calendrum.jcal/ICalSerializers|null[0]
+    final val component // io.github.calendrum.jcal/ICalSerializers.component|{}component[0]
+        final fun <get-component>(): kotlinx.serialization/KSerializer<io.github.calendrum.syntax/ICalComponent> // io.github.calendrum.jcal/ICalSerializers.component.<get-component>|<get-component>(){}[0]
+    final val dateTime // io.github.calendrum.jcal/ICalSerializers.dateTime|{}dateTime[0]
+        final fun <get-dateTime>(): kotlinx.serialization/KSerializer<io.github.calendrum.value/ICalDateTime> // io.github.calendrum.jcal/ICalSerializers.dateTime.<get-dateTime>|<get-dateTime>(){}[0]
+    final val duration // io.github.calendrum.jcal/ICalSerializers.duration|{}duration[0]
+        final fun <get-duration>(): kotlinx.serialization/KSerializer<io.github.calendrum.value/ICalDuration> // io.github.calendrum.jcal/ICalSerializers.duration.<get-duration>|<get-duration>(){}[0]
+    final val period // io.github.calendrum.jcal/ICalSerializers.period|{}period[0]
+        final fun <get-period>(): kotlinx.serialization/KSerializer<io.github.calendrum.value/ICalPeriod> // io.github.calendrum.jcal/ICalSerializers.period.<get-period>|<get-period>(){}[0]
+    final val recur // io.github.calendrum.jcal/ICalSerializers.recur|{}recur[0]
+        final fun <get-recur>(): kotlinx.serialization/KSerializer<io.github.calendrum.value/Recur> // io.github.calendrum.jcal/ICalSerializers.recur.<get-recur>|<get-recur>(){}[0]
+
+    final fun toString(): kotlin/String // io.github.calendrum.jcal/ICalSerializers.toString|toString(){}[0]
+}
+
+final object io.github.calendrum.jcal/JCal { // io.github.calendrum.jcal/JCal|null[0]
+    final fun decodeFromJsonElement(kotlinx.serialization.json/JsonElement, io.github.calendrum.jcal/JCalOptions = ...): io.github.calendrum.jcal/JCalResult // io.github.calendrum.jcal/JCal.decodeFromJsonElement|decodeFromJsonElement(kotlinx.serialization.json.JsonElement;io.github.calendrum.jcal.JCalOptions){}[0]
+    final fun decodeFromString(kotlin/String, io.github.calendrum.jcal/JCalOptions = ...): io.github.calendrum.jcal/JCalResult // io.github.calendrum.jcal/JCal.decodeFromString|decodeFromString(kotlin.String;io.github.calendrum.jcal.JCalOptions){}[0]
+    final fun encodeToJsonElement(kotlin.collections/List<io.github.calendrum.syntax/ICalComponent>, io.github.calendrum.jcal/JCalOptions = ...): kotlinx.serialization.json/JsonElement // io.github.calendrum.jcal/JCal.encodeToJsonElement|encodeToJsonElement(kotlin.collections.List<io.github.calendrum.syntax.ICalComponent>;io.github.calendrum.jcal.JCalOptions){}[0]
+    final fun encodeToString(kotlin.collections/List<io.github.calendrum.syntax/ICalComponent>, io.github.calendrum.jcal/JCalOptions = ...): kotlin/String // io.github.calendrum.jcal/JCal.encodeToString|encodeToString(kotlin.collections.List<io.github.calendrum.syntax.ICalComponent>;io.github.calendrum.jcal.JCalOptions){}[0]
+    final fun toString(): kotlin/String // io.github.calendrum.jcal/JCal.toString|toString(){}[0]
+}

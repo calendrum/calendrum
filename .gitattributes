@@ -1,0 +1,7 @@
+/gradlew text eol=lf
+*.bat text eol=crlf
+*.jar binary
+*.ics -text
+/fuzz/src/test/resources/**/*Inputs/** -text
+/conformance/ical/** -text
+/corpus/** -text

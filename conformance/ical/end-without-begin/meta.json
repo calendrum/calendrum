@@ -1,0 +1,13 @@
+{
+  "id": "end-without-begin",
+  "description": "An END line appears with no open component and is ignored.",
+  "tags": [
+    "structure",
+    "robustness"
+  ],
+  "rfc": [
+    "RFC 5545 §3.6"
+  ],
+  "source": "synthetic",
+  "license": "CC0-1.0"
+}

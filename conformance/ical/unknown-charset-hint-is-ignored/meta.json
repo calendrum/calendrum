@@ -1,0 +1,13 @@
+{
+  "id": "unknown-charset-hint-is-ignored",
+  "description": "An unrecognized charset hint is ignored and detection falls back to the heuristic.",
+  "tags": [
+    "charset"
+  ],
+  "rfc": [],
+  "source": "synthetic",
+  "license": "CC0-1.0",
+  "options": {
+    "charset": "shift_jis"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "algorithmVersion": 1,
+  "entries": [
+    {
+      "calendarIndex": 0,
+      "name": "VEVENT",
+      "uid": null,
+      "recurrenceId": null,
+      "tzid": null,
+      "ordinal": 0,
+      "hash": "e23d1f0af09fa37d",
+      "startOffset": 17,
+      "endOffset": 56
+    },
+    {
+      "calendarIndex": 1,
+      "name": "VEVENT",
+      "uid": null,
+      "recurrenceId": null,
+      "tzid": null,
+      "ordinal": 0,
+      "hash": "5dd72cdefd55561f",
+      "startOffset": 88,
+      "endOffset": 127
+    }
+  ]
+}

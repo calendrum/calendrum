@@ -1,0 +1,11 @@
+{
+  "ops_version": 1,
+  "ok": true,
+  "result": {
+    "uid": "000102030405060708090a0b0c0d0e0f@calendrum",
+    "ics": "BEGIN:VCALENDAR\r\nPRODID:-//Calendrum//Tooling//EN\r\nVERSION:2.0\r\nBEGIN:VEVENT\r\nSUMMARY:Holiday\r\nDTSTART;VALUE=DATE:20261225\r\nDTEND;VALUE=DATE:20261226\r\nUID:000102030405060708090a0b0c0d0e0f@calendrum\r\nDTSTAMP:20260101T000000Z\r\nEND:VEVENT\r\nEND:VCALENDAR\r\n",
+    "problems": [],
+    "problem_count": 0
+  },
+  "truncated": false
+}

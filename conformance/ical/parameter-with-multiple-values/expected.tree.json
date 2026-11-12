@@ -1,0 +1,24 @@
+{
+  "charset": "UTF-8",
+  "components": [
+    {
+      "name": "X",
+      "properties": [
+        {
+          "name": "ATTENDEE",
+          "parameters": [
+            {
+              "name": "MEMBER",
+              "values": [
+                "mailto:a@example.com",
+                "mailto:b@example.com"
+              ]
+            }
+          ],
+          "value": "mailto:c@example.com"
+        }
+      ],
+      "components": []
+    }
+  ]
+}

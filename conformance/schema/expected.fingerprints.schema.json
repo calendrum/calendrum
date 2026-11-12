@@ -1,0 +1,90 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Calendrum conformance expected fingerprints (expected.fingerprints.json)",
+  "description": "Component fingerprints of input.ics with the default fingerprint options, in input order.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "algorithmVersion",
+    "entries"
+  ],
+  "properties": {
+    "algorithmVersion": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 1
+    },
+    "entries": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "calendarIndex",
+          "name",
+          "uid",
+          "recurrenceId",
+          "tzid",
+          "ordinal",
+          "hash",
+          "startOffset",
+          "endOffset"
+        ],
+        "properties": {
+          "calendarIndex": {
+            "description": "The VCALENDAR the component belongs to, from 0; -1 for a top-level component outside any VCALENDAR.",
+            "type": "integer",
+            "minimum": -1,
+            "maximum": 2147483647
+          },
+          "name": {
+            "description": "Canonical component name.",
+            "type": "string"
+          },
+          "uid": {
+            "description": "UID of the component, null for VTIMEZONE and for components keyed by ordinal.",
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "recurrenceId": {
+            "description": "Raw RECURRENCE-ID value next to a UID, otherwise null.",
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "tzid": {
+            "description": "TZID of a VTIMEZONE, otherwise null.",
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "ordinal": {
+            "description": "Position among components of the same name without a UID (TZID for VTIMEZONE) in the same VCALENDAR, from 0; -1 for a keyed component.",
+            "type": "integer",
+            "minimum": -1,
+            "maximum": 2147483647
+          },
+          "hash": {
+            "description": "xxHash64 of the canonical component text, 16 lowercase hex digits.",
+            "type": "string",
+            "pattern": "^[0-9a-f]{16}$"
+          },
+          "startOffset": {
+            "description": "Offset of the BEGIN line in UTF-8 bytes from the start of the input (of the decoded text for a transcoded input).",
+            "type": "integer",
+            "minimum": 0
+          },
+          "endOffset": {
+            "description": "Offset just after the END line and its line ending, or where the component was closed implicitly.",
+            "type": "integer",
+            "minimum": 0
+          }
+        }
+      }
+    }
+  }
+}

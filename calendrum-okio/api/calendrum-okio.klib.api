@@ -1,0 +1,15 @@
+// Klib ABI Dump
+// Targets: [iosArm64, iosSimulatorArm64, iosX64, js, linuxArm64, linuxX64, macosArm64, macosX64, mingwX64, tvosArm64, tvosSimulatorArm64, tvosX64, wasmJs, wasmWasi, watchosArm64, watchosDeviceArm64, watchosSimulatorArm64]
+// Rendering settings:
+// - Signature version: 2
+// - Show manifest properties: true
+// - Show declarations: true
+
+// Library unique name: <io.github.calendrum:calendrum-okio>
+final fun (io.github.calendrum.syntax/ICalParser).io.github.calendrum.okio/components(okio/BufferedSource): io.github.calendrum.syntax/ComponentStream // io.github.calendrum.okio/components|components@io.github.calendrum.syntax.ICalParser(okio.BufferedSource){}[0]
+final fun (io.github.calendrum.syntax/ICalParser).io.github.calendrum.okio/parse(okio/BufferedSource): io.github.calendrum.syntax/ParseResult // io.github.calendrum.okio/parse|parse@io.github.calendrum.syntax.ICalParser(okio.BufferedSource){}[0]
+final fun (io.github.calendrum.syntax/ICalParser).io.github.calendrum.okio/reader(okio/BufferedSource): io.github.calendrum.syntax/ICalReader // io.github.calendrum.okio/reader|reader@io.github.calendrum.syntax.ICalParser(okio.BufferedSource){}[0]
+final fun (io.github.calendrum.syntax/ICalWriter).io.github.calendrum.okio/write(io.github.calendrum.syntax/ICalComponent, okio/BufferedSink) // io.github.calendrum.okio/write|write@io.github.calendrum.syntax.ICalWriter(io.github.calendrum.syntax.ICalComponent;okio.BufferedSink){}[0]
+final fun (io.github.calendrum.syntax/ICalWriter).io.github.calendrum.okio/write(kotlin.collections/List<io.github.calendrum.syntax/ICalComponent>, okio/BufferedSink) // io.github.calendrum.okio/write|write@io.github.calendrum.syntax.ICalWriter(kotlin.collections.List<io.github.calendrum.syntax.ICalComponent>;okio.BufferedSink){}[0]
+final fun (okio/BufferedSink).io.github.calendrum.okio/asByteOutput(): io.github.calendrum/ByteOutput // io.github.calendrum.okio/asByteOutput|asByteOutput@okio.BufferedSink(){}[0]
+final fun (okio/BufferedSource).io.github.calendrum.okio/asByteInput(): io.github.calendrum/ByteInput // io.github.calendrum.okio/asByteInput|asByteInput@okio.BufferedSource(){}[0]

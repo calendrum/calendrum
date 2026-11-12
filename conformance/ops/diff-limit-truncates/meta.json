@@ -1,0 +1,7 @@
+{
+  "id": "diff-limit-truncates",
+  "operation": "diff",
+  "description": "The limit cuts the lists.",
+  "source": "synthetic",
+  "license": "CC0-1.0"
+}

@@ -1,0 +1,39 @@
+{
+  "charset": "UTF-8",
+  "components": [
+    {
+      "name": "VCALENDAR",
+      "properties": [],
+      "components": [
+        {
+          "name": "VEVENT",
+          "properties": [
+            {
+              "name": "SUMMARY",
+              "parameters": [],
+              "value": "one"
+            }
+          ],
+          "components": []
+        }
+      ]
+    },
+    {
+      "name": "VCALENDAR",
+      "properties": [],
+      "components": [
+        {
+          "name": "VEVENT",
+          "properties": [
+            {
+              "name": "SUMMARY",
+              "parameters": [],
+              "value": "two"
+            }
+          ],
+          "components": []
+        }
+      ]
+    }
+  ]
+}

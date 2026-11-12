@@ -1,0 +1,291 @@
+sealed class Calendrum.AnonymizeOptions
+  Int32? ShiftWeeks { get; init; }
+  new()
+sealed class Calendrum.AnonymizeResult, IOperationResult
+  Boolean Truncated { get; }
+  new()
+  required IReadOnlyList<Problem> Problems { get; init; }
+  required Int32 ProblemCount { get; init; }
+  required Int32 ShiftWeeks { get; init; }
+  required String Ics { get; init; }
+sealed class Calendrum.Attendee
+  Boolean? Rsvp { get; init; }
+  String? Name { get; init; }
+  new()
+  required String Address { get; init; }
+sealed class Calendrum.BadArgumentException : CalendrumException, ISerializable
+  new(String code, String message)
+sealed class Calendrum.BuildEventOptions
+  Boolean? AllDay { get; init; }
+  IReadOnlyList<Attendee>? Attendees { get; init; }
+  String? Description { get; init; }
+  String? Dtstamp { get; init; }
+  String? Duration { get; init; }
+  String? End { get; init; }
+  String? Location { get; init; }
+  String? Organizer { get; init; }
+  String? Rrule { get; init; }
+  String? Uid { get; init; }
+  String? Zone { get; init; }
+  new()
+sealed class Calendrum.BuildEventResult, IOperationResult
+  Boolean Truncated { get; }
+  new()
+  required IReadOnlyList<Problem> Problems { get; init; }
+  required Int32 ProblemCount { get; init; }
+  required String Ics { get; init; }
+  required String Uid { get; init; }
+sealed class Calendrum.BusyInterval
+  new()
+  required String End { get; init; }
+  required String Start { get; init; }
+  required String Type { get; init; }
+sealed class Calendrum.CalendarInput
+  static CalendarInput FromBytes(ReadOnlyMemory<Byte> bytes)
+  static CalendarInput FromFile(String path)
+  static CalendarInput FromText(String text)
+  static CalendarInput op_Implicit(Byte[] bytes)
+  static CalendarInput op_Implicit(ReadOnlyMemory<Byte> bytes)
+  static CalendarInput op_Implicit(String text)
+class Calendrum.CalendrumException : Exception, ISerializable
+  String Code { get; }
+  new(String code, String message)
+sealed class Calendrum.CalendrumVersions
+  Int32 Abi { get; }
+  Int32 Contract { get; }
+  String Library { get; }
+  String Package { get; }
+  String Sdk { get; }
+sealed class Calendrum.CallResult, IOperationResult
+  Boolean Truncated { get; }
+  JsonObject Result { get; }
+sealed class Calendrum.Conflict
+  new()
+  required ConflictSide First { get; init; }
+  required ConflictSide Second { get; init; }
+  required String End { get; init; }
+  required String Start { get; init; }
+sealed class Calendrum.ConflictSide
+  String? Summary { get; init; }
+  String? Uid { get; init; }
+  new()
+  required String End { get; init; }
+  required String Start { get; init; }
+sealed class Calendrum.ConvertResult, IOperationResult
+  Boolean Truncated { get; }
+  JsonElement? Jcal { get; init; }
+  String? Ics { get; init; }
+  new()
+  required IReadOnlyList<Problem> Problems { get; init; }
+  required Int32 ProblemCount { get; init; }
+sealed class Calendrum.DiffComponent
+  String? RecurrenceId { get; init; }
+  String? Tzid { get; init; }
+  String? Uid { get; init; }
+  new()
+  required Int32 CalendarIndex { get; init; }
+  required Int32 Ordinal { get; init; }
+  required String Name { get; init; }
+sealed class Calendrum.DiffOptions
+  Int32? Limit { get; init; }
+  new()
+sealed class Calendrum.DiffResult, IOperationResult
+  Boolean Truncated { get; }
+  new()
+  required IReadOnlyList<DiffComponent> Added { get; init; }
+  required IReadOnlyList<DiffComponent> Changed { get; init; }
+  required IReadOnlyList<DiffComponent> Removed { get; init; }
+  required IReadOnlyList<Problem> Problems { get; init; }
+  required Int32 ProblemCount { get; init; }
+  required Int32 UnchangedCount { get; init; }
+sealed class Calendrum.ExpandOptions
+  Boolean? IncludeCancelled { get; init; }
+  Int32? Limit { get; init; }
+  String? Zone { get; init; }
+  new()
+sealed class Calendrum.ExpandResult, IOperationResult
+  Boolean Truncated { get; }
+  new()
+  required IReadOnlyList<Occurrence> Occurrences { get; init; }
+  required IReadOnlyList<Problem> Problems { get; init; }
+  required Int32 Count { get; init; }
+  required Int32 ProblemCount { get; init; }
+sealed class Calendrum.ExplainResult, IOperationResult
+  Boolean Truncated { get; }
+  new()
+  required String Code { get; init; }
+  required String Constant { get; init; }
+  required String Meaning { get; init; }
+  required String Severity { get; init; }
+sealed class Calendrum.FixChange
+  String? Code { get; init; }
+  new()
+  required String Fixup { get; init; }
+  required String Path { get; init; }
+sealed class Calendrum.FixOptions
+  IReadOnlyList<String>? Fixups { get; init; }
+  new()
+sealed class Calendrum.FixResult, IOperationResult
+  Boolean Truncated { get; }
+  new()
+  required Boolean Changed { get; init; }
+  required IReadOnlyList<FixChange> Changes { get; init; }
+  required IReadOnlyList<Problem> Problems { get; init; }
+  required Int32 ProblemCount { get; init; }
+  required String Ics { get; init; }
+sealed class Calendrum.FreebusyOptions
+  Boolean? Conflicts { get; init; }
+  Int32? Limit { get; init; }
+  String? Zone { get; init; }
+  new()
+sealed class Calendrum.FreebusyResult, IOperationResult
+  Boolean Truncated { get; }
+  new()
+  required IReadOnlyList<BusyInterval> Busy { get; init; }
+  required IReadOnlyList<Conflict> Conflicts { get; init; }
+  required IReadOnlyList<Problem> Problems { get; init; }
+  required Int32 ProblemCount { get; init; }
+static class Calendrum.ICal
+  static AnonymizeResult Anonymize(CalendarInput calendar, AnonymizeOptions options = null)
+  static BuildEventResult BuildEvent(String summary, String start, BuildEventOptions options = null)
+  static CalendrumVersions GetVersions()
+  static CallResult Call(String operation, JsonObject request)
+  static ConvertResult ConvertFromJcal(JsonElement jcal)
+  static ConvertResult ConvertToJcal(CalendarInput calendar)
+  static DiffResult Diff(CalendarInput before, CalendarInput after, DiffOptions options = null)
+  static ExpandResult Expand(CalendarInput calendar, String from, String to, ExpandOptions options = null)
+  static ExplainResult Explain(String code)
+  static FixResult Fix(CalendarInput calendar, FixOptions options = null)
+  static FreebusyResult Freebusy(CalendarInput calendar, String from, String to, FreebusyOptions options = null)
+  static InspectResult Inspect(CalendarInput calendar, InspectOptions options = null)
+  static RruleExpandResult RruleExpand(String rrule, String start, RruleExpandOptions options = null)
+  static TzResolveResult TzResolve(String name, TzResolveOptions options = null)
+  static ValidateResult Validate(CalendarInput calendar, ValidateOptions options = null)
+interface Calendrum.IOperationResult
+  Boolean Truncated { get; }
+sealed class Calendrum.InspectCalendar
+  String? Method { get; init; }
+  String? ProdId { get; init; }
+  String? Version { get; init; }
+  new()
+  required IReadOnlyList<InspectEvent> Events { get; init; }
+  required IReadOnlyList<String> Names { get; init; }
+  required IReadOnlyList<String> TimeZones { get; init; }
+  required Int32 EventCount { get; init; }
+  required Int32 FreeBusyCount { get; init; }
+  required Int32 JournalCount { get; init; }
+  required Int32 TodoCount { get; init; }
+sealed class Calendrum.InspectEvent
+  String? End { get; init; }
+  String? EndZone { get; init; }
+  String? Rrule { get; init; }
+  String? Start { get; init; }
+  String? StartZone { get; init; }
+  String? Status { get; init; }
+  String? Summary { get; init; }
+  String? Uid { get; init; }
+  new()
+sealed class Calendrum.InspectOptions
+  Boolean? IncludeJcal { get; init; }
+  Int32? Limit { get; init; }
+  new()
+sealed class Calendrum.InspectResult, IOperationResult
+  Boolean Truncated { get; }
+  JsonElement? Jcal { get; init; }
+  new()
+  required IReadOnlyList<InspectCalendar> Calendars { get; init; }
+  required IReadOnlyList<Problem> Problems { get; init; }
+  required Int32 ProblemCount { get; init; }
+  required String Charset { get; init; }
+sealed class Calendrum.InternalLibraryException : CalendrumException, ISerializable
+  new(String code, String message)
+sealed class Calendrum.LibraryException : Exception, ISerializable
+  Int32? NativeCode { get; }
+sealed class Calendrum.NextTransition
+  new()
+  required Int32 OffsetSecondsAfter { get; init; }
+  required String At { get; init; }
+sealed class Calendrum.Occurrence
+  Boolean? Cancelled { get; init; }
+  String? LocalEnd { get; init; }
+  String? LocalStart { get; init; }
+  String? RecurrenceId { get; init; }
+  String? RecurrenceIdZone { get; init; }
+  String? Summary { get; init; }
+  String? Uid { get; init; }
+  new()
+  required Boolean AllDay { get; init; }
+  required Int32 CalendarIndex { get; init; }
+  required String Component { get; init; }
+  required String End { get; init; }
+  required String Start { get; init; }
+static class Calendrum.OperationResultExtensions
+  static T EnsureComplete<T>(T result)
+sealed class Calendrum.Problem
+  new()
+  required Int32 Column { get; init; }
+  required Int32 Line { get; init; }
+  required Int32 Offset { get; init; }
+  required String Code { get; init; }
+  required String Message { get; init; }
+  required String Severity { get; init; }
+sealed class Calendrum.RruleDate
+  String? DateZone { get; init; }
+  String? Utc { get; init; }
+  new()
+  required String Date { get; init; }
+sealed class Calendrum.RruleExpandOptions
+  Int32? Limit { get; init; }
+  String? Zone { get; init; }
+  new()
+sealed class Calendrum.RruleExpandResult, IOperationResult
+  Boolean Truncated { get; }
+  new()
+  required IReadOnlyList<Problem> Problems { get; init; }
+  required IReadOnlyList<RruleDate> Dates { get; init; }
+  required Int32 Count { get; init; }
+  required Int32 ProblemCount { get; init; }
+sealed class Calendrum.TooLargeException : CalendrumException, ISerializable
+  new(String code, String message)
+sealed class Calendrum.TruncatedResultException : Exception, ISerializable
+sealed class Calendrum.TzResolveOptions
+  String? At { get; init; }
+  new()
+sealed class Calendrum.TzResolveResult, IOperationResult
+  Boolean Truncated { get; }
+  NextTransition? NextTransition { get; init; }
+  new()
+  required Boolean Alias { get; init; }
+  required IReadOnlyList<Problem> Problems { get; init; }
+  required Int32 OffsetSeconds { get; init; }
+  required Int32 ProblemCount { get; init; }
+  required String At { get; init; }
+  required String Id { get; init; }
+  required String Offset { get; init; }
+  required String TzdbVersion { get; init; }
+sealed class Calendrum.UnknownCodeException : CalendrumException, ISerializable
+  new(String code, String message)
+sealed class Calendrum.UnknownOperationException : CalendrumException, ISerializable
+  new(String code, String message)
+sealed class Calendrum.UnknownZoneException : CalendrumException, ISerializable
+  new(String code, String message)
+sealed class Calendrum.ValidateIssue
+  Boolean? Fixable { get; init; }
+  new()
+  required Int32 CalendarIndex { get; init; }
+  required String Code { get; init; }
+  required String Message { get; init; }
+  required String Path { get; init; }
+  required String Severity { get; init; }
+sealed class Calendrum.ValidateOptions
+  Int32? Limit { get; init; }
+  String? Rules { get; init; }
+  new()
+sealed class Calendrum.ValidateResult, IOperationResult
+  Boolean Truncated { get; }
+  new()
+  required Boolean Valid { get; init; }
+  required IReadOnlyList<Problem> Problems { get; init; }
+  required IReadOnlyList<ValidateIssue> Issues { get; init; }
+  required Int32 CalendarCount { get; init; }
+  required Int32 ProblemCount { get; init; }

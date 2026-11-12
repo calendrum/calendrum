@@ -1,0 +1,7 @@
+{
+  "id": "validate-missing-dtstamp",
+  "operation": "validate",
+  "description": "A required property is missing.",
+  "source": "synthetic",
+  "license": "CC0-1.0"
+}
